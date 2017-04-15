@@ -3,10 +3,11 @@ package implementation;
 import javax.swing.JPanel;
 import javax.swing.JFrame;
 import java.awt.GridLayout;
+import java.util.ArrayList;
 
 public class TicTacToe extends JFrame{
 	JPanel p=new JPanel();
-	XOButton buttons[]=new XOButton[9];
+	Reinforcement lib = new Reinforcement();
 
 	public TicTacToe(){
 		super("TicTacToe");
@@ -15,11 +16,10 @@ public class TicTacToe extends JFrame{
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		p.setLayout(new GridLayout(3,3));
 		for(int i=0;i<9;i++){
-			buttons[i]=new XOButton();
-			p.add(buttons[i]);
+			lib.buttons[i]=new XOButton(i);
+			p.add(lib.buttons[i]);
 		}
 		add(p);
-		
 		setVisible(true);
 	}
 }

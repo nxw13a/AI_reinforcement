@@ -1,10 +1,13 @@
 package implementation;
 
-class Main()
+import java.util.ArrayList;
+
+class Main
 {
+
 	public static void main(String[] args)
 	{
-		System.out.println("Hello this is James");
+		//System.out.println("Go First or Last: ");
 		TicTacToe run = new TicTacToe();
 	}
 }
