@@ -5,6 +5,7 @@ import javax.swing.ImageIcon;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.util.ArrayList;
+import java.util.concurrent.TimeUnit;
 import java.util.Random;
 import java.security.SecureRandom;
 
@@ -31,31 +32,52 @@ public class XOButton extends JButton implements ActionListener{
 	
 	public void actionPerformed(ActionEvent e){
 
-		if(lib.check_forX())
-		{
-			System.out.println("YOU WIN");
-		}
-		if(lib.check_forO())
-		{
-			System.out.println("YOU LOST");
-		}
+		//System.out.println(lib.print());
+
 		if(lib.position[location_button] == null && lib.check_forX() == false && lib.check_forO() == false)
 		{
-			//System.out.println(location_button);
 			lib.position[location_button] = "X";
 			setIcon(X);
-			this.removeActionListener(this);
+			//lib.pick = ((lib.count > 8) ? true  : false);
+			//this.removeActionListener(this);
 			lib.count++;
+			//TimeUnit.SECONDS.sleep(1);
 			if(lib.check_forX())
 			{
 				System.out.println("YOU WIN");
+				for(int i=0;i<9;i++){
+					lib.buttons[i].setIcon(null);
+				}
+				lib.position = new String[9];
+				lib.count = 0;
+				lib.pick = 1;
+
 			}
-			if(lib.check_forO())
+			else if(lib.check_forO())
 			{
 				System.out.println("YOU LOST");
+				for(int i=0;i<9;i++){
+					lib.buttons[i].setIcon(null);
+				}
+				lib.position = new String[9];
+				lib.count = 0;
+				lib.pick = 0;
+
 			}
-			if(lib.count <= 8 && lib.check_forX() == false && lib.check_forO() == false)
+			else if(lib.check_forO() == false && lib.check_forX() == false && lib.count == 9)
 			{
+				System.out.println("NO ONE WIN");
+				for(int i=0;i<9;i++){
+					lib.buttons[i].setIcon(null);
+				}
+				lib.position = new String[9];
+				lib.count = 0;
+				lib.pick = 1;
+			}
+
+			else if(lib.count <= 8 && lib.count >= lib.pick &&lib.check_forX() == false && lib.check_forO() == false)
+			{
+				//lib.pick = false;
 				Random a = new SecureRandom();
 				int select = a.nextInt(9);
 				while(lib.position[select] != null)
@@ -65,12 +87,41 @@ public class XOButton extends JButton implements ActionListener{
 				lib.buttons[select].setIcon(O);
 				lib.position[select] = "O";
 				lib.count++;
+		
+				if(lib.check_forX())
+				{
+					System.out.println("YOU WIN");
+					for(int i=0;i<9;i++){
+						lib.buttons[i].setIcon(null);
+					}
+					lib.position = new String[9];
+					lib.count = 0;
+					lib.pick = 1;
+
+				}
+				else if(lib.check_forO())
+				{
+					System.out.println("YOU LOST");
+					for(int i=0;i<9;i++){
+						lib.buttons[i].setIcon(null);
+					}
+					lib.position = new String[9];
+					lib.count = 0;
+					lib.pick = 0;
+
+				}
+				else if(lib.check_forO() == false && lib.check_forX() == false && lib.count == 9)
+				{
+					System.out.println("NO ONE WIN");
+					for(int i=0;i<9;i++){
+						lib.buttons[i].setIcon(null);
+					}
+					lib.position = new String[9];
+					lib.count = 0;
+					lib.pick = 1;
+				}
 				//System.out.println(lib.print());
 			}
-		}
-		else if(lib.position[location_button] != null && lib.check_forX() == false && lib.check_forO() == false)
-		{
-			this.removeActionListener(this);
 		}
 	}
 }
