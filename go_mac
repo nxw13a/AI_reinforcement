@@ -1,0 +1,2 @@
+javac implementation/*.java
+java implementation/Main
