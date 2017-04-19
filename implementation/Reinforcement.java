@@ -5,10 +5,17 @@ import java.util.*;
 class Reinforcement{
 
 	public static String[] position = new String[9];
+	public static int[] order = new int[9];
 	public static List<Double> score = new ArrayList<Double>();
 	public static XOButton buttons[] = new XOButton[9];
 	public static int count = 0;
 	public static int pick = 1;
+
+	public Reinforcement(){
+		for (int i = 0; i < 9; i++) {
+            score.add(i, 0.5);
+        }
+	}
 
 	public static String print() {
 		String hold = "";
@@ -21,6 +28,14 @@ class Reinforcement{
 		}
 		return hold;
 	}
+
+	// public static void printOrder(){ 
+	// 	for (int i = 0; i < 9; i++) {
+	// 		System.out.print(order[i] + " ");
+	// 	}
+	// 	System.out.println(" ");
+	// }
+
 	public static boolean check_forX()
 	{
 		if(position[0] == "X" && position[1] == "X" && position[2] == "X")

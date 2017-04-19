@@ -13,7 +13,7 @@ public class XOButton extends JButton implements ActionListener{
 	int count = 0;
 	int location_button;
 	Reinforcement lib;
-	ManagerList managerList = new ManagerList();
+	ManagerList managerList;
 	int indexOfManager = 0;
 	int select;
 	/*
@@ -26,7 +26,8 @@ public class XOButton extends JButton implements ActionListener{
 		X=new ImageIcon(this.getClass().getResource("X.png"));
 		O=new ImageIcon(this.getClass().getResource("O.png"));
 		location_button = location;
-		lib = new Reinforcement();		
+		lib = new Reinforcement();
+		managerList = new ManagerList();
 		this.addActionListener(this);
 	}
 	
@@ -37,8 +38,31 @@ public class XOButton extends JButton implements ActionListener{
 		indexOfManager = 0;
 	}
 
+	private void generateRandomMove() {
+		Random a = new SecureRandom();
+		select = a.nextInt(9);
+		while(lib.position[select] != null)
+		{
+			select = a.nextInt(9);
+		}
+	}
+
 	private void resetWin(){
 		System.out.println("YOU WIN");
+		// If the state does not exist
+		int index = managerList.doesExist(lib.position, lib.order, lib.count);
+		if (index == -1) {
+			Manager newManager = new Manager();
+			// Add position to list
+			newManager.setPosition(lib.position);
+			newManager.setScore(lib.score);
+			newManager.setOrderWith(lib.order);
+			// Push to ManagerList
+			managerList.addState(newManager);
+		} else {
+			managerList.getItemAtIndex(index).setScore(lib.score);
+		}
+
 		resetBoard();
 		lib.position = new String[9];
 		lib.count = 0;
@@ -47,6 +71,20 @@ public class XOButton extends JButton implements ActionListener{
 
 	private void resetLost(){
 		System.out.println("YOU LOST");
+		// If the state does not exist
+		int index = managerList.doesExist(lib.position, lib.order, lib.count);
+		if (index == -1) {
+			Manager newManager = new Manager();
+			// Add position to list
+			newManager.setPosition(lib.position);
+			newManager.setScore(lib.score);
+			newManager.setOrderWith(lib.order);
+			// Push to ManagerList
+			managerList.addState(newManager);
+		} else {
+			managerList.getItemAtIndex(index).setScore(lib.score);
+		}
+
 		resetBoard();
 		lib.position = new String[9];
 		lib.count = 0;
@@ -72,39 +110,14 @@ public class XOButton extends JButton implements ActionListener{
 			//lib.pick = ((lib.count > 8) ? true  : false);
 			//this.removeActionListener(this);
 			lib.count++;
+			lib.order[location_button] = lib.count;
+			// lib.printOrder();
 			//TimeUnit.SECONDS.sleep(1);
 			if(lib.check_forX())
 			{
-				if (managerList.doesExist(lib.position) != -1) {
-					// @TODO - UPDATE SCORE
-					managerList.getItemAtIndex(indexOfManager).setScoreAtIndex(select, false);
-				} else {
-					Manager newManager = new Manager();
-					// @TODO - Add position to list
-					newManager.setPosition(lib.position);
-					newManager.setScoreAtIndex(location_button, false);
-					// @TODO - Push to ManagerList
-					managerList.addState(newManager);
-					
-				}				
+				lib.score.set(lib.count, lib.score.get(lib.count) + 0.1);
+				lib.score.set((lib.count-1), lib.score.get(lib.count-1) + 0.1);
 				resetWin();
-
-			}
-			else if(lib.check_forO())
-			{
-				// If the state is found in the manager
-				if (managerList.doesExist(lib.position) != -1) {
-					// @TODO - UPDATE SCORE
-					managerList.getItemAtIndex(indexOfManager).setScoreAtIndex(select, true);
-				} else {
-					Manager newManager = new Manager();
-					// @TODO - Add position to list
-					newManager.setPosition(lib.position);
-					newManager.setScoreAtIndex(location_button, true);
-					// @TODO - Push to ManagerList
-					managerList.addState(newManager);
-				}				
-				resetLost();
 
 			}
 			else if(lib.check_forO() == false && lib.check_forX() == false && lib.count == 9)
@@ -113,38 +126,32 @@ public class XOButton extends JButton implements ActionListener{
 			}
 			else if(lib.count <= 8 && lib.count >= lib.pick &&lib.check_forX() == false && lib.check_forO() == false)
 			{
-
 				if (managerList.isEmpty()) {
-					//lib.pick = false;
-					Random a = new SecureRandom();
-					select = a.nextInt(9);
-					while(lib.position[select] != null)
-					{
-						select = a.nextInt(9);
-					}	
+					generateRandomMove();
 				} else {
-					for (int i = 0; i < managerList.getSize(); i++) {
-						if (managerList.getItemAtIndex(i).isSubset(lib.position)) {
-							indexOfManager = i;
-							break;
-						}
-					}
+					
+					indexOfManager = managerList.doesExist(lib.position, lib.order, lib.count);
+					System.out.println(indexOfManager);
+					// @ TODO - IF STATES DON'T EXIST
+					if (indexOfManager == -1) {
+						generateRandomMove();
+					} else { // @ TODO - IF STATE EXISTS
+						if (managerList.getItemAtIndex(indexOfManager).isEqualScore()) {
+							generateRandomMove();
+						} else {
+							select = managerList.getItemAtIndex(indexOfManager).getHighestScore();
+							if (lib.position[select] != null){
+								generateRandomMove();
+								// @ TODO - GET NEXT OR EQUAL
+								// Manager currentIndex = managerList.getItemAtIndex(indexOfManager);
 
-					if (managerList.getItemAtIndex(indexOfManager).isEqualScore()) {
-						Random a = new SecureRandom();
-						select = a.nextInt(9);
-						while(lib.position[select] != null)
-						{
-							select = a.nextInt(9);
-						}	
-					} else {
-						select = managerList.getItemAtIndex(indexOfManager).getHighestScore();
-						if (lib.position[select] != null){
-							Random a = new SecureRandom();
-							select = a.nextInt(9);
-							while(lib.position[select] != null){
-								select = a.nextInt(9);
-							}	
+								// select = 0;
+								// for (int i = 1; i< 9; i++) {
+								// 	if ((currentIndex.getScoreAtIndex(select) <= currentIndex.getScoreAtIndex(i)) && (currentIndex.getScoreAtIndex(select) <= currentIndex.getScoreAtIndex(select))){
+								// 		select = i;
+								// 	}
+								// }
+							}
 						}
 					}
 				}
@@ -152,35 +159,13 @@ public class XOButton extends JButton implements ActionListener{
 				lib.buttons[select].setIcon(O);
 				lib.position[select] = "O";
 				lib.count++;
+
+				lib.order[select] = lib.count;
+				// lib.printOrder();
 		
-				if(lib.check_forX())
+				if(lib.check_forO())
 				{
-					// If the state is found in the manager
-					if (managerList.doesExist(lib.position) != -1) {
-						// @TODO - UPDATE SCORE
-						managerList.getItemAtIndex(indexOfManager).setScoreAtIndex(select, false);
-					} else {
-						Manager newManager = new Manager();
-						// @TODO - Add position to list
-						newManager.setPosition(lib.position);
-						// @TODO - Push to ManagerList
-						managerList.addState(newManager);
-					}
-					resetWin();
-				}
-				else if(lib.check_forO())
-				{
-					// If the state is found in the manager
-					if (managerList.doesExist(lib.position) != -1) {
-						// @TODO - UPDATE SCORE
-						managerList.getItemAtIndex(indexOfManager).setScoreAtIndex(select, true);
-					} else {
-						Manager newManager = new Manager();
-						// @TODO - Add position to list
-						newManager.setPosition(lib.position);
-						// @TODO - Push to ManagerList
-						managerList.addState(newManager);
-					}
+					lib.score.set(lib.count, lib.score.get(lib.count) + 0.1);
 					resetLost();
 
 				}

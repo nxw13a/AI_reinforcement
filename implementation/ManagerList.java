@@ -29,16 +29,32 @@ public class ManagerList {
         return managerList.get(index);
     }
 
-    public static int doesExist(String[] pos) {
-        if (getSize() == 0) {
-            return -1;
-        } else {
-            for (int i = 0; i < getSize(); i++) {
-                if (pos == getItemAtIndex(i).getPosition()) {
-                    return i;
-                }
+    public static int doesExist(String[] pos, int[] currentOrder, int count) {
+        for (int i = 0; i < getSize(); i++) {
+            if (getItemAtIndex(i).compare(pos ,currentOrder, count)) {
+                return i;
             }
-            return -1;
         }
+        return -1;
     }
+
+    // public static String stringBuild(String[] pos) {
+    //     String temp = "";
+    //     for (int i = 1; i < 9; i++) {
+    //         temp += pos[i];
+    //     }
+    //     return temp;
+    // }
+
+    // public static int isSubset(String[] pos) {
+    //     for (int i = 0; i < getSize(); i++) {
+    //         System.out.println("getItemAtIndex(i).getPosition(): " + getItemAtIndex(i).getPosition());
+    //         System.out.println("stringBuild(pos): " + stringBuild(pos));
+    //         if (getItemAtIndex(i).getPosition().contains(stringBuild(pos))){
+    //             System.out.println("true");
+    //             return i;
+    //         }
+    //     }
+    //     return -1;
+    // }
 }
