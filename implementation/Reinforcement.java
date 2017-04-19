@@ -1,13 +1,15 @@
 package implementation;
 
-import java.util.ArrayList;
+import java.util.*;
 
 class Reinforcement{
 
 	public static String[] position = new String[9];
+	public static List<Double> score = new ArrayList<Double>();
 	public static XOButton buttons[] = new XOButton[9];
 	public static int count = 0;
 	public static int pick = 1;
+
 	public static String print() {
 		String hold = "";
 		for(int x = 0; x < 9; x++)
@@ -58,5 +60,5 @@ class Reinforcement{
 		if(position[2] == "O" && position[4] == "O" && position[6] == "O")
 				return true;
 		return false;		
-	}	
+	}
 }

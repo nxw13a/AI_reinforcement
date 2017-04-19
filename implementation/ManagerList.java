@@ -16,17 +16,16 @@ public class ManagerList {
     }
 
     public static boolean isEmpty() {
-        if (managerList.size() == 0) {
-            return true;
-        } else
-            return false;
+
+        boolean flag = ((managerList.size() == 0) ? true : false);
+        return flag;
     }
 
     public static void addState(Manager pos) {
         managerList.add(pos);
     }
 
-    private static Manager getItemAtIndex(int index) {
+    public static Manager getItemAtIndex(int index) {
         return managerList.get(index);
     }
 
@@ -41,7 +40,5 @@ public class ManagerList {
             }
             return -1;
         }
-
     }
-
 }
