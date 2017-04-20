@@ -5,83 +5,91 @@ import java.util.*;
 public class Manager {
 
     // Object Attributes
-    private static int[] order;
-    private static List<Double> score;
-    private static String[] position;
+    public int[] order;
+    public double[] score;
+    public String[] position;
 
     // Constructor
     public Manager(){
-        position = new String[9];
-        score = new ArrayList<Double>();
-        order = new int[9];
+        this.score = new double[9];;
+        this.position = new String[9];
+        this.order = new int[9];
 
         for (int i = 0; i < 9; i++) {
-            order[i] = 0;
-            score.add(i, 0.5);
+            this.order[i] = 0;
+            this.score[i] = 0.5;
         }
     }
+
+    public Manager(Manager other){
+        this.score = other.score;
+        this.position = other.position;
+        this.order = other.order;
+    }
     
+    public void print(){ 
+        for (int i = 0; i < 9; i++) {
+            System.out.print(order[i] + " ");
+        }
+        System.out.println(" ");
+        for (int i = 0; i < 9; i++) {
+            System.out.print(position[i] + " ");
+        } 
+        System.out.println(" ");
+        for (int i = 0; i < 9; i++) {
+            System.out.print(score[i] + " ");
+        }
+        System.out.println("\n");
+    }
+
     /*
         Returns the highest score so that the better 
         move for this state may be played by the bot
     */
-    public static int getHighestScore() {
+    public int getHighestScore() {
         int checker = 0;
         for (int i = 1; i < 9; i++) {
-            if (score.get(i) > score.get(checker)) {
+            if (score[i] > score[checker]) {
                 checker = i;
             }
         }
-        System.out.println("score: " + score);
-        System.out.println("High: " + score.get(checker));
+        // System.out.println("score: " + score.size());
+        // System.out.println("High: " + score[checker]);
         return checker;
     }
 
-    public static void setOrderWith(int[] turnNumber) {
-        order = turnNumber;
-    }
-
-    /*
-        posNeg - Positive or Negative (True / False)
-        Score will increase when positive move is made and decrease for a bad move
-    */
-    public static void setScoreAtIndex(int index, boolean posNeg) {
-        double value;
-        if (posNeg){
-            value = score.get(index) + 0.1;
-            score.set(index, value);
-            System.out.println("plus: " + score);
-        } else {
-            value = score.get(index) - 0.1;
-            score.set(index, value);
-            System.out.println("minus: " + score);
-        }
-    }
-    public static void setScore(List<Double> sc) {
-        score = sc;
+    public void setScore(double[] sc) {
+        double [] clonedSc = (double[])sc.clone();
+        this.score = clonedSc;
     }
 
     // sets the position of a state
-    public static void setPosition(String[] pos) {
-        position = pos;
+    public void setPosition(String[] pos) {
+        String [] clonedPos = (String[])pos.clone();
+        position = clonedPos;
+    }
+
+    public void setOrderWith(int[] turnNumber) {
+        int [] clonedTurn= (int[])turnNumber.clone();
+        order = clonedTurn;
     }
 
     // Checks if all possible moves have the same score
-    public static boolean isEqualScore() {
-        double checker = score.get(0);
+    public boolean isEqualScore() {
+        double checker = score[0];
         for (int i = 1; i < 9; i++) {
-            if (score.get(i) != checker) {
+            if (score[i] != checker) {
                 return false;
             }
         }
         return true;
     }
 
-    public static double getScoreAtIndex(int index) {
-        return score.get(index);
+    public double getScoreAtIndex(int index) {
+        return score[index];
     }  
 
-    public static boolean compare (String[] pos, int[] currentOrder, int count) {
+    public boolean compare (String[] pos, int[] currentOrder, int count) {
         boolean flag = true;
         for (int i = 1; i <= count; i++) {
             for (int j = 0; j < 9; j++) {

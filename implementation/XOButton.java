@@ -14,7 +14,7 @@ public class XOButton extends JButton implements ActionListener{
 	int location_button;
 	Reinforcement lib;
 	ManagerList managerList;
-	int indexOfManager = 0;
+	int indexOfManager = -1;
 	int select;
 	/*
 	0:nothing
@@ -36,6 +36,8 @@ public class XOButton extends JButton implements ActionListener{
 			lib.buttons[i].setIcon(null);
 		}
 		indexOfManager = 0;
+		lib.reinit();
+		managerList.print();
 	}
 
 	private void generateRandomMove() {
@@ -53,11 +55,12 @@ public class XOButton extends JButton implements ActionListener{
 		int index = managerList.doesExist(lib.position, lib.order, lib.count);
 		if (index == -1) {
 			Manager newManager = new Manager();
-			// Add position to list
+		// 	// Add position to list
 			newManager.setPosition(lib.position);
 			newManager.setScore(lib.score);
 			newManager.setOrderWith(lib.order);
-			// Push to ManagerList
+		// 	// Push to ManagerList
+			// newManager.print();
 			managerList.addState(newManager);
 		} else {
 			managerList.getItemAtIndex(index).setScore(lib.score);
@@ -65,6 +68,7 @@ public class XOButton extends JButton implements ActionListener{
 
 		resetBoard();
 		lib.position = new String[9];
+		lib.order = new int[9];
 		lib.count = 0;
 		lib.pick = 1;
 	}
@@ -87,6 +91,7 @@ public class XOButton extends JButton implements ActionListener{
 
 		resetBoard();
 		lib.position = new String[9];
+		lib.order = new int[9];
 		lib.count = 0;
 		lib.pick = 0;
 	}
@@ -95,6 +100,7 @@ public class XOButton extends JButton implements ActionListener{
 		System.out.println("NO ONE WIN");
 		resetBoard();
 		lib.position = new String[9];
+		lib.order = new int[9];
 		lib.count = 0;
 		lib.pick = 1;
 	}
@@ -110,13 +116,16 @@ public class XOButton extends JButton implements ActionListener{
 			//lib.pick = ((lib.count > 8) ? true  : false);
 			//this.removeActionListener(this);
 			lib.count++;
+
 			lib.order[location_button] = lib.count;
 			// lib.printOrder();
 			//TimeUnit.SECONDS.sleep(1);
 			if(lib.check_forX())
 			{
-				lib.score.set(lib.count, lib.score.get(lib.count) + 0.1);
-				lib.score.set((lib.count-1), lib.score.get(lib.count-1) + 0.1);
+				if (lib.count >= 2){
+					lib.score[lib.count-1] = lib.score[lib.count-1] + 0.1;
+					lib.score[lib.count-2] = lib.score[lib.count-2] - 0.1;
+				}
 				resetWin();
 
 			}
@@ -128,10 +137,10 @@ public class XOButton extends JButton implements ActionListener{
 			{
 				if (managerList.isEmpty()) {
 					generateRandomMove();
+
 				} else {
 					
 					indexOfManager = managerList.doesExist(lib.position, lib.order, lib.count);
-					System.out.println(indexOfManager);
 					// @ TODO - IF STATES DON'T EXIST
 					if (indexOfManager == -1) {
 						generateRandomMove();
@@ -165,7 +174,8 @@ public class XOButton extends JButton implements ActionListener{
 		
 				if(lib.check_forO())
 				{
-					lib.score.set(lib.count, lib.score.get(lib.count) + 0.1);
+					System.out.println(lib.count);
+					lib.score[lib.count-1] = lib.score[lib.count-1] + 0.1;
 					resetLost();
 
 				}

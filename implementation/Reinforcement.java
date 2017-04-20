@@ -6,14 +6,22 @@ class Reinforcement{
 
 	public static String[] position = new String[9];
 	public static int[] order = new int[9];
-	public static List<Double> score = new ArrayList<Double>();
+	public static double[] score = new double[9];
+	// public static ArrayList<Double> score;
 	public static XOButton buttons[] = new XOButton[9];
 	public static int count = 0;
 	public static int pick = 1;
 
 	public Reinforcement(){
 		for (int i = 0; i < 9; i++) {
-            score.add(i, 0.5);
+            score[i] = 0.5;
+        }
+	}
+
+	public static void reinit() {
+		// score.clear();
+		for (int i = 0; i < 9; i++) {
+            score[i] = 0.5;
         }
 	}
 
@@ -28,13 +36,6 @@ class Reinforcement{
 		}
 		return hold;
 	}
-
-	// public static void printOrder(){ 
-	// 	for (int i = 0; i < 9; i++) {
-	// 		System.out.print(order[i] + " ");
-	// 	}
-	// 	System.out.println(" ");
-	// }
 
 	public static boolean check_forX()
 	{

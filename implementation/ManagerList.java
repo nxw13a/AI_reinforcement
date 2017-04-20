@@ -5,11 +5,7 @@ import java.util.*;
 public class ManagerList {
 
     // Object Attributes
-    private static List<Manager> managerList;
-
-    public ManagerList() {
-        managerList = new ArrayList<Manager>();
-    }
+    public static ArrayList<Manager> managerList = new ArrayList<Manager>();
 
     public static int getSize() {
         return managerList.size();
@@ -22,7 +18,8 @@ public class ManagerList {
     }
 
     public static void addState(Manager pos) {
-        managerList.add(pos);
+        Manager temp = new Manager(pos);
+        managerList.add(temp);
     }
 
     public static Manager getItemAtIndex(int index) {
@@ -38,23 +35,10 @@ public class ManagerList {
         return -1;
     }
 
-    // public static String stringBuild(String[] pos) {
-    //     String temp = "";
-    //     for (int i = 1; i < 9; i++) {
-    //         temp += pos[i];
-    //     }
-    //     return temp;
-    // }
-
-    // public static int isSubset(String[] pos) {
-    //     for (int i = 0; i < getSize(); i++) {
-    //         System.out.println("getItemAtIndex(i).getPosition(): " + getItemAtIndex(i).getPosition());
-    //         System.out.println("stringBuild(pos): " + stringBuild(pos));
-    //         if (getItemAtIndex(i).getPosition().contains(stringBuild(pos))){
-    //             System.out.println("true");
-    //             return i;
-    //         }
-    //     }
-    //     return -1;
-    // }
+    public static void print(){ 
+        for (int i = 0; i < getSize(); i++) {
+            getItemAtIndex(i).print();
+        }
+        System.out.println(" ");
+    }
 }
