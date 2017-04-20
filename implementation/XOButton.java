@@ -55,12 +55,11 @@ public class XOButton extends JButton implements ActionListener{
 		int index = managerList.doesExist(lib.position, lib.order, lib.count);
 		if (index == -1) {
 			Manager newManager = new Manager();
-		// 	// Add position to list
+			// Add position to list
 			newManager.setPosition(lib.position);
 			newManager.setScore(lib.score);
 			newManager.setOrderWith(lib.order);
-		// 	// Push to ManagerList
-			// newManager.print();
+			// Push to ManagerList
 			managerList.addState(newManager);
 		} else {
 			managerList.getItemAtIndex(index).setScore(lib.score);
@@ -170,7 +169,6 @@ public class XOButton extends JButton implements ActionListener{
 				lib.count++;
 
 				lib.order[select] = lib.count;
-				// lib.printOrder();
 		
 				if(lib.check_forO())
 				{

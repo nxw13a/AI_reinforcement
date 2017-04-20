@@ -49,12 +49,10 @@ public class Manager {
     public int getHighestScore() {
         int checker = 0;
         for (int i = 1; i < 9; i++) {
-            if (score[i] > score[checker]) {
+            if (this.score[i] > this.score[checker]) {
                 checker = i;
             }
         }
-        // System.out.println("score: " + score.size());
-        // System.out.println("High: " + score[checker]);
         return checker;
     }
 
@@ -66,12 +64,12 @@ public class Manager {
     // sets the position of a state
     public void setPosition(String[] pos) {
         String [] clonedPos = (String[])pos.clone();
-        position = clonedPos;
+        this.position = clonedPos;
     }
 
     public void setOrderWith(int[] turnNumber) {
         int [] clonedTurn= (int[])turnNumber.clone();
-        order = clonedTurn;
+        this.order = clonedTurn;
     }
 
     // Checks if all possible moves have the same score
@@ -86,20 +84,20 @@ public class Manager {
     }
 
     public double getScoreAtIndex(int index) {
-        return score[index];
+        return this.score[index];
     }  
 
     public boolean compare (String[] pos, int[] currentOrder, int count) {
         boolean flag = true;
         for (int i = 1; i <= count; i++) {
             for (int j = 0; j < 9; j++) {
-                if ((currentOrder[j] != i) && (order[j] != i)){
+                if ((currentOrder[j] != i) && (this.order[j] != i)){
                     flag = false;
                 } else {
                     flag = true;
                 }
                 if (flag) {
-                    if (pos[j] != position[j]){
+                    if (pos[j] != this.position[j]){
                         return false;
                     }
                 }
