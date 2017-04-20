@@ -1,6 +1,7 @@
 package implementation;
 
 import java.util.*;
+import java.io.*;
 
 public class ManagerList {
 
@@ -41,4 +42,12 @@ public class ManagerList {
         }
         System.out.println(" ");
     }
+
+    public static void printToFile(){ 
+        for (int i = 0; i < getSize(); i++) {
+            getItemAtIndex(i).printToFile();
+        }
+    }
+
+    
 }

@@ -1,9 +1,11 @@
 package implementation;
-
-import javax.swing.JPanel;
-import javax.swing.JFrame;
 import java.awt.GridLayout;
 import java.util.ArrayList;
+
+import java.awt.event.*;
+import javax.swing.*;
+import java.io.*;
+import java.util.*;
 
 public class TicTacToe extends JFrame{
 	JPanel p=new JPanel();

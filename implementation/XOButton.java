@@ -37,7 +37,7 @@ public class XOButton extends JButton implements ActionListener{
 		}
 		indexOfManager = 0;
 		lib.reinit();
-		managerList.print();
+		managerList.printToFile();
 	}
 
 	private void generateRandomMove() {

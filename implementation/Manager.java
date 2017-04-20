@@ -1,6 +1,7 @@
 package implementation;
 
 import java.util.*;
+import java.io.*;
 
 public class Manager {
 
@@ -8,6 +9,8 @@ public class Manager {
     public int[] order;
     public double[] score;
     public String[] position;
+    public static BufferedWriter writer = null;
+    public static FileWriter fw = null;
 
     // Constructor
     public Manager(){
@@ -40,6 +43,56 @@ public class Manager {
             System.out.print(score[i] + " ");
         }
         System.out.println("\n");
+    }
+
+    public void printToFile(){ 
+
+        File varTmpDir = new File("data.txt");
+        boolean exists = varTmpDir.exists();
+
+
+        try {
+
+            if (!exists) {
+                varTmpDir.createNewFile();
+            }
+
+            fw = new FileWriter(varTmpDir.getAbsoluteFile(), true);
+            writer = new BufferedWriter(fw);
+            writer.write("Order of moves: ");
+            for (int i = 0; i < 9; i++) {
+                writer.write(order[i] + " ");
+            }
+            writer.write("\nFinal State:");
+            for (int i = 0; i < 9; i++) {
+                writer.write(position[i] + " ");
+            } 
+            writer.write("\nReinforcement points: ");
+            for (int i = 0; i < 9; i++) {
+                writer.write(score[i] + " ");
+            }
+            writer.write("\n\n");
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+
+            try {
+
+                if (writer != null)
+                    writer.close();
+
+                if (fw != null)
+                    fw.close();
+
+            } catch (IOException ex) {
+
+                ex.printStackTrace();
+
+            }
+        }
+
+        
     }
 
     /*
