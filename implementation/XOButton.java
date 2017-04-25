@@ -38,6 +38,8 @@ public class XOButton extends JButton implements ActionListener{
 		indexOfManager = 0;
 		lib.reinit();
 		managerList.printToFile();
+		// managerList.print();
+
 	}
 
 	private void generateRandomMove() {
@@ -62,7 +64,9 @@ public class XOButton extends JButton implements ActionListener{
 			// Push to ManagerList
 			managerList.addState(newManager);
 		} else {
-			managerList.getItemAtIndex(index).setScore(lib.score);
+			// System.out.println("lib.count: " + lib.count);
+			managerList.getItemAtIndex(index).updateScore(location_button, true);
+			managerList.getItemAtIndex(index).updateScore(select, false);
 		}
 
 		resetBoard();
@@ -85,7 +89,8 @@ public class XOButton extends JButton implements ActionListener{
 			// Push to ManagerList
 			managerList.addState(newManager);
 		} else {
-			managerList.getItemAtIndex(index).setScore(lib.score);
+			// System.out.println("lib.count: " + lib.count);
+			managerList.getItemAtIndex(index).updateScore(select, true);
 		}
 
 		resetBoard();
@@ -121,10 +126,6 @@ public class XOButton extends JButton implements ActionListener{
 			//TimeUnit.SECONDS.sleep(1);
 			if(lib.check_forX())
 			{
-				if (lib.count >= 2){
-					lib.score[lib.count-1] = lib.score[lib.count-1] + 0.1;
-					lib.score[lib.count-2] = lib.score[lib.count-2] - 0.1;
-				}
 				resetWin();
 
 			}
@@ -147,18 +148,15 @@ public class XOButton extends JButton implements ActionListener{
 						if (managerList.getItemAtIndex(indexOfManager).isEqualScore()) {
 							generateRandomMove();
 						} else {
-							select = managerList.getItemAtIndex(indexOfManager).getHighestScore();
-							if (lib.position[select] != null){
+							select = managerList.getHighestScore(lib.position, lib.order, lib.count);
+							
+							if (select == -1) {
 								generateRandomMove();
-								// @ TODO - GET NEXT OR EQUAL
-								// Manager currentIndex = managerList.getItemAtIndex(indexOfManager);
-
-								// select = 0;
-								// for (int i = 1; i< 9; i++) {
-								// 	if ((currentIndex.getScoreAtIndex(select) <= currentIndex.getScoreAtIndex(i)) && (currentIndex.getScoreAtIndex(select) <= currentIndex.getScoreAtIndex(select))){
-								// 		select = i;
-								// 	}
-								// }
+							} else {
+								select = managerList.getItemAtIndex(select).getHighestScore();
+								if (lib.position[select] != null){
+									generateRandomMove();
+								}
 							}
 						}
 					}
@@ -172,8 +170,6 @@ public class XOButton extends JButton implements ActionListener{
 		
 				if(lib.check_forO())
 				{
-					System.out.println(lib.count);
-					lib.score[lib.count-1] = lib.score[lib.count-1] + 0.1;
 					resetLost();
 
 				}
