@@ -1,0 +1,2648 @@
+Order of moves: 3 5 1 2 0 0 0 0 4 
+Final State:X X X O null null null null O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 3 5 1 2 0 0 0 0 4 
+Final State:X X X O null null null null O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 2 3 1 5 7 8 4 9 6 
+Final State:O X X X X O O X O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 3 5 1 2 0 0 0 0 4 
+Final State:X X X O null null null null O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 2 3 1 5 7 8 4 9 6 
+Final State:O X X X X O O X O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 4 2 7 0 6 5 
+Final State:X null X O O X null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 3 5 1 2 0 0 0 0 4 
+Final State:X X X O null null null null O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 2 3 1 5 7 8 4 9 6 
+Final State:O X X X X O O X O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 4 2 7 0 6 5 
+Final State:X null X O O X null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 2 3 4 6 7 0 0 5 
+Final State:X O X O O X null null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 3 5 1 2 0 0 0 0 4 
+Final State:X X X O null null null null O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 2 3 1 5 7 8 4 9 6 
+Final State:O X X X X O O X O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 4 2 7 0 6 5 
+Final State:X null X O O X null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 2 3 4 6 7 0 0 5 
+Final State:X O X O O X null null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 2 3 0 7 4 6 0 5 
+Final State:X O X null X O O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 4 3 2 0 7 0 6 5 
+Final State:X O X O null X null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 4 3 2 0 7 0 6 5 
+Final State:X O X O null X null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 7 6 4 5 0 2 
+Final State:X null X X O O X null O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 4 3 2 0 7 0 6 5 
+Final State:X O X O null X null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 7 6 4 5 0 2 
+Final State:X null X X O O X null O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 3 4 0 1 2 0 5 0 0 
+Final State:X O null X O null X null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 4 3 2 0 7 0 6 5 
+Final State:X O X O null X null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 7 6 4 5 0 2 
+Final State:X null X X O O X null O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 3 4 0 1 2 0 5 0 0 
+Final State:X O null X O null X null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 2 0 5 0 0 3 4 0 
+Final State:X O null X null null X O null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 4 3 2 0 7 0 6 5 
+Final State:X O X O null X null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 7 6 4 5 0 2 
+Final State:X null X X O O X null O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 3 4 0 1 2 0 5 0 0 
+Final State:X O null X O null X null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 2 0 5 0 0 3 4 0 
+Final State:X O null X null null X O null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 5 3 6 2 4 0 0 
+Final State:X X X X O O O null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 4 3 2 0 7 0 6 5 
+Final State:X O X O null X null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 7 6 4 5 0 2 
+Final State:X null X X O O X null O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 3 4 0 1 2 0 5 0 0 
+Final State:X O null X O null X null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 2 0 5 0 0 3 4 0 
+Final State:X O null X null null X O null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 5 3 6 2 4 0 0 
+Final State:X X X X O O O null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 2 6 4 0 0 5 
+Final State:X null X O O O null null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 4 3 2 0 7 0 6 5 
+Final State:X O X O null X null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 7 6 4 5 0 2 
+Final State:X null X X O O X null O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 3 4 0 1 2 0 5 0 0 
+Final State:X O null X O null X null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 2 0 5 0 0 3 4 0 
+Final State:X O null X null null X O null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 5 3 6 2 4 0 0 
+Final State:X X X X O O O null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 2 6 4 0 0 5 
+Final State:X null X O O O null null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 2 3 0 6 7 4 0 5 
+Final State:X O X null O X O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 4 3 2 0 7 0 6 5 
+Final State:X O X O null X null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 7 6 4 5 0 2 
+Final State:X null X X O O X null O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 3 4 0 1 2 0 5 0 0 
+Final State:X O null X O null X null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 2 0 5 0 0 3 4 0 
+Final State:X O null X null null X O null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 5 3 6 2 4 0 0 
+Final State:X X X X O O O null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 2 6 4 0 0 5 
+Final State:X null X O O O null null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 2 3 0 6 7 4 0 5 
+Final State:X O X null O X O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 2 3 6 7 4 0 0 5 
+Final State:X O X O X O null null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 4 3 2 0 7 0 6 5 
+Final State:X O X O null X null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 7 6 4 5 0 2 
+Final State:X null X X O O X null O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 3 4 0 1 2 0 5 0 0 
+Final State:X O null X O null X null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 2 0 5 0 0 3 4 0 
+Final State:X O null X null null X O null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 5 3 6 2 4 0 0 
+Final State:X X X X O O O null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 2 6 4 0 0 5 
+Final State:X null X O O O null null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 2 3 0 6 7 4 0 5 
+Final State:X O X null O X O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 2 3 6 7 4 0 0 5 
+Final State:X O X O X O null null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 0 6 7 2 4 5 
+Final State:X null X null O X O O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 4 3 2 0 7 0 6 5 
+Final State:X O X O null X null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 7 6 4 5 0 2 
+Final State:X null X X O O X null O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 3 4 0 1 2 0 5 0 0 
+Final State:X O null X O null X null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 2 0 5 0 0 3 4 0 
+Final State:X O null X null null X O null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 5 3 6 2 4 0 0 
+Final State:X X X X O O O null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 2 6 4 0 0 5 
+Final State:X null X O O O null null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 2 3 0 6 7 4 0 5 
+Final State:X O X null O X O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 2 3 6 7 4 0 0 5 
+Final State:X O X O X O null null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 0 6 7 2 4 5 
+Final State:X null X null O X O O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 5 3 2 0 0 0 0 4 
+Final State:X X X O null null null null O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 4 3 2 0 7 0 6 5 
+Final State:X O X O null X null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 7 6 4 5 0 2 
+Final State:X null X X O O X null O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 3 4 0 1 2 0 5 0 0 
+Final State:X O null X O null X null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 2 0 5 0 0 3 4 0 
+Final State:X O null X null null X O null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 5 3 6 2 4 0 0 
+Final State:X X X X O O O null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 2 6 4 0 0 5 
+Final State:X null X O O O null null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 2 3 0 6 7 4 0 5 
+Final State:X O X null O X O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 2 3 6 7 4 0 0 5 
+Final State:X O X O X O null null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 0 6 7 2 4 5 
+Final State:X null X null O X O O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 5 3 2 0 0 0 0 4 
+Final State:X X X O null null null null O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 5 3 0 0 0 0 4 2 
+Final State:X X X null null null null O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 4 3 2 0 7 0 6 5 
+Final State:X O X O null X null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 7 6 4 5 0 2 
+Final State:X null X X O O X null O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 3 4 0 1 2 0 5 0 0 
+Final State:X O null X O null X null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 2 0 5 0 0 3 4 0 
+Final State:X O null X null null X O null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 5 3 6 2 4 0 0 
+Final State:X X X X O O O null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 2 6 4 0 0 5 
+Final State:X null X O O O null null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 2 3 0 6 7 4 0 5 
+Final State:X O X null O X O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 2 3 6 7 4 0 0 5 
+Final State:X O X O X O null null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 0 6 7 2 4 5 
+Final State:X null X null O X O O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 5 3 2 0 0 0 0 4 
+Final State:X X X O null null null null O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 5 3 0 0 0 0 4 2 
+Final State:X X X null null null null O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 2 0 5 0 0 4 3 
+Final State:X null O null X null null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 4 3 2 0 7 0 6 5 
+Final State:X O X O null X null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 7 6 4 5 0 2 
+Final State:X null X X O O X null O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 3 4 0 1 2 0 5 0 0 
+Final State:X O null X O null X null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 2 0 5 0 0 3 4 0 
+Final State:X O null X null null X O null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 5 3 6 2 4 0 0 
+Final State:X X X X O O O null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 2 6 4 0 0 5 
+Final State:X null X O O O null null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 2 3 0 6 7 4 0 5 
+Final State:X O X null O X O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 2 3 6 7 4 0 0 5 
+Final State:X O X O X O null null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 0 6 7 2 4 5 
+Final State:X null X null O X O O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 5 3 2 0 0 0 0 4 
+Final State:X X X O null null null null O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 5 3 0 0 0 0 4 2 
+Final State:X X X null null null null O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 2 0 5 0 0 4 3 
+Final State:X null O null X null null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 4 3 6 7 0 0 2 5 
+Final State:X O X O X null null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 4 6 0 0 2 5 
+Final State:X X X O O null null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 4 6 0 0 2 5 
+Final State:X X X O O null null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 7 6 0 5 2 4 
+Final State:X null X X O null X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 4 6 0 0 2 5 
+Final State:X X X O O null null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 7 6 0 5 2 4 
+Final State:X null X X O null X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 2 4 6 0 5 7 3 
+Final State:X null O O O null X X X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 4 6 0 0 2 5 
+Final State:X X X O O null null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 7 6 0 5 2 4 
+Final State:X null X X O null X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 2 4 6 0 5 7 3 
+Final State:X null O O O null X X X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 2 3 0 7 4 0 6 5 
+Final State:X O X null X O null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 4 6 0 0 2 5 
+Final State:X X X O O null null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 7 6 0 5 2 4 
+Final State:X null X X O null X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 2 4 6 0 5 7 3 
+Final State:X null O O O null X X X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 2 3 0 7 4 0 6 5 
+Final State:X O X null X O null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 0 2 6 4 0 5 
+Final State:X X X null O O O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 4 6 0 0 2 5 
+Final State:X X X O O null null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 7 6 0 5 2 4 
+Final State:X null X X O null X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 2 4 6 0 5 7 3 
+Final State:X null O O O null X X X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 2 3 0 7 4 0 6 5 
+Final State:X O X null X O null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 0 2 6 4 0 5 
+Final State:X X X null O O O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 5 2 4 8 6 0 7 3 
+Final State:X X O O O O null X X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 4 6 0 0 2 5 
+Final State:X X X O O null null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 7 6 0 5 2 4 
+Final State:X null X X O null X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 2 4 6 0 5 7 3 
+Final State:X null O O O null X X X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 2 3 0 7 4 0 6 5 
+Final State:X O X null X O null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 0 2 6 4 0 5 
+Final State:X X X null O O O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 5 2 4 8 6 0 7 3 
+Final State:X X O O O O null X X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 3 5 2 0 4 0 0 0 
+Final State:X X X O null O null null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 4 6 0 0 2 5 
+Final State:X X X O O null null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 7 6 0 5 2 4 
+Final State:X null X X O null X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 2 4 6 0 5 7 3 
+Final State:X null O O O null X X X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 2 3 0 7 4 0 6 5 
+Final State:X O X null X O null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 0 2 6 4 0 5 
+Final State:X X X null O O O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 5 2 4 8 6 0 7 3 
+Final State:X X O O O O null X X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 3 5 2 0 4 0 0 0 
+Final State:X X X O null O null null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 3 4 0 7 6 0 2 5 
+Final State:X X O null X O null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 4 6 0 0 2 5 
+Final State:X X X O O null null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 7 6 0 5 2 4 
+Final State:X null X X O null X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 2 4 6 0 5 7 3 
+Final State:X null O O O null X X X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 2 3 0 7 4 0 6 5 
+Final State:X O X null X O null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 0 2 6 4 0 5 
+Final State:X X X null O O O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 5 2 4 8 6 0 7 3 
+Final State:X X O O O O null X X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 3 5 2 0 4 0 0 0 
+Final State:X X X O null O null null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 3 4 0 7 6 0 2 5 
+Final State:X X O null X O null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 3 2 7 6 0 8 4 5 
+Final State:X X O X O null O O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 2 3 4 0 7 0 6 5 
+Final State:X O X O null X null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 2 3 4 0 7 0 6 5 
+Final State:X O X O null X null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 4 3 0 2 6 7 8 5 
+Final State:X O X null O O X O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 2 3 4 0 7 0 6 5 
+Final State:X O X O null X null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 4 3 0 2 6 7 8 5 
+Final State:X O X null O O X O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 6 3 7 0 0 5 2 4 
+Final State:X O X X null null X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 2 3 4 0 7 0 6 5 
+Final State:X O X O null X null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 4 3 0 2 6 7 8 5 
+Final State:X O X null O O X O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 6 3 7 0 0 5 2 4 
+Final State:X O X X null null X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 2 5 4 0 3 0 0 
+Final State:X null O X O null X null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 2 3 4 0 7 0 6 5 
+Final State:X O X O null X null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 4 3 0 2 6 7 8 5 
+Final State:X O X null O O X O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 6 3 7 0 0 5 2 4 
+Final State:X O X X null null X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 2 5 4 0 3 0 0 
+Final State:X null O X O null X null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 4 6 0 2 0 5 
+Final State:X X X O O null O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 2 3 4 0 7 0 6 5 
+Final State:X O X O null X null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 4 3 0 2 6 7 8 5 
+Final State:X O X null O O X O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 6 3 7 0 0 5 2 4 
+Final State:X O X X null null X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 2 5 4 0 3 0 0 
+Final State:X null O X O null X null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 4 6 0 2 0 5 
+Final State:X X X O O null O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 0 6 2 4 0 5 
+Final State:X X X null O O O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 2 3 4 0 7 0 6 5 
+Final State:X O X O null X null O X 
+Reinforcement points: 0.0 0.5 0.5 0.5 0.5 0.55 0.5 0.5 0.5 
+
+Order of moves: 1 4 3 0 2 6 7 8 5 
+Final State:X O X null O O X O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 6 3 7 0 0 5 2 4 
+Final State:X O X X null null X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 2 5 4 0 3 0 0 
+Final State:X null O X O null X null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 4 6 0 2 0 5 
+Final State:X X X O O null O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 0 6 2 4 0 5 
+Final State:X X X null O O O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 2 3 4 0 7 0 6 5 
+Final State:X O X O null X null O X 
+Reinforcement points: 0.0 0.5 0.5 0.5 0.5 0.55 0.5 0.5 0.5 
+
+Order of moves: 1 4 3 0 2 6 7 8 5 
+Final State:X O X null O O X O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 6 3 7 0 0 5 2 4 
+Final State:X O X X null null X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 2 5 4 0 3 0 0 
+Final State:X null O X O null X null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 4 6 0 2 0 5 
+Final State:X X X O O null O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 0 6 2 4 0 5 
+Final State:X X X null O O O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 6 0 2 0 4 5 
+Final State:X X X O null O null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 2 3 4 0 7 0 6 5 
+Final State:X O X O null X null O X 
+Reinforcement points: 0.0 0.5 0.5 0.5 0.5 0.55 0.5 0.5 0.5 
+
+Order of moves: 1 4 3 0 2 6 7 8 5 
+Final State:X O X null O O X O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 6 3 7 0 0 5 2 4 
+Final State:X O X X null null X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 2 5 4 0 3 0 0 
+Final State:X null O X O null X null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 4 6 0 2 0 5 
+Final State:X X X O O null O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 0 6 2 4 0 5 
+Final State:X X X null O O O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 6 0 2 0 4 5 
+Final State:X X X O null O null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 6 3 4 7 2 0 0 5 
+Final State:X O X O X O null null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 2 3 4 0 7 0 6 5 
+Final State:X O X O null X null O X 
+Reinforcement points: 0.0 0.5 0.5 0.5 0.5 0.55 0.5 0.5 0.5 
+
+Order of moves: 1 4 3 0 2 6 7 8 5 
+Final State:X O X null O O X O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 6 3 7 0 0 5 2 4 
+Final State:X O X X null null X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 2 5 4 0 3 0 0 
+Final State:X null O X O null X null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 4 6 0 2 0 5 
+Final State:X X X O O null O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 0 6 2 4 0 5 
+Final State:X X X null O O O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 6 0 2 0 4 5 
+Final State:X X X O null O null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 6 3 4 7 2 0 0 5 
+Final State:X O X O X O null null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 5 3 0 0 2 0 0 4 
+Final State:X X X null null O null null O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 2 3 4 0 7 0 6 5 
+Final State:X O X O null X null O X 
+Reinforcement points: 0.0 0.5 0.5 0.5 0.5 0.55 0.5 0.5 0.5 
+
+Order of moves: 1 4 3 0 2 6 7 8 5 
+Final State:X O X null O O X O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 6 3 7 0 0 5 2 4 
+Final State:X O X X null null X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 2 5 4 0 3 0 0 
+Final State:X null O X O null X null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 4 6 0 2 0 5 
+Final State:X X X O O null O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 0 6 2 4 0 5 
+Final State:X X X null O O O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 6 0 2 0 4 5 
+Final State:X X X O null O null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 6 3 4 7 2 0 0 5 
+Final State:X O X O X O null null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 5 3 0 0 2 0 0 4 
+Final State:X X X null null O null null O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 5 3 0 0 2 4 0 0 
+Final State:X X X null null O O null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 2 3 4 0 7 0 6 5 
+Final State:X O X O null X null O X 
+Reinforcement points: 0.0 0.5 0.5 0.5 0.5 0.55 0.5 0.5 0.5 
+
+Order of moves: 1 4 3 0 2 6 7 8 5 
+Final State:X O X null O O X O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 6 3 7 0 0 5 2 4 
+Final State:X O X X null null X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 2 5 4 0 3 0 0 
+Final State:X null O X O null X null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 4 6 0 2 0 5 
+Final State:X X X O O null O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 0 6 2 4 0 5 
+Final State:X X X null O O O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 6 0 2 0 4 5 
+Final State:X X X O null O null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 6 3 4 7 2 0 0 5 
+Final State:X O X O X O null null X 
+Reinforcement points: 0.0 0.5 0.5 0.5 0.55 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 5 3 0 0 2 0 0 4 
+Final State:X X X null null O null null O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 5 3 0 0 2 4 0 0 
+Final State:X X X null null O O null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 2 3 4 0 7 0 6 5 
+Final State:X O X O null X null O X 
+Reinforcement points: 0.0 0.5 0.5 0.5 0.5 0.55 0.5 0.5 0.5 
+
+Order of moves: 1 4 3 0 2 6 7 8 5 
+Final State:X O X null O O X O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 6 3 7 0 0 5 2 4 
+Final State:X O X X null null X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 2 5 4 0 3 0 0 
+Final State:X null O X O null X null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 4 6 0 2 0 5 
+Final State:X X X O O null O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 0 6 2 4 0 5 
+Final State:X X X null O O O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 6 0 2 0 4 5 
+Final State:X X X O null O null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 6 3 4 7 2 0 0 5 
+Final State:X O X O X O null null X 
+Reinforcement points: 0.0 0.5 0.5 0.5 0.55 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 5 3 0 0 2 0 0 4 
+Final State:X X X null null O null null O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 5 3 0 0 2 4 0 0 
+Final State:X X X null null O O null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 4 3 0 7 2 6 0 5 
+Final State:X O X null X O O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 0 7 2 5 6 4 
+Final State:X null X null X O X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 0 7 2 5 6 4 
+Final State:X null X null X O X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 4 6 2 0 0 5 
+Final State:X null X O O O null null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 0 7 2 5 6 4 
+Final State:X null X null X O X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 4 6 2 0 0 5 
+Final State:X null X O O O null null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 0 6 0 5 4 2 
+Final State:X X X null O null X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 0 7 2 5 6 4 
+Final State:X null X null X O X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 4 6 2 0 0 5 
+Final State:X null X O O O null null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 0 6 0 5 4 2 
+Final State:X X X null O null X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 4 3 0 2 0 0 6 5 
+Final State:X O X null O null null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 0 7 2 5 6 4 
+Final State:X null X null X O X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 4 6 2 0 0 5 
+Final State:X null X O O O null null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 0 6 0 5 4 2 
+Final State:X X X null O null X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 4 3 0 2 0 0 6 5 
+Final State:X O X null O null null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 2 5 4 6 0 0 
+Final State:X X X O X O O null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 0 7 2 5 6 4 
+Final State:X null X null X O X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 4 6 2 0 0 5 
+Final State:X null X O O O null null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 0 6 0 5 4 2 
+Final State:X X X null O null X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 4 3 0 2 0 0 6 5 
+Final State:X O X null O null null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 2 5 4 6 0 0 
+Final State:X X X O X O O null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 5 3 4 0 0 2 0 0 
+Final State:X X X O null null O null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 0 7 2 5 6 4 
+Final State:X null X null X O X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 4 6 2 0 0 5 
+Final State:X null X O O O null null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 0 6 0 5 4 2 
+Final State:X X X null O null X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 4 3 0 2 0 0 6 5 
+Final State:X O X null O null null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 2 5 4 6 0 0 
+Final State:X X X O X O O null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 5 3 4 0 0 2 0 0 
+Final State:X X X O null null O null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 5 3 4 0 0 0 2 0 
+Final State:X X X O null null null O null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 0 7 2 5 6 4 
+Final State:X null X null X O X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 4 6 2 0 0 5 
+Final State:X null X O O O null null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 0 6 0 5 4 2 
+Final State:X X X null O null X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 4 3 0 2 0 0 6 5 
+Final State:X O X null O null null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 2 5 4 6 0 0 
+Final State:X X X O X O O null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 5 3 4 0 0 2 0 0 
+Final State:X X X O null null O null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 5 3 4 0 0 0 2 0 
+Final State:X X X O null null null O null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 5 3 0 0 4 2 0 0 
+Final State:X X X null null O O null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 0 7 2 5 6 4 
+Final State:X null X null X O X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 4 6 2 0 0 5 
+Final State:X null X O O O null null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 0 6 0 5 4 2 
+Final State:X X X null O null X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 4 3 0 2 0 0 6 5 
+Final State:X O X null O null null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 2 5 4 6 0 0 
+Final State:X X X O X O O null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 5 3 4 0 0 2 0 0 
+Final State:X X X O null null O null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 5 3 4 0 0 0 2 0 
+Final State:X X X O null null null O null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 5 3 0 0 4 2 0 0 
+Final State:X X X null null O O null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 2 3 0 4 7 6 0 5 
+Final State:X O X null O X O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 0 7 2 5 6 4 
+Final State:X null X null X O X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 4 6 2 0 0 5 
+Final State:X null X O O O null null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 0 6 0 5 4 2 
+Final State:X X X null O null X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 4 3 0 2 0 0 6 5 
+Final State:X O X null O null null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 2 5 4 6 0 0 
+Final State:X X X O X O O null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 5 3 4 0 0 2 0 0 
+Final State:X X X O null null O null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 5 3 4 0 0 0 2 0 
+Final State:X X X O null null null O null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 5 3 0 0 4 2 0 0 
+Final State:X X X null null O O null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 2 3 0 4 7 6 0 5 
+Final State:X O X null O X O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 6 3 0 7 0 4 2 5 
+Final State:X O X null X null O O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 0 7 2 5 6 4 
+Final State:X null X null X O X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 4 6 2 0 0 5 
+Final State:X null X O O O null null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 0 6 0 5 4 2 
+Final State:X X X null O null X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 4 3 0 2 0 0 6 5 
+Final State:X O X null O null null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 2 5 4 6 0 0 
+Final State:X X X O X O O null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 5 3 4 0 0 2 0 0 
+Final State:X X X O null null O null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 5 3 4 0 0 0 2 0 
+Final State:X X X O null null null O null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 5 3 0 0 4 2 0 0 
+Final State:X X X null null O O null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 2 3 0 4 7 6 0 5 
+Final State:X O X null O X O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 6 3 0 7 0 4 2 5 
+Final State:X O X null X null O O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 5 2 4 7 0 6 0 3 
+Final State:X X O O X null O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 0 7 2 5 6 4 
+Final State:X null X null X O X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 4 6 2 0 0 5 
+Final State:X null X O O O null null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 0 6 0 5 4 2 
+Final State:X X X null O null X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 4 3 0 2 0 0 6 5 
+Final State:X O X null O null null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 2 5 4 6 0 0 
+Final State:X X X O X O O null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 5 3 4 0 0 2 0 0 
+Final State:X X X O null null O null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 5 3 4 0 0 0 2 0 
+Final State:X X X O null null null O null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 5 3 0 0 4 2 0 0 
+Final State:X X X null null O O null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 2 3 0 4 7 6 0 5 
+Final State:X O X null O X O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 6 3 0 7 0 4 2 5 
+Final State:X O X null X null O O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 5 2 4 7 0 6 0 3 
+Final State:X X O O X null O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 4 0 5 0 2 0 3 
+Final State:X null O null X null O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 0 7 2 5 6 4 
+Final State:X null X null X O X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 4 6 2 0 0 5 
+Final State:X null X O O O null null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 0 6 0 5 4 2 
+Final State:X X X null O null X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 4 3 0 2 0 0 6 5 
+Final State:X O X null O null null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 2 5 4 6 0 0 
+Final State:X X X O X O O null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 5 3 4 0 0 2 0 0 
+Final State:X X X O null null O null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 5 3 4 0 0 0 2 0 
+Final State:X X X O null null null O null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 5 3 0 0 4 2 0 0 
+Final State:X X X null null O O null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 2 3 0 4 7 6 0 5 
+Final State:X O X null O X O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 6 3 0 7 0 4 2 5 
+Final State:X O X null X null O O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 5 2 4 7 0 6 0 3 
+Final State:X X O O X null O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 4 0 5 0 2 0 3 
+Final State:X null O null X null O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 5 2 8 4 6 7 0 3 
+Final State:X X O O O O X null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 0 7 2 5 6 4 
+Final State:X null X null X O X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 4 6 2 0 0 5 
+Final State:X null X O O O null null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 0 6 0 5 4 2 
+Final State:X X X null O null X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 4 3 0 2 0 0 6 5 
+Final State:X O X null O null null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 2 5 4 6 0 0 
+Final State:X X X O X O O null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 5 3 4 0 0 2 0 0 
+Final State:X X X O null null O null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 5 3 4 0 0 0 2 0 
+Final State:X X X O null null null O null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 5 3 0 0 4 2 0 0 
+Final State:X X X null null O O null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 2 3 0 4 7 6 0 5 
+Final State:X O X null O X O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 6 3 0 7 0 4 2 5 
+Final State:X O X null X null O O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 5 2 4 7 0 6 0 3 
+Final State:X X O O X null O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 4 0 5 0 2 0 3 
+Final State:X null O null X null O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 5 2 8 4 6 7 0 3 
+Final State:X X O O O O X null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 2 4 7 6 0 5 
+Final State:X null X O O X O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 0 7 2 5 6 4 
+Final State:X null X null X O X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 4 6 2 0 0 5 
+Final State:X null X O O O null null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 0 6 0 5 4 2 
+Final State:X X X null O null X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 4 3 0 2 0 0 6 5 
+Final State:X O X null O null null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 2 5 4 6 0 0 
+Final State:X X X O X O O null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 5 3 4 0 0 2 0 0 
+Final State:X X X O null null O null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 5 3 4 0 0 0 2 0 
+Final State:X X X O null null null O null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 5 3 0 0 4 2 0 0 
+Final State:X X X null null O O null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 2 3 0 4 7 6 0 5 
+Final State:X O X null O X O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 6 3 0 7 0 4 2 5 
+Final State:X O X null X null O O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 5 2 4 7 0 6 0 3 
+Final State:X X O O X null O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 4 0 5 0 2 0 3 
+Final State:X null O null X null O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 5 2 8 4 6 7 0 3 
+Final State:X X O O O O X null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 2 4 7 6 0 5 
+Final State:X null X O O X O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 5 3 2 0 0 0 0 4 
+Final State:X X X O null null null null O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 0 7 2 5 6 4 
+Final State:X null X null X O X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 4 6 2 0 0 5 
+Final State:X null X O O O null null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 0 6 0 5 4 2 
+Final State:X X X null O null X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 4 3 0 2 0 0 6 5 
+Final State:X O X null O null null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 2 5 4 6 0 0 
+Final State:X X X O X O O null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 5 3 4 0 0 2 0 0 
+Final State:X X X O null null O null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 5 3 4 0 0 0 2 0 
+Final State:X X X O null null null O null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 5 3 0 0 4 2 0 0 
+Final State:X X X null null O O null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 2 3 0 4 7 6 0 5 
+Final State:X O X null O X O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 6 3 0 7 0 4 2 5 
+Final State:X O X null X null O O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 5 2 4 7 0 6 0 3 
+Final State:X X O O X null O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 4 0 5 0 2 0 3 
+Final State:X null O null X null O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 5 2 8 4 6 7 0 3 
+Final State:X X O O O O X null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 2 4 7 6 0 5 
+Final State:X null X O O X O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 5 3 2 0 0 0 0 4 
+Final State:X X X O null null null null O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 5 3 2 0 4 0 0 0 
+Final State:X X X O null O null null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 0 7 2 5 6 4 
+Final State:X null X null X O X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 4 6 2 0 0 5 
+Final State:X null X O O O null null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 0 6 0 5 4 2 
+Final State:X X X null O null X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 4 3 0 2 0 0 6 5 
+Final State:X O X null O null null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 2 5 4 6 0 0 
+Final State:X X X O X O O null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 5 3 4 0 0 2 0 0 
+Final State:X X X O null null O null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 5 3 4 0 0 0 2 0 
+Final State:X X X O null null null O null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 5 3 0 0 4 2 0 0 
+Final State:X X X null null O O null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 2 3 0 4 7 6 0 5 
+Final State:X O X null O X O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 6 3 0 7 0 4 2 5 
+Final State:X O X null X null O O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 5 2 4 7 0 6 0 3 
+Final State:X X O O X null O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 4 0 5 0 2 0 3 
+Final State:X null O null X null O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 5 2 8 4 6 7 0 3 
+Final State:X X O O O O X null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 2 4 7 6 0 5 
+Final State:X null X O O X O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 5 3 2 0 0 0 0 4 
+Final State:X X X O null null null null O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 5 3 2 0 4 0 0 0 
+Final State:X X X O null O null null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 5 3 0 0 0 4 2 0 
+Final State:X X X null null null O O null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 2 5 0 7 4 6 
+Final State:X null X O X null X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 2 5 0 7 4 6 
+Final State:X null X O X null X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 2 6 4 0 0 5 
+Final State:X null X O O O null null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 2 5 0 7 4 6 
+Final State:X null X O X null X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 2 6 4 0 0 5 
+Final State:X null X O O O null null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 2 0 6 5 0 4 
+Final State:X X X O null O X null O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 2 5 0 7 4 6 
+Final State:X null X O X null X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 2 6 4 0 0 5 
+Final State:X null X O O O null null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 2 0 6 5 0 4 
+Final State:X X X O null O X null O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 8 3 6 5 2 9 7 4 
+Final State:X O X O X O X X O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 2 5 0 7 4 6 
+Final State:X null X O X null X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 2 6 4 0 0 5 
+Final State:X null X O O O null null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 2 0 6 5 0 4 
+Final State:X X X O null O X null O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 8 3 6 5 2 9 7 4 
+Final State:X O X O X O X X O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 2 3 7 6 0 5 0 4 
+Final State:X O X X O null X null O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 2 5 0 7 4 6 
+Final State:X null X O X null X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 2 6 4 0 0 5 
+Final State:X null X O O O null null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 2 0 6 5 0 4 
+Final State:X X X O null O X null O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 8 3 6 5 2 9 7 4 
+Final State:X O X O X O X X O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 2 3 7 6 0 5 0 4 
+Final State:X O X X O null X null O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 4 3 2 7 6 0 0 5 
+Final State:X O X O X O null null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 2 5 0 7 4 6 
+Final State:X null X O X null X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 2 6 4 0 0 5 
+Final State:X null X O O O null null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 2 0 6 5 0 4 
+Final State:X X X O null O X null O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 8 3 6 5 2 9 7 4 
+Final State:X O X O X O X X O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 2 3 7 6 0 5 0 4 
+Final State:X O X X O null X null O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 4 3 2 7 6 0 0 5 
+Final State:X O X O X O null null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 2 0 4 6 5 7 3 
+Final State:X null O null O O X X X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 2 5 0 7 4 6 
+Final State:X null X O X null X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 2 6 4 0 0 5 
+Final State:X null X O O O null null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 2 0 6 5 0 4 
+Final State:X X X O null O X null O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 8 3 6 5 2 9 7 4 
+Final State:X O X O X O X X O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 2 3 7 6 0 5 0 4 
+Final State:X O X X O null X null O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 4 3 2 7 6 0 0 5 
+Final State:X O X O X O null null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 2 0 4 6 5 7 3 
+Final State:X null O null O O X X X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 2 5 0 7 4 6 0 3 
+Final State:X O X null X O O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 2 5 0 7 4 6 
+Final State:X null X O X null X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 2 6 4 0 0 5 
+Final State:X null X O O O null null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 2 0 6 5 0 4 
+Final State:X X X O null O X null O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 8 3 6 5 2 9 7 4 
+Final State:X O X O X O X X O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 2 3 7 6 0 5 0 4 
+Final State:X O X X O null X null O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 4 3 2 7 6 0 0 5 
+Final State:X O X O X O null null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 2 0 4 6 5 7 3 
+Final State:X null O null O O X X X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 2 5 0 7 4 6 0 3 
+Final State:X O X null X O O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 4 6 2 5 0 0 
+Final State:X null X O O O X null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 6 3 7 9 8 4 2 5 
+Final State:X O X X X O O O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 6 3 7 9 8 4 2 5 
+Final State:X O X X X O O O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 0 6 0 4 2 5 
+Final State:X X X null O null O O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 6 3 7 9 8 4 2 5 
+Final State:X O X X X O O O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 0 6 0 4 2 5 
+Final State:X X X null O null O O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 0 0 1 0 2 0 4 0 3 
+Final State:null null O null O null O null O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 2 0 1 0 0 3 0 4 5 
+Final State:O null X null null X null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 2 0 1 0 0 3 0 4 5 
+Final State:O null X null null X null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 4 2 6 0 0 5 
+Final State:X null X O O O null null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 2 0 1 0 0 3 0 4 5 
+Final State:O null X null null X null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 4 2 6 0 0 5 
+Final State:X null X O O O null null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 2 0 5 0 4 0 3 
+Final State:X null O null X null O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 2 0 1 0 0 3 0 4 5 
+Final State:O null X null null X null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 4 2 6 0 0 5 
+Final State:X null X O O O null null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 2 0 5 0 4 0 3 
+Final State:X null O null X null O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 0 4 7 2 6 5 
+Final State:X null X null O X O O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 2 0 1 0 0 3 0 4 5 
+Final State:O null X null null X null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 4 2 6 0 0 5 
+Final State:X null X O O O null null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 2 0 5 0 4 0 3 
+Final State:X null O null X null O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 0 4 7 2 6 5 
+Final State:X null X null O X O O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 5 3 0 0 4 0 0 2 
+Final State:X X X null null O null null O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 3 5 1 2 0 0 4 0 0 
+Final State:X X X O null null O null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 3 5 1 2 0 0 4 0 0 
+Final State:X X X O null null O null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 5 7 1 6 0 2 0 4 3 
+Final State:X X X O null O null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 3 5 1 2 0 0 4 0 0 
+Final State:X X X O null null O null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 5 7 1 6 0 2 0 4 3 
+Final State:X X X O null O null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 2 0 5 0 4 0 3 
+Final State:X null O null X null O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 3 5 1 2 0 0 4 0 0 
+Final State:X X X O null null O null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 5 7 1 6 0 2 0 4 3 
+Final State:X X X O null O null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 2 0 5 0 4 0 3 
+Final State:X null O null X null O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 0 7 6 5 4 2 
+Final State:X null X null X O X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 3 5 1 2 0 0 4 0 0 
+Final State:X X X O null null O null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 5 7 1 6 0 2 0 4 3 
+Final State:X X X O null O null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 2 0 5 0 4 0 3 
+Final State:X null O null X null O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 0 7 6 5 4 2 
+Final State:X null X null X O X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 7 6 0 5 4 2 
+Final State:X null X X O null X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 3 5 1 2 0 0 4 0 0 
+Final State:X X X O null null O null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 5 7 1 6 0 2 0 4 3 
+Final State:X X X O null O null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 2 0 5 0 4 0 3 
+Final State:X null O null X null O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 0 7 6 5 4 2 
+Final State:X null X null X O X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 7 6 0 5 4 2 
+Final State:X null X X O null X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 7 0 4 5 2 6 
+Final State:X null X X null O X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 3 5 1 2 0 0 4 0 0 
+Final State:X X X O null null O null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 5 7 1 6 0 2 0 4 3 
+Final State:X X X O null O null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 2 0 5 0 4 0 3 
+Final State:X null O null X null O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 0 7 6 5 4 2 
+Final State:X null X null X O X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 7 6 0 5 4 2 
+Final State:X null X X O null X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 7 0 4 5 2 6 
+Final State:X null X X null O X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 4 3 0 6 0 5 2 0 
+Final State:X O X null O null X O null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 3 5 1 2 0 0 4 0 0 
+Final State:X X X O null null O null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 5 7 1 6 0 2 0 4 3 
+Final State:X X X O null O null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 2 0 5 0 4 0 3 
+Final State:X null O null X null O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 0 7 6 5 4 2 
+Final State:X null X null X O X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 7 6 0 5 4 2 
+Final State:X null X X O null X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 7 0 4 5 2 6 
+Final State:X null X X null O X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 4 3 0 6 0 5 2 0 
+Final State:X O X null O null X O null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 0 4 6 5 2 0 
+Final State:X X X null O O X O null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 3 5 1 2 0 0 4 0 0 
+Final State:X X X O null null O null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 5 7 1 6 0 2 0 4 3 
+Final State:X X X O null O null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 2 0 5 0 4 0 3 
+Final State:X null O null X null O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 0 7 6 5 4 2 
+Final State:X null X null X O X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 7 6 0 5 4 2 
+Final State:X null X X O null X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 7 0 4 5 2 6 
+Final State:X null X X null O X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 4 3 0 6 0 5 2 0 
+Final State:X O X null O null X O null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 0 4 6 5 2 0 
+Final State:X X X null O O X O null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 4 5 6 9 8 3 2 7 
+Final State:X O X O X O X O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 3 5 1 2 0 0 4 0 0 
+Final State:X X X O null null O null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 5 7 1 6 0 2 0 4 3 
+Final State:X X X O null O null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 2 0 5 0 4 0 3 
+Final State:X null O null X null O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 0 7 6 5 4 2 
+Final State:X null X null X O X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 7 6 0 5 4 2 
+Final State:X null X X O null X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 7 0 4 5 2 6 
+Final State:X null X X null O X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 4 3 0 6 0 5 2 0 
+Final State:X O X null O null X O null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 0 4 6 5 2 0 
+Final State:X X X null O O X O null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 4 5 6 9 8 3 2 7 
+Final State:X O X O X O X O X 
+Reinforcement points: 0.47 0.5 0.5 0.5 0.53 0.5 0.5 0.5 0.5 
+
+Order of moves: 3 5 1 2 0 0 4 0 0 
+Final State:X X X O null null O null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 5 7 1 6 0 2 0 4 3 
+Final State:X X X O null O null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 2 0 5 0 4 0 3 
+Final State:X null O null X null O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 0 7 6 5 4 2 
+Final State:X null X null X O X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 7 6 0 5 4 2 
+Final State:X null X X O null X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 7 0 4 5 2 6 
+Final State:X null X X null O X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 4 3 0 6 0 5 2 0 
+Final State:X O X null O null X O null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 0 4 6 5 2 0 
+Final State:X X X null O O X O null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 4 5 6 9 8 3 2 7 
+Final State:X O X O X O X O X 
+Reinforcement points: 0.47 0.5 0.5 0.5 0.53 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 6 3 0 7 2 4 0 5 
+Final State:X O X null X O O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 3 5 1 2 0 0 4 0 0 
+Final State:X X X O null null O null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 5 7 1 6 0 2 0 4 3 
+Final State:X X X O null O null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 2 0 5 0 4 0 3 
+Final State:X null O null X null O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 0 7 6 5 4 2 
+Final State:X null X null X O X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 7 6 0 5 4 2 
+Final State:X null X X O null X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 7 0 4 5 2 6 
+Final State:X null X X null O X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 4 3 0 6 0 5 2 0 
+Final State:X O X null O null X O null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 0 4 6 5 2 0 
+Final State:X X X null O O X O null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 4 5 6 9 8 3 2 7 
+Final State:X O X O X O X O X 
+Reinforcement points: 0.47 0.5 0.5 0.5 0.53 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 6 3 0 7 2 4 0 5 
+Final State:X O X null X O O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 0 2 6 4 0 5 
+Final State:X X X null O O O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 3 5 1 2 0 0 4 0 0 
+Final State:X X X O null null O null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 5 7 1 6 0 2 0 4 3 
+Final State:X X X O null O null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 2 0 5 0 4 0 3 
+Final State:X null O null X null O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 0 7 6 5 4 2 
+Final State:X null X null X O X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 7 6 0 5 4 2 
+Final State:X null X X O null X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 7 0 4 5 2 6 
+Final State:X null X X null O X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 4 3 0 6 0 5 2 0 
+Final State:X O X null O null X O null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 0 4 6 5 2 0 
+Final State:X X X null O O X O null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 4 5 6 9 8 3 2 7 
+Final State:X O X O X O X O X 
+Reinforcement points: 0.47 0.5 0.5 0.5 0.53 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 6 3 0 7 2 4 0 5 
+Final State:X O X null X O O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 0 2 6 4 0 5 
+Final State:X X X null O O O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 3 5 1 2 0 0 4 0 0 
+Final State:X X X O null null O null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 5 7 1 6 0 2 0 4 3 
+Final State:X X X O null O null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 2 0 5 0 4 0 3 
+Final State:X null O null X null O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 0 7 6 5 4 2 
+Final State:X null X null X O X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 7 6 0 5 4 2 
+Final State:X null X X O null X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 7 0 4 5 2 6 
+Final State:X null X X null O X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 4 3 0 6 0 5 2 0 
+Final State:X O X null O null X O null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 0 4 6 5 2 0 
+Final State:X X X null O O X O null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 4 5 6 9 8 3 2 7 
+Final State:X O X O X O X O X 
+Reinforcement points: 0.47 0.5 0.5 0.5 0.53 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 6 3 0 7 2 4 0 5 
+Final State:X O X null X O O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 0 2 6 4 0 5 
+Final State:X X X null O O O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 4 2 8 5 6 7 
+Final State:X null X O O O X O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 3 5 1 2 0 0 4 0 0 
+Final State:X X X O null null O null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 5 7 1 6 0 2 0 4 3 
+Final State:X X X O null O null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 2 0 5 0 4 0 3 
+Final State:X null O null X null O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 0 7 6 5 4 2 
+Final State:X null X null X O X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 7 6 0 5 4 2 
+Final State:X null X X O null X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 7 0 4 5 2 6 
+Final State:X null X X null O X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 4 3 0 6 0 5 2 0 
+Final State:X O X null O null X O null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 0 4 6 5 2 0 
+Final State:X X X null O O X O null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 4 5 6 9 8 3 2 7 
+Final State:X O X O X O X O X 
+Reinforcement points: 0.47 0.5 0.5 0.5 0.53 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 6 3 0 7 2 4 0 5 
+Final State:X O X null X O O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 0 2 6 4 0 5 
+Final State:X X X null O O O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 4 2 8 5 6 7 
+Final State:X null X O O O X O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 0 2 1 6 4 7 0 5 3 
+Final State:null O X O O X null X X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 3 5 1 2 0 0 4 0 0 
+Final State:X X X O null null O null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 5 7 1 6 0 2 0 4 3 
+Final State:X X X O null O null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 2 0 5 0 4 0 3 
+Final State:X null O null X null O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 0 7 6 5 4 2 
+Final State:X null X null X O X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 7 6 0 5 4 2 
+Final State:X null X X O null X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 7 0 4 5 2 6 
+Final State:X null X X null O X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 4 3 0 6 0 5 2 0 
+Final State:X O X null O null X O null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 0 4 6 5 2 0 
+Final State:X X X null O O X O null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 4 5 6 9 8 3 2 7 
+Final State:X O X O X O X O X 
+Reinforcement points: 0.47 0.5 0.5 0.5 0.53 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 6 3 0 7 2 4 0 5 
+Final State:X O X null X O O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 0 2 6 4 0 5 
+Final State:X X X null O O O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 4 2 8 5 6 7 
+Final State:X null X O O O X O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 0 2 1 6 4 7 0 5 3 
+Final State:null O X O O X null X X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 2 0 1 0 7 6 5 4 3 
+Final State:O null X null X O X O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 3 5 1 2 0 0 4 0 0 
+Final State:X X X O null null O null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 5 7 1 6 0 2 0 4 3 
+Final State:X X X O null O null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 2 0 5 0 4 0 3 
+Final State:X null O null X null O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 0 7 6 5 4 2 
+Final State:X null X null X O X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 7 6 0 5 4 2 
+Final State:X null X X O null X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 7 0 4 5 2 6 
+Final State:X null X X null O X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 4 3 0 6 0 5 2 0 
+Final State:X O X null O null X O null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 0 4 6 5 2 0 
+Final State:X X X null O O X O null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 4 5 6 9 8 3 2 7 
+Final State:X O X O X O X O X 
+Reinforcement points: 0.47 0.5 0.5 0.5 0.53 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 6 3 0 7 2 4 0 5 
+Final State:X O X null X O O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 0 2 6 4 0 5 
+Final State:X X X null O O O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 4 2 8 5 6 7 
+Final State:X null X O O O X O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 0 2 1 6 4 7 0 5 3 
+Final State:null O X O O X null X X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 2 0 1 0 7 6 5 4 3 
+Final State:O null X null X O X O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 2 6 0 5 0 4 
+Final State:X X X O O null X null O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 3 5 1 2 0 0 4 0 0 
+Final State:X X X O null null O null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 5 7 1 6 0 2 0 4 3 
+Final State:X X X O null O null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 2 0 5 0 4 0 3 
+Final State:X null O null X null O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 0 7 6 5 4 2 
+Final State:X null X null X O X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 7 6 0 5 4 2 
+Final State:X null X X O null X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 7 0 4 5 2 6 
+Final State:X null X X null O X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 4 3 0 6 0 5 2 0 
+Final State:X O X null O null X O null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 0 4 6 5 2 0 
+Final State:X X X null O O X O null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 4 5 6 9 8 3 2 7 
+Final State:X O X O X O X O X 
+Reinforcement points: 0.47 0.5 0.5 0.5 0.53 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 6 3 0 7 2 4 0 5 
+Final State:X O X null X O O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 0 2 6 4 0 5 
+Final State:X X X null O O O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 4 2 8 5 6 7 
+Final State:X null X O O O X O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 0 2 1 6 4 7 0 5 3 
+Final State:null O X O O X null X X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 2 0 1 0 7 6 5 4 3 
+Final State:O null X null X O X O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 2 6 0 5 0 4 
+Final State:X X X O O null X null O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 0 7 4 2 6 5 
+Final State:X null X null X O O O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 3 5 1 2 0 0 4 0 0 
+Final State:X X X O null null O null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 5 7 1 6 0 2 0 4 3 
+Final State:X X X O null O null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 2 0 5 0 4 0 3 
+Final State:X null O null X null O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 0 7 6 5 4 2 
+Final State:X null X null X O X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 7 6 0 5 4 2 
+Final State:X null X X O null X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 7 0 4 5 2 6 
+Final State:X null X X null O X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 4 3 0 6 0 5 2 0 
+Final State:X O X null O null X O null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 0 4 6 5 2 0 
+Final State:X X X null O O X O null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 4 5 6 9 8 3 2 7 
+Final State:X O X O X O X O X 
+Reinforcement points: 0.47 0.5 0.5 0.5 0.53 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 6 3 0 7 2 4 0 5 
+Final State:X O X null X O O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 0 2 6 4 0 5 
+Final State:X X X null O O O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 4 2 8 5 6 7 
+Final State:X null X O O O X O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 0 2 1 6 4 7 0 5 3 
+Final State:null O X O O X null X X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 2 0 1 0 7 6 5 4 3 
+Final State:O null X null X O X O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 2 6 0 5 0 4 
+Final State:X X X O O null X null O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 0 7 4 2 6 5 
+Final State:X null X null X O O O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 2 4 3 6 0 7 1 0 5 
+Final State:O O X O null X X null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 3 5 1 2 0 0 4 0 0 
+Final State:X X X O null null O null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 5 7 1 6 0 2 0 4 3 
+Final State:X X X O null O null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 2 0 5 0 4 0 3 
+Final State:X null O null X null O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 0 7 6 5 4 2 
+Final State:X null X null X O X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 7 6 0 5 4 2 
+Final State:X null X X O null X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 7 0 4 5 2 6 
+Final State:X null X X null O X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 4 3 0 6 0 5 2 0 
+Final State:X O X null O null X O null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 0 4 6 5 2 0 
+Final State:X X X null O O X O null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 4 5 6 9 8 3 2 7 
+Final State:X O X O X O X O X 
+Reinforcement points: 0.47 0.5 0.5 0.5 0.53 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 6 3 0 7 2 4 0 5 
+Final State:X O X null X O O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 0 2 6 4 0 5 
+Final State:X X X null O O O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 4 2 8 5 6 7 
+Final State:X null X O O O X O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 0 2 1 6 4 7 0 5 3 
+Final State:null O X O O X null X X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 2 0 1 0 7 6 5 4 3 
+Final State:O null X null X O X O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 2 6 0 5 0 4 
+Final State:X X X O O null X null O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 0 7 4 2 6 5 
+Final State:X null X null X O O O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 2 4 3 6 0 7 1 0 5 
+Final State:O O X O null X X null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 4 6 2 0 5 0 1 3 0 
+Final State:O O O null X null X X null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 3 5 1 2 0 0 4 0 0 
+Final State:X X X O null null O null null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 5 7 1 6 0 2 0 4 3 
+Final State:X X X O null O null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 2 0 5 0 4 0 3 
+Final State:X null O null X null O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 0 7 6 5 4 2 
+Final State:X null X null X O X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 7 6 0 5 4 2 
+Final State:X null X X O null X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 7 0 4 5 2 6 
+Final State:X null X X null O X O O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 4 3 0 6 0 5 2 0 
+Final State:X O X null O null X O null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 0 4 6 5 2 0 
+Final State:X X X null O O X O null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 4 5 6 9 8 3 2 7 
+Final State:X O X O X O X O X 
+Reinforcement points: 0.47 0.5 0.5 0.5 0.53 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 6 3 0 7 2 4 0 5 
+Final State:X O X null X O O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 0 2 6 4 0 5 
+Final State:X X X null O O O null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 4 2 8 5 6 7 
+Final State:X null X O O O X O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 0 2 1 6 4 7 0 5 3 
+Final State:null O X O O X null X X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 2 0 1 0 7 6 5 4 3 
+Final State:O null X null X O X O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 7 3 2 6 0 5 0 4 
+Final State:X X X O O null X null O 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 1 0 3 0 7 4 2 6 5 
+Final State:X null X null X O O O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 2 4 3 6 0 7 1 0 5 
+Final State:O O X O null X X null X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 4 6 2 0 5 0 1 3 0 
+Final State:O O O null X null X X null 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+Order of moves: 0 2 6 7 5 1 0 4 3 
+Final State:null O O X X X null O X 
+Reinforcement points: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+

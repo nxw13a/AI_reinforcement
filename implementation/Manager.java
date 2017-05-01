@@ -33,9 +33,9 @@ public class Manager {
     public void updateScore(int index, boolean increase) {
         if (this.score[index] != 0) {
             if (increase)
-                this.score[index] += 0.01;
+                this.score[index] += 0.03;
             else
-                this.score[index] -= 0.01;
+                this.score[index] -= 0.03;
         }
     }
 

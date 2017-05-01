@@ -111,7 +111,7 @@ public class XOButton extends JButton implements ActionListener{
 
 	public void actionPerformed(ActionEvent e){
 
-		//System.out.println(lib.print());
+		System.out.println(e);
 
 		if(lib.position[location_button] == null && lib.check_forX() == false && lib.check_forO() == false)
 		{
