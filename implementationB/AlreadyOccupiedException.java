@@ -1,4 +1,4 @@
-package Checkers;
+package implementationB;
 
 public class AlreadyOccupiedException extends RuntimeException
 {

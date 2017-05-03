@@ -1,4 +1,4 @@
-package Checkers;
+package implementationB;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
@@ -9,9 +9,8 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseMotionAdapter;
 
-import java.util.ArrayList;
-import java.util.List;
-
+import java.util.*;
+import java.security.SecureRandom;
 import javax.swing.JComponent;
 
 public class Board extends JComponent
@@ -32,6 +31,7 @@ public class Board extends JComponent
    // and cleared to false when user releases mouse button
 
    private boolean inDrag = false;
+   private boolean pick = true;
 
    // displacement between drag start coordinates and checker center coordinates
 
@@ -44,6 +44,10 @@ public class Board extends JComponent
    // center location of checker at start of drag
 
    private int oldcx, oldcy;
+   private String[] list = {"R1","R2","R3","R4","R5","R6","R7","R8"};
+   private ArrayList<Integer> poss_moveX = new ArrayList<Integer>();
+   private ArrayList<Integer> poss_moveY = new ArrayList<Integer>();
+
 
    // list of Checker objects and their initial positions
 
@@ -54,6 +58,249 @@ public class Board extends JComponent
 
    public String[][] matrix = new String[8][8];
 
+   private boolean check_move(int number)
+   { 
+      if(number < 1)
+          return false;
+      String name = list[number - 1];
+      int pos_Y = 0;
+      int pos_X = 0;
+      for(int t = 0; t < 8; t++)
+      {
+        for(int u = 0; u < 8; u++)
+        {
+            if(matrix[t][u] == name)
+            {
+                pos_X = u;
+                pos_Y = t;
+            }
+        }
+      }
+      if(pos_X  + 1 < 8 && pos_Y + 1 < 8)
+      {
+         if(matrix[pos_Y + 1][pos_X + 1] == null)
+         {
+             return true;
+          }
+      }
+      
+      else if(pos_X  - 1 >= 0 && pos_Y + 1 < 8)
+      {
+         if(matrix[pos_Y + 1][pos_X - 1] == null)
+         {
+             return true;
+        }
+      }
+      return false;
+   }
+  private int generateRandomMove() {
+    Random a = new SecureRandom();
+    int select = a.nextInt(8);
+    while(!check_move(select))
+    {
+      select = a.nextInt(8);
+    }
+    return select;
+  }
+  private int gen_move(int size)
+  {
+    Random a = new SecureRandom();
+    int select = a.nextInt(size);
+    return select;
+  }
+
+
+   //this is where the AI move 
+
+
+   private void AI_activate(List<PosCheck> posChecks2)
+   {
+      //print_matrix();
+      String name = list[generateRandomMove() - 1];
+      int pos_Y = 0;
+      int pos_X = 0;
+      for(int t = 0; t < 8; t++)
+      {
+        for(int u = 0; u < 8; u++)
+        {
+            if(matrix[t][u] == name)
+            {
+                pos_X = x_matrix[u][0];
+                pos_Y = y_matrix[0][t];
+            }
+        }
+      }
+      System.out.println(pos_X + " " + pos_Y);
+      all_move(name);
+      int move = gen_move(poss_moveX.size());
+      change(x_matrix[poss_moveX.get(move)][0],y_matrix[0][poss_moveY.get(move)],name);
+      int hold_X = x_matrix[poss_moveX.get(move)][0];
+      int hold_Y = y_matrix[0][poss_moveY.get(move)];
+
+      for (PosCheck posCheck: posChecks2)
+      {
+        if (posCheck.cx == pos_X &&
+            posCheck.cy == pos_Y )
+         {
+            posCheck.cx = hold_X;
+            posCheck.cy = hold_Y;
+         }
+         //System.out.println(x + " = " + posCheck.cx + " , " + y  + " = " + posCheck.cy);
+      }     
+
+      
+      print_matrix();
+      System.out.println(name);
+      System.out.println(poss_moveX);
+      System.out.println(poss_moveY);
+      
+   }
+
+
+
+
+
+   private void all_move(String name)
+   {
+      int pos_Y = 0;
+      int pos_X = 0;
+      for(int t = 0; t < 8; t++)
+      {
+        for(int u = 0; u < 8; u++)
+        {
+            if(matrix[t][u] == name)
+            {
+                pos_X = u;
+                pos_Y = t;
+            }
+        }
+      }
+
+      if(pos_X  + 1 < 8 && pos_Y + 1 < 8)
+      {
+         if(matrix[pos_Y + 1][pos_X + 1] == null)
+         {
+             poss_moveX.add(pos_X+1);
+             poss_moveY.add(pos_Y+1);
+         }
+      }
+      
+      if(pos_X  - 1 >= 0 && pos_Y + 1 < 8)
+      {
+         if(matrix[pos_Y + 1][pos_X - 1] == null)
+         {
+             poss_moveX.add(pos_X-1);
+             poss_moveY.add(pos_Y+1);
+        }
+      }
+   }
+
+   public void print_matrix()
+   {
+      for(int t = 0; t < 8; t++)
+      {
+        for(int u = 0; u < 8; u++)
+        {
+          if(matrix[t][u] == null)
+             System.out.print("   ");
+          else
+            System.out.print(matrix[t][u] + " ");
+        }
+        System.out.println();
+      }
+   }
+   private String opposite(String type)
+   {
+     return (type == "B") ? "R" : "B"; 
+   }
+   private boolean eating(int y, int x, String type)
+   {
+      if(y - 2 >= 0 && x + 2 < 8)
+      {
+        if(matrix[y - 1][x + 1] != null)
+        {
+           if(matrix[y - 1][x + 1].charAt(0) == opposite(type).charAt(0) && matrix[y - 2][x + 2] == null)
+           {
+              return true;
+           }
+        }
+      }
+      else if(y - 2 >= 0 && x - 2 >= 0)
+      {
+        if(matrix[y - 1][x - 1] != null)
+        {
+           if(matrix[y - 1][x - 1].charAt(0) == opposite(type).charAt(0) && matrix[y - 2][x - 2] == null)
+           {
+              return true;
+           }
+        }
+      }
+      return false;
+   }
+   private boolean find_eating(String type)
+   {
+      for(int t = 0; t < 8; t++)
+      {
+        for(int u = 0; u < 8; u++)
+        {
+          if(matrix[t][u] != null)
+          {
+            if(matrix[t][u].charAt(0) == type.charAt(0))
+            {
+                 if(eating(t,u,type))
+                    return true;
+            }
+
+          }
+        }
+      }
+      return false;
+   }
+   private void change(int dom, int ran, String name)
+   {
+      int pos_X = 0;
+      int pos_Y = 0;
+      for(int x = 0; x < 8; x++)
+      {
+         if(dom == x_matrix[x][0])
+            pos_X = x;
+
+      }
+      for(int y = 0; y < 8; y++)
+      {
+         if(ran == y_matrix[0][y])
+            pos_Y = y;
+      }
+      for(int t = 0; t < 8; t++)
+      {
+        for(int u = 0; u < 8; u++)
+        {
+          if(matrix[t][u] == name)
+              matrix[t][u] = null;
+        }
+      }
+      matrix[pos_Y][pos_X] = name;
+   }
+   private String find(int dom, int ran)
+   {
+      int pos_X = 0;
+      int pos_Y = 0;
+      for(int x = 0; x < 8; x++)
+      {
+         if(dom == x_matrix[x][0])
+            pos_X = x;
+          //System.out.print(x_matrix[x][0]+ " ");
+      }
+     // System.out.println();
+      for(int y = 0; y < 8; y++)
+      {
+         if(ran == y_matrix[0][y])
+            pos_Y = y;
+          //System.out.print(y_matrix[0][y]+ " ");
+      }
+      //System.out.println("\n"+ pos_X + " " + pos_Y);
+      return matrix[pos_Y][pos_X];
+   }
    private boolean containThis(List<PosCheck> posChecks2, int x, int y, CheckerType color)
    {
       for (PosCheck posCheck: posChecks2)
@@ -115,6 +362,7 @@ public class Board extends JComponent
                           @Override
                           public void mouseReleased(MouseEvent me)
                           {
+                            //print_matrix();
                              // When mouse released, clear inDrag (to
                              // indicate no drag in progress) if inDrag is
                              // already set.
@@ -125,7 +373,6 @@ public class Board extends JComponent
                                 return;
 
                              // Snap checker to center of square.
-
                              int x = me.getX();
                              int y = me.getY();
                              
@@ -133,8 +380,8 @@ public class Board extends JComponent
                                            SQUAREDIM / 2;
                              posCheck.cy = (y - deltay) / SQUAREDIM * SQUAREDIM + 
                                            SQUAREDIM / 2;
-                             System.out.println(posCheck.cx+" "+posCheck.cy);
-
+                             //System.out.println(oldcx+" "+oldcy);
+                             //System.out.println(find(oldcx,oldcy));
                              // Do not move checker onto an occupied square.
                              for (PosCheck posCheck: posChecks)
                                 if (posCheck != Board.this.posCheck && 
@@ -151,10 +398,12 @@ public class Board extends JComponent
                                  Board.this.posCheck.cy = oldcy;
                               }
                               //Do not jump or go back ward if not
-                              else if(Board.this.posCheck.checker.checkerType != CheckerType.BLACK_KING)
-                              {
-                    
-                                if(Board.this.posCheck.checker.checkerType == CheckerType.BLACK_REGULAR )
+                              if(Board.this.posCheck.checker.checkerType == CheckerType.RED_REGULAR)
+                                {
+                                  Board.this.posCheck.cx = oldcx;
+                                  Board.this.posCheck.cy = oldcy;
+                                }
+                              if(Board.this.posCheck.checker.checkerType == CheckerType.BLACK_REGULAR )
                                 {
                                    if(Board.this.posCheck.cy > oldcy)
                                   {
@@ -195,23 +444,35 @@ public class Board extends JComponent
                                     Board.this.posCheck.cx = oldcx;
                                     Board.this.posCheck.cy = oldcy;
                                   }
+                                  else if(!pick || Board.this.posCheck.cx == oldcx && Board.this.posCheck.cy == oldcy)
+                                  {
+                                      Board.this.posCheck.cx = oldcx;
+                                      Board.this.posCheck.cy = oldcy;
+                                  }
+                                  else if(Board.this.posCheck.cx != oldcx && Board.this.posCheck.cy != oldcy)
+                                  {
+                                    change(Board.this.posCheck.cx,Board.this.posCheck.cy,find(oldcx,oldcy));
+                                    //print_matrix();
+                                    if(find_eating("B") == false)
+                                    {
+                                        pick = false;
+                                    }
+                                    if(pick == false)
+                                    {
+                                        AI_activate(posChecks);
+                                    }
+                                  }
                                 }
-                                
-
-                              
-                                if(Board.this.posCheck.checker.checkerType == CheckerType.RED_REGULAR)
-                                {
-                                  Board.this.posCheck.cx = oldcx;
-                                  Board.this.posCheck.cy = oldcy;
-                                }
-                              }
-
+                          
+                            
 
 
 
                              posCheck = null;
                              repaint();
-                          }
+                          
+                        }
+
                        });
 
       // Attach a mouse motion listener to the applet. That listener listens

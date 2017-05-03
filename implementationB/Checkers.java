@@ -1,4 +1,4 @@
-package Checkers;
+package implementationB;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -28,18 +28,20 @@ public class Checkers extends JFrame
       board.add(new Checker(CheckerType.BLACK_REGULAR), 7, 6);
       board.add(new Checker(CheckerType.BLACK_REGULAR), 7, 8);
 
-      board.matrix[0][1] = "R1";
-      board.matrix[0][3] = "R2";
       board.x_matrix[0][0] = 31;
-      board.y_matrix[0][0] = 31;
+      int total = 31;
+      int incre = 31;
       for(int x = 0; x < 8; x++)
       {
             for(int y = 0; y < 8; y++)
             {
-                  
+              board.x_matrix[x][y] = total;
+              board.y_matrix[y][x] = total; 
             }
-            System.out.println();
+        total += 62;
       }
+      board.matrix[0][1] = "R1";
+      board.matrix[0][3] = "R2";
       board.matrix[0][5] = "R3";
       board.matrix[0][7] = "R4";
       board.matrix[1][0] = "R5";
@@ -47,14 +49,14 @@ public class Checkers extends JFrame
       board.matrix[1][4] = "R7";
       board.matrix[1][6] = "R8";
 
-      board.matrix[7][0] = "R1";
-      board.matrix[7][2] = "R1";
-      board.matrix[7][4] = "R1";
-      board.matrix[7][6] = "R1";
-      board.matrix[6][1] = "R1";
-      board.matrix[6][3] = "R1";
-      board.matrix[6][5] = "R1";
-      board.matrix[6][7] = "R1";
+      board.matrix[7][0] = "B1";
+      board.matrix[7][2] = "B2";
+      board.matrix[7][4] = "B3";
+      board.matrix[7][6] = "B4";
+      board.matrix[6][1] = "B5";
+      board.matrix[6][3] = "B6";
+      board.matrix[6][5] = "B7";
+      board.matrix[6][7] = "B8";
       setContentPane(board);
       pack();
       setVisible(true);

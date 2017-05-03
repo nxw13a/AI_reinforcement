@@ -1,4 +1,4 @@
-package Checkers;
+package implementationB;
 public enum CheckerType
 {
    BLACK_REGULAR,
