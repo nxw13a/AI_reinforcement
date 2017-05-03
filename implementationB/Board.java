@@ -32,6 +32,7 @@ public class Board extends JComponent
 
    private boolean inDrag = false;
    private boolean pick = true;
+   private boolean still_eating = false;
 
    // displacement between drag start coordinates and checker center coordinates
 
@@ -45,6 +46,8 @@ public class Board extends JComponent
 
    private int oldcx, oldcy;
    private String[] list = {"R1","R2","R3","R4","R5","R6","R7","R8"};
+   private ArrayList<String> list_RED = new ArrayList<String>();
+   private ArrayList<String> list_BLACK = new ArrayList<String>();
    private ArrayList<Integer> poss_moveX = new ArrayList<Integer>();
    private ArrayList<Integer> poss_moveY = new ArrayList<Integer>();
 
@@ -62,6 +65,11 @@ public class Board extends JComponent
    { 
       if(number < 1)
           return false;
+      for(int x = 0 ; x < list_RED.size(); x++)
+      {
+         if(list_RED.get(x) == list[number - 1])
+           return false;
+      }
       String name = list[number - 1];
       int pos_Y = 0;
       int pos_X = 0;
@@ -130,13 +138,20 @@ public class Board extends JComponent
             }
         }
       }
-      System.out.println(pos_X + " " + pos_Y);
+      //System.out.println(pos_X + " " + pos_Y);
+
       all_move(name);
       int move = gen_move(poss_moveX.size());
       change(x_matrix[poss_moveX.get(move)][0],y_matrix[0][poss_moveY.get(move)],name);
       int hold_X = x_matrix[poss_moveX.get(move)][0];
       int hold_Y = y_matrix[0][poss_moveY.get(move)];
+      //System.out.println(poss_moveX);
+      //System.out.println(poss_moveY);
 
+      poss_moveX = new ArrayList<Integer>();
+      poss_moveY = new ArrayList<Integer>();
+
+      //print_matrix();
       for (PosCheck posCheck: posChecks2)
       {
         if (posCheck.cx == pos_X &&
@@ -147,13 +162,17 @@ public class Board extends JComponent
          }
          //System.out.println(x + " = " + posCheck.cx + " , " + y  + " = " + posCheck.cy);
       }     
-
-      
+      if(find_eating("R", find(hold_Y,hold_X)) == false)
+      {
+          pick = true;
+      }
+      print_matrix();
+      /*
       print_matrix();
       System.out.println(name);
       System.out.println(poss_moveX);
       System.out.println(poss_moveY);
-      
+      */
    }
 
 
@@ -175,7 +194,6 @@ public class Board extends JComponent
             }
         }
       }
-
       if(pos_X  + 1 < 8 && pos_Y + 1 < 8)
       {
          if(matrix[pos_Y + 1][pos_X + 1] == null)
@@ -202,9 +220,9 @@ public class Board extends JComponent
         for(int u = 0; u < 8; u++)
         {
           if(matrix[t][u] == null)
-             System.out.print("   ");
+             System.out.print("  ");
           else
-            System.out.print(matrix[t][u] + " ");
+            System.out.print(matrix[t][u]);
         }
         System.out.println();
       }
@@ -237,7 +255,7 @@ public class Board extends JComponent
       }
       return false;
    }
-   private boolean find_eating(String type)
+   private boolean find_eating(String type, String name)
    {
       for(int t = 0; t < 8; t++)
       {
@@ -245,7 +263,7 @@ public class Board extends JComponent
         {
           if(matrix[t][u] != null)
           {
-            if(matrix[t][u].charAt(0) == type.charAt(0))
+            if(matrix[t][u]== name)
             {
                  if(eating(t,u,type))
                     return true;
@@ -255,6 +273,17 @@ public class Board extends JComponent
         }
       }
       return false;
+   }
+   private void remove(String name)
+   {
+      for(int t = 0; t < 8; t++)
+      {
+        for(int u = 0; u < 8; u++)
+        {
+          if(matrix[t][u] == name)
+              matrix[t][u] = null;
+        }
+      }
    }
    private void change(int dom, int ran, String name)
    {
@@ -418,8 +447,13 @@ public class Board extends JComponent
                                           if (posCheck.cx == Board.this.posCheck.cx + 62 &&
                                               posCheck.cy ==  Board.this.posCheck.cy + 62 && posCheck.checker.checkerType == CheckerType.RED_REGULAR)
                                            {
+                                             change(Board.this.posCheck.cx,Board.this.posCheck.cy,find(oldcx,oldcy));
+                                             list_RED.add(find(Board.this.posCheck.cx + 62,Board.this.posCheck.cy + 62));
+                                             remove(find(Board.this.posCheck.cx + 62,Board.this.posCheck.cy + 62));
+
                                               posCheck.cx = 527;
                                               posCheck.cy = 403;
+                                              still_eating = true;
                                            }
                                            //System.out.println(x + " = " + posCheck.cx + " , " + y  + " = " + posCheck.cy);
                                         }  
@@ -432,8 +466,12 @@ public class Board extends JComponent
                                           if (posCheck.cx == Board.this.posCheck.cx - 62 &&
                                               posCheck.cy ==  Board.this.posCheck.cy + 62 && posCheck.checker.checkerType == CheckerType.RED_REGULAR)
                                            {
+                                              change(Board.this.posCheck.cx,Board.this.posCheck.cy,find(oldcx,oldcy));
+                                              list_RED.add(find(Board.this.posCheck.cx - 62,Board.this.posCheck.cy + 62));
+                                              remove(find(Board.this.posCheck.cx - 62,Board.this.posCheck.cy + 62));
                                               posCheck.cx = 527;
                                               posCheck.cy = 403;
+                                              still_eating = true;
                                            }
                                            //System.out.println(x + " = " + posCheck.cx + " , " + y  + " = " + posCheck.cy);
                                         }  
@@ -452,8 +490,7 @@ public class Board extends JComponent
                                   else if(Board.this.posCheck.cx != oldcx && Board.this.posCheck.cy != oldcy)
                                   {
                                     change(Board.this.posCheck.cx,Board.this.posCheck.cy,find(oldcx,oldcy));
-                                    //print_matrix();
-                                    if(find_eating("B") == false)
+                                    if(find_eating("B", find(oldcx,oldcy)) == false)
                                     {
                                         pick = false;
                                     }
@@ -461,12 +498,22 @@ public class Board extends JComponent
                                     {
                                         AI_activate(posChecks);
                                     }
+                                    //print_matrix();
+                                
                                   }
+                                   if(find_eating("B", find(oldcx,oldcy)) == false && still_eating)
+                                    {
+                                        pick = false;
+                                        still_eating = false;
+                                    }
+                                    if(pick == false)
+                                    {
+                                        AI_activate(posChecks);
+                                    }
+                                    System.out.println();
+                                    print_matrix();
                                 }
                           
-                            
-
-
 
                              posCheck = null;
                              repaint();
