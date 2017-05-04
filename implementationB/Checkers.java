@@ -40,6 +40,16 @@ public class Checkers extends JFrame
             }
         total += 62;
       }
+
+      board.list.add("R1");
+      board.list.add("R2");
+      board.list.add("R3");
+      board.list.add("R4");
+      board.list.add("R5");
+      board.list.add("R6");
+      board.list.add("R7");
+      board.list.add("R8");
+
       board.matrix[0][1] = "R1";
       board.matrix[0][3] = "R2";
       board.matrix[0][5] = "R3";
