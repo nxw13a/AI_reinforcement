@@ -33,6 +33,7 @@ public class Board extends JComponent
    private boolean inDrag = false;
    private boolean pick = true;
    private boolean still_eating = true;
+   private boolean gameover = false;
 
    // displacement between drag start coordinates and checker center coordinates
 
@@ -60,7 +61,24 @@ public class Board extends JComponent
    public int[][] y_matrix = new int[8][8];
 
    public String[][] matrix = new String[8][8];
-
+   private String turn_king(String a)
+   {
+      if(a == "R1")
+        return "R1K";
+      if(a == "R2")
+        return "R2K";
+      if(a == "R3")
+        return "R3K";
+      if(a == "R4")
+        return "R4K";
+      if(a == "R5")
+        return "R5K";
+      if(a == "R6")
+        return "R6K";
+      if(a == "R7")
+        return "R7K";
+      return "R8K";
+   }
    private boolean check_move( String name)
    { 
       int pos_Y = 0;
@@ -77,22 +95,106 @@ public class Board extends JComponent
         }
       }
       //System.out.println("HI");
-      if(pos_X  + 1 < 8 && pos_Y + 1 < 8)
+      if(name.length() < 3)
       {
-         //System.out.println(matrix[pos_Y + 1][pos_X + 1]);
-         if(matrix[pos_Y + 1][pos_X + 1] == null)
-         {
+        if(pos_X  + 1 < 8 && pos_Y + 1 < 8)
+        {
+           //System.out.println(matrix[pos_Y + 1][pos_X + 1]);
+           if(matrix[pos_Y + 1][pos_X + 1] == null)
+           {
+              //System.out.println("HI");
+               return true;
+           }
+           else if(pos_X  + 2 < 8 && pos_Y + 2 < 8)
+           {
+            if(matrix[pos_Y + 1][pos_X + 1].charAt(0) == 'B' && matrix[pos_Y + 2][pos_X + 2] == null)
+            {
+              return true;
+            }
+          }
+        }
+        
+        if(pos_X  - 1 >= 0 && pos_Y + 1 < 8)
+        {
+           if(matrix[pos_Y + 1][pos_X - 1] == null)
+           {
             //System.out.println("HI");
-             return true;
-         }
+              return true;
+          }
+           else if(pos_X  - 2 >= 0 && pos_Y + 2 < 8)
+           {
+            if(matrix[pos_Y + 1][pos_X - 1].charAt(0) == 'B' && matrix[pos_Y + 2][pos_X - 2] == null)
+            {
+              return true;
+            }
+          }
+ 
+        }
       }
-      
-      if(pos_X  - 1 >= 0 && pos_Y + 1 < 8)
+      else
       {
-         if(matrix[pos_Y + 1][pos_X - 1] == null)
-         {
-          //System.out.println("HI");
-            return true;
+        if(pos_X  + 1 < 8 && pos_Y + 1 < 8)
+        {
+           //System.out.println(matrix[pos_Y + 1][pos_X + 1]);
+           if(matrix[pos_Y + 1][pos_X + 1] == null)
+           {
+              //System.out.println("HI");
+               return true;
+           }
+           else if(pos_X  + 2 < 8 && pos_Y + 2 < 8)
+           {
+            if(matrix[pos_Y + 1][pos_X + 1].charAt(0) == 'B' && matrix[pos_Y + 2][pos_X + 2] == null)
+            {
+              return true;
+            }
+          }
+        }
+        
+        if(pos_X  - 1 >= 0 && pos_Y + 1 < 8)
+        {
+           if(matrix[pos_Y + 1][pos_X - 1] == null)
+           {
+            //System.out.println("HI");
+              return true;
+           }
+            else if(pos_X  - 2 >= 0 && pos_Y + 2 < 8)
+           {
+            if(matrix[pos_Y + 1][pos_X - 1].charAt(0) == 'B' && matrix[pos_Y + 2][pos_X - 2] == null)
+            {
+              return true;
+            }
+          }
+        }
+
+        if(pos_X  - 1 >= 0 && pos_Y - 1 >= 0)
+        {
+           if(matrix[pos_Y - 1][pos_X + 1] == null)
+           {
+            //System.out.println("HI");
+              return true;
+           }
+            else if(pos_X  - 2 >= 0 && pos_Y - 2 >= 0)
+           {
+            if(matrix[pos_Y - 1][pos_X - 1].charAt(0) == 'B' && matrix[pos_Y - 2][pos_X - 2] == null)
+            {
+              return true;
+            }
+          }
+        }
+        if(pos_X  + 1 < 8 && pos_Y - 1 >= 0)
+        {
+           if(matrix[pos_Y - 1][pos_X + 1] == null)
+           {
+            //System.out.println("HI");
+              return true;
+          }
+           else if(pos_X  + 2 < 8 && pos_Y - 2 >= 0)
+           {
+            if(matrix[pos_Y - 1][pos_X + 1].charAt(0) == 'B' && matrix[pos_Y - 2][pos_X + 2] == null)
+            {
+              return true;
+            }
+          }
         }
       }
       return false;
@@ -108,7 +210,8 @@ public class Board extends JComponent
             t--;
          }
       }
-    //System.out.println(copy);
+    System.out.println(copy);
+    System.out.println(list +"\n");
     int select = a.nextInt(copy.size());
     return copy.get(select);
     
@@ -125,35 +228,247 @@ public class Board extends JComponent
         if (posCheck.cx == x &&
             posCheck.cy == y)
           {
-            return false;
+            return true;
           }
-     return true;
+     return false;
   }
-  private boolean check_king(List<PosCheck> posChecks2, int x, int y, int orgX, int orgY)
+  private boolean check_kingLL(List<PosCheck> posChecks2, int x, int y, int orgX, int orgY)
   {
       int or_X = x;
       int or_Y = y;
+      int count = 0;
+      x += 62;
+      y -= 62;
+       //System.out.println(x + " " + orgX + " " + y + " " + orgY);
+
+      if(x == orgX && y == orgY)
+          return true;
       while(y > 0 && x < 500)
       {
-        System.out.println(x + " " + orgX + " " + y + " " + orgY);
-          if(y == orgX && x == orgY)
+        //System.out.println(x + " " + orgX + " " + y + " " + orgY);
+          if(count >= 2)
           {
+            //System.out.println("HI " + count);
+            return false;
+          }
+          if(x == orgX && y == orgY)
+          {
+              if( (containThis(posChecks2, or_X + 62, or_Y - 62, CheckerType.RED_REGULAR) || containThis(posChecks2, or_X + 62, or_Y - 62, CheckerType.RED_KING)) && count == 1)
+              {
+                  for (PosCheck posCheck: posChecks2)
+                    {
+                      if (posCheck.cx == or_X + 62 &&
+                          posCheck.cy == or_Y - 62)
+                       {
+                          posCheck.cx = 527;
+                          posCheck.cy = 403;
+                       }
+                       //System.out.println(x + " = " + posCheck.cx + " , " + y  + " = " + posCheck.cy);
+                    } 
+                  for(int p = 0; p < list.size(); p++)
+                  {
+                    if(list.get(p) == find(Board.this.posCheck.cx + 62,Board.this.posCheck.cy - 62))
+                    {
+                       list.remove(p);
+                    }
+                  }
+                  remove(find(Board.this.posCheck.cx + 62,Board.this.posCheck.cy - 62));                                    
+              }
+             still_eating = false;
              return true;
+          }
+          else if(occupied_space(posChecks2,x,y))
+          {
+            //System.out.println(count);
+             count++;
+             //System.out.println(count);
           }
           x += 62;
           y -= 62;
       }
-
+      //System.out.println("OOO");
       return false;
   }
-
+   private boolean check_kingLR(List<PosCheck> posChecks2, int x, int y, int orgX, int orgY)
+  {
+      int or_X = x;
+      int or_Y = y;
+      int count = 0;
+      x -= 62;
+      y -= 62;
+      if(x == orgX && y == orgY)
+          return true;
+      while(y > 0 && x > 0)
+      {
+         //System.out.println(+ " " + orgX + " " + y + " " + orgY);
+          if(count >= 2)
+          {
+            //System.out.println("HI " + count);
+            return false;
+          }
+          if(x == orgX && y == orgY)
+          {
+              if( (containThis(posChecks2, or_X - 62, or_Y - 62, CheckerType.RED_REGULAR) || containThis(posChecks2, or_X - 62, or_Y - 62, CheckerType.RED_KING)) && count == 1)
+              {
+                  for (PosCheck posCheck: posChecks2)
+                    {
+                      if (posCheck.cx == or_X - 62 &&
+                          posCheck.cy == or_Y - 62)
+                       {
+                          posCheck.cx = 527;
+                          posCheck.cy = 403;
+                       }
+                       //System.out.println(x + " = " + posCheck.cx + " , " + y  + " = " + posCheck.cy);
+                    } 
+                  for(int p = 0; p < list.size(); p++)
+                  {
+                    if(list.get(p) == find(Board.this.posCheck.cx - 62,Board.this.posCheck.cy - 62))
+                    {
+                       list.remove(p);
+                    }
+                  }
+                  remove(find(Board.this.posCheck.cx - 62,Board.this.posCheck.cy - 62));        
+              }
+             still_eating = false;
+             return true;
+          }
+          else if(occupied_space(posChecks2,x,y))
+          {
+            //System.out.println(count);
+             count++;
+             //System.out.println(count);
+          }
+          x -= 62;
+          y -= 62;
+      }
+      //System.out.println("OOO");
+      return false;
+  }
+    private boolean check_kingUL(List<PosCheck> posChecks2, int x, int y, int orgX, int orgY)
+  {
+      int or_X = x;
+      int or_Y = y;
+      int count = 0;
+      x += 62;
+      y += 62;
+      if(x == orgX && y == orgY)
+          return true;
+      while(y < 500 && x < 500)
+      {
+         //System.out.println(+ " " + orgX + " " + y + " " + orgY);
+          if(count >= 2)
+          {
+            //System.out.println("HI " + count);
+            return false;
+          }
+          if(x == orgX && y == orgY)
+          {
+              if( (containThis(posChecks2, or_X + 62, or_Y + 62, CheckerType.RED_REGULAR) || containThis(posChecks2, or_X + 62, or_Y + 62, CheckerType.RED_KING)) && count == 1)
+              {
+                  for (PosCheck posCheck: posChecks2)
+                    {
+                      if (posCheck.cx == or_X + 62 &&
+                          posCheck.cy == or_Y + 62)
+                       {
+                          posCheck.cx = 527;
+                          posCheck.cy = 403;
+                       }
+                       //System.out.println(x + " = " + posCheck.cx + " , " + y  + " = " + posCheck.cy);
+                    } 
+                  for(int p = 0; p < list.size(); p++)
+                  {
+                    if(list.get(p) == find(Board.this.posCheck.cx + 62,Board.this.posCheck.cy + 62))
+                    {
+                       list.remove(p);
+                    }
+                  }
+                 remove(find(Board.this.posCheck.cx + 62,Board.this.posCheck.cy + 62));        
+              }
+             still_eating = false;
+             return true;
+          }
+          else if(occupied_space(posChecks2,x,y))
+          {
+            //System.out.println(count);
+             count++;
+             //System.out.println(count);
+          }
+          x += 62;
+          y += 62;
+      }
+      return false;
+  }
+   private boolean check_kingUR(List<PosCheck> posChecks2, int x, int y, int orgX, int orgY)
+  {
+      int or_X = x;
+      int or_Y = y;
+      int count = 0;
+      x -= 62;
+      y += 62;
+      if(x == orgX && y == orgY)
+          return true;
+      while(y < 500 && x > 0)
+      {
+         //System.out.println(+ " " + orgX + " " + y + " " + orgY);
+          if(count >= 2)
+          {
+            //System.out.println("HI " + count);
+            return false;
+          }
+          if(x == orgX && y == orgY)
+          {
+              if( (containThis(posChecks2, or_X - 62, or_Y + 62, CheckerType.RED_REGULAR) || containThis(posChecks2, or_X - 62, or_Y + 62, CheckerType.RED_KING)) && count == 1)
+              {
+                  for (PosCheck posCheck: posChecks2)
+                    {
+                      if (posCheck.cx == or_X - 62 &&
+                          posCheck.cy == or_Y + 62)
+                       {
+                          posCheck.cx = 527;
+                          posCheck.cy = 403;
+                       }
+                       //System.out.println(x + " = " + posCheck.cx + " , " + y  + " = " + posCheck.cy);
+                    }  
+                  for(int p = 0; p < list.size(); p++)
+                  {
+                    if(list.get(p) == find(Board.this.posCheck.cx - 62,Board.this.posCheck.cy + 62))
+                    {
+                       list.remove(p);
+                    }
+                  }
+                  remove(find(Board.this.posCheck.cx - 62,Board.this.posCheck.cy + 62));       
+              }
+             still_eating = false;
+             return true;
+          }
+          else if(occupied_space(posChecks2,x,y))
+          {
+            //System.out.println(count);
+             count++;
+             //System.out.println(count);
+          }
+          x -= 62;
+          y += 62;
+      }
+      return false;
+  }
    //this is where the AI move 
 
 
    private void AI_activate(List<PosCheck> posChecks2)
    {
       //print_matrix();
-      String name = generateRandomMove();
+    if(list.size() != 0)
+    {
+      String name;
+      if(list.size() == 1)
+      {
+         name = list.get(0);
+      }
+      else
+      {
+        name = generateRandomMove();
+      }
       int pos_Y = 0;
       int pos_X = 0;
       //System.out.println(list);
@@ -169,35 +484,77 @@ public class Board extends JComponent
         }
       }
       //System.out.println(pos_X + " " + pos_Y);
-
+     //System.out.println(name);
       all_move(name);
-      int move = gen_move(poss_moveX.size());
-      change(x_matrix[poss_moveX.get(move)][0],y_matrix[0][poss_moveY.get(move)],name);
-      int hold_X = x_matrix[poss_moveX.get(move)][0];
-      int hold_Y = y_matrix[0][poss_moveY.get(move)];
-      //System.out.println(poss_moveX);
-      //System.out.println(poss_moveY);
-
-      poss_moveX = new ArrayList<Integer>();
-      poss_moveY = new ArrayList<Integer>();
-
-      //print_matrix();
-      for (PosCheck posCheck: posChecks2)
+      if(poss_moveX.size() != 0 && poss_moveY.size() != 0)
       {
-        if (posCheck.cx == pos_X &&
-            posCheck.cy == pos_Y )
-         {
-            posCheck.cx = hold_X;
-            posCheck.cy = hold_Y;
-            if(hold_Y - pos_Y == 124)
-            {
-                //System.out.println("OHLLLLLLLLLLLLLLLLLLA");
-                clear_p(posChecks2, hold_X, hold_Y, pos_X, pos_Y);
-                
-            }
-         }
-         //System.out.println(x + " = " + posCheck.cx + " , " + y  + " = " + posCheck.cy);
+        int move = gen_move(poss_moveX.size());
+        change(x_matrix[poss_moveX.get(move)][0],y_matrix[0][poss_moveY.get(move)],name);
+        int hold_X = x_matrix[poss_moveX.get(move)][0];
+        int hold_Y = y_matrix[0][poss_moveY.get(move)];
+        //System.out.println(poss_moveX);
+        //System.out.println(poss_moveY);
+
+        poss_moveX = new ArrayList<Integer>();
+        poss_moveY = new ArrayList<Integer>();
+
+        //print_matrix();
+        for (PosCheck posCheck: posChecks2)
+        {
+          if (posCheck.cx == pos_X &&
+              posCheck.cy == pos_Y )
+           {
+              posCheck.cx = hold_X;
+              posCheck.cy = hold_Y;
+
+              if(hold_Y - pos_Y == 124)
+              {
+                  //System.out.println("OHLLLLLLLLLLLLLLLLLLA");
+                  clear_p(posChecks2, hold_X, hold_Y, pos_X, pos_Y);
+                  
+              }
+
+              if(hold_Y == 465 && posCheck.checker.checkerType != CheckerType.RED_KING)
+              {
+                posCheck.checker.checkerType = CheckerType.RED_KING;
+                for(int x = 0; x <  list.size();x++)
+                {
+                   if(list.get(x) == find(hold_X,hold_Y))
+                   {
+                      String h = list.get(x);
+                      list.set(x,turn_king(h));
+                   }
+                 }
+                for(int t = 0; t < 8; t++)
+                {
+                  for(int u = 0; u < 8; u++)
+                  {
+                    if( (hold_Y == x_matrix[u][0]) && (hold_X == y_matrix[0][t]) )
+                    {
+                      String hold = matrix[u][t];
+                      matrix[u][t] = turn_king(hold);
+                    }
+                  }
+                }
+                 //System.out.println(list);
+                 //print_matrix();
+              }
+           }
+           //System.out.println(x + " = " + posCheck.cx + " , " + y  + " = " + posCheck.cy);
+        }
+      }
+      else
+      {
+        System.out.println("YOU WIN");
+        gameover = true;
       }     
+    }
+    else
+    {
+        System.out.println("YOU WIN");
+        gameover = true;
+
+    }
       //print_matrix();
       /*
       print_matrix();
@@ -213,7 +570,7 @@ public class Board extends JComponent
     for (PosCheck posCheck: posChecks2)
                 {
                   if (posCheck.cx == hold_X - 62 && pos_X == hold_X - 124 &&
-                      posCheck.cy == hold_Y - 62 && posCheck.checker.checkerType == CheckerType.BLACK_REGULAR)
+                      posCheck.cy == hold_Y - 62 && (posCheck.checker.checkerType == CheckerType.BLACK_REGULAR || posCheck.checker.checkerType == CheckerType.BLACK_KING))
                    {
                       remove(find(posCheck.cx,posCheck.cy));
                       //System.out.println(find(posCheck.cx,posCheck.cy));
@@ -221,7 +578,7 @@ public class Board extends JComponent
                       posCheck.cy = 403;
                    }
                    else if(posCheck.cx == hold_X + 62 && pos_X == hold_X + 124 &&
-                      posCheck.cy == hold_Y - 62 && posCheck.checker.checkerType == CheckerType.BLACK_REGULAR)
+                      posCheck.cy == hold_Y - 62 && (posCheck.checker.checkerType == CheckerType.BLACK_REGULAR || posCheck.checker.checkerType == CheckerType.BLACK_KING))
                    {
                       remove(find(posCheck.cx,posCheck.cy));
                       //System.out.println(find(posCheck.cx,posCheck.cy));
@@ -248,43 +605,147 @@ public class Board extends JComponent
             }
         }
       }
-      if(pos_X  + 1 < 8 && pos_Y + 1 < 8)
+      //System.out.println(name.length());
+      if(name.length() < 3)
       {
-         if(matrix[pos_Y + 1][pos_X + 1] == null)
-         {
-             poss_moveX.add(pos_X+1);
-             poss_moveY.add(pos_Y+1);
-         }
-      }
-      
-      if(pos_X  - 1 >= 0 && pos_Y + 1 < 8)
-      {
-         if(matrix[pos_Y + 1][pos_X - 1] == null)
-         {
-             poss_moveX.add(pos_X-1);
-             poss_moveY.add(pos_Y+1); 
+        if(pos_X  + 1 < 8 && pos_Y + 1 < 8)
+        {
+           if(matrix[pos_Y + 1][pos_X + 1] == null)
+           {
+               poss_moveX.add(pos_X+1);
+               poss_moveY.add(pos_Y+1);
+           }
+        }
+        
+        if(pos_X  - 1 >= 0 && pos_Y + 1 < 8)
+        {
+           if(matrix[pos_Y + 1][pos_X - 1] == null)
+           {
+               poss_moveX.add(pos_X-1);
+               poss_moveY.add(pos_Y+1); 
+          }
+        }
+        if(pos_X + 2 < 8 && pos_Y + 2 < 8)
+        {
+           if(matrix[pos_Y + 2][pos_X + 2] == null && matrix[pos_Y + 1][pos_X + 1] != null)
+           {
+              if(matrix[pos_Y + 1][pos_X + 1].charAt(0) == 'B')
+              {
+               poss_moveX.add(pos_X+2);
+               poss_moveY.add(pos_Y+2);
+             }
+           }
+        }
+         if(pos_X - 2 >= 0 && pos_Y + 2 < 8)
+        {
+           if(matrix[pos_Y + 2][pos_X - 2] == null && matrix[pos_Y + 1][pos_X - 1] != null)
+           {  
+              if(matrix[pos_Y + 1][pos_X - 1].charAt(0) == 'B')
+              {
+               poss_moveX.add(pos_X-2);
+               poss_moveY.add(pos_Y+2);
+             }
+           }
         }
       }
-      if(pos_X + 2 < 8 && pos_Y + 2 < 8)
+      else /* *******************************************************************************************************************************************************************************/
       {
-         if(matrix[pos_Y + 2][pos_X + 2] == null && matrix[pos_Y + 1][pos_X + 1] != null)
+         int oldY = pos_Y;
+         int oldX = pos_X;
+         System.out.println(oldX + " " + oldY);
+         while(oldX < 8 || oldY < 8)
          {
-            if(matrix[pos_Y + 1][pos_X + 1].charAt(0) == 'B')
-            {
-             poss_moveX.add(pos_X+2);
-             poss_moveY.add(pos_Y+2);
-           }
+            if(matrix[oldY][oldX] == null)
+             {
+                poss_moveX.add(oldX);
+                poss_moveY.add(oldY);
+             }
+            else 
+            {  
+              if(matrix[oldY][oldX].charAt(0) == 'B' && matrix[oldY + 1][oldX + 1] == null)
+              {
+                poss_moveX.add(oldX);
+                poss_moveY.add(oldY);
+              }
+              else
+              {
+                break;
+              }       
+            }
+            oldY += 1;
+            oldX += 1;
          }
-      }
-       if(pos_X - 2 >= 0 && pos_Y + 2 < 8)
-      {
-         if(matrix[pos_Y + 2][pos_X - 2] == null && matrix[pos_Y + 1][pos_X - 1] != null)
-         {  
-            if(matrix[pos_Y + 1][pos_X - 1].charAt(0) == 'B')
+
+         oldX = pos_X;
+         oldY = pos_Y;
+
+         while(oldX >= 0 || oldY >= 0)
+         {
+          if(matrix[oldY][oldX] == null)
+             {
+                poss_moveX.add(oldX);
+                poss_moveY.add(oldY);
+             }
+            else 
             {
-             poss_moveX.add(pos_X-2);
-             poss_moveY.add(pos_Y+2);
-           }
+              if(matrix[oldY][oldX].charAt(0) == 'B' && matrix[oldY - 1][oldX - 1] == null)
+              {
+                poss_moveX.add(oldX);
+                poss_moveY.add(oldY);
+              }
+              break;
+            }
+            System.out.println(oldX + " " + oldY);
+            oldX -= 1;
+            oldY -= 1; 
+         }
+
+         oldX = pos_X;
+         oldY = pos_Y;
+
+         while(oldX >= 0 || oldY < 8)
+         {
+            if(matrix[oldY][oldX] == null)
+             {
+                poss_moveX.add(oldX);
+                poss_moveY.add(oldY);
+             }
+            else 
+            {
+              if(matrix[oldY][oldX].charAt(0) == 'B' && matrix[oldY + 1][oldX - 1] == null)
+              {
+                poss_moveX.add(oldX);
+                poss_moveY.add(oldY);
+              }
+              break;
+            }
+
+            oldX -= 1;
+            oldY += 1;
+         }
+
+         oldX = pos_X;
+         oldY = pos_Y;
+
+         while(oldX < 8 || oldY >= 0)
+         {
+            if(matrix[oldY][oldX] == null)
+             {
+                poss_moveX.add(oldX);
+                poss_moveY.add(oldY);
+             }
+            else 
+            {
+              if(matrix[oldY][oldX].charAt(0) == 'B' && matrix[oldY - 1][oldX + 1] == null)
+              {
+                poss_moveX.add(oldX);
+                poss_moveY.add(oldY);
+              }
+              break;
+            }
+            System.out.println(oldX + " " + oldY);
+            oldX += 1;
+            oldY -= 1;
          }
       }
    }
@@ -476,7 +937,7 @@ public class Board extends JComponent
                                 inDrag = false;
                              else
                                 return;
-
+                              print_matrix();
                              // Snap checker to center of square.
                              int x = me.getX();
                              int y = me.getY();
@@ -485,7 +946,7 @@ public class Board extends JComponent
                                            SQUAREDIM / 2;
                              posCheck.cy = (y - deltay) / SQUAREDIM * SQUAREDIM + 
                                            SQUAREDIM / 2;
-                             //System.out.println(oldcx+" "+oldcy);
+                             //System.out.println(posCheck.cx+" "+posCheck.cy);
                              //System.out.println(find(oldcx,oldcy));
                              // Do not move checker onto an occupied square.
                              for (PosCheck posCheck: posChecks)
@@ -497,7 +958,12 @@ public class Board extends JComponent
                                    Board.this.posCheck.cy = oldcy;
                                 }
                               //Do not move out of the board
-                              if(Board.this.posCheck.cx >= 527 || Board.this.posCheck.cy >= 527 || oldcy == Board.this.posCheck.cy || oldcx == Board.this.posCheck.cx)
+                              if(gameover)
+                              {
+                                Board.this.posCheck.cx = oldcx;
+                                 Board.this.posCheck.cy = oldcy;
+                              }
+                              else if(Board.this.posCheck.cx >= 527 || Board.this.posCheck.cy >= 527 || oldcy == Board.this.posCheck.cy || oldcx == Board.this.posCheck.cx)
                               {
                                  Board.this.posCheck.cx = oldcx;
                                  Board.this.posCheck.cy = oldcy;
@@ -505,15 +971,29 @@ public class Board extends JComponent
                               //Do not jump or go back ward if not
                               else if(Board.this.posCheck.checker.checkerType == CheckerType.RED_REGULAR || Board.this.posCheck.checker.checkerType == CheckerType.RED_KING )
                                 {
-                                  System.out.println(find(oldcx,oldcy));
+                                  //System.out.println(find(oldcx,oldcy));
                                   Board.this.posCheck.cx = oldcx;
                                   Board.this.posCheck.cy = oldcy;
                                 }
+
+                  
                               else if(Board.this.posCheck.checker.checkerType == CheckerType.BLACK_REGULAR )
                                 {
-                                  System.out.println(find(oldcx,oldcy));
+                                  //System.out.println(find(oldcx,oldcy));
                                    if(Board.this.posCheck.cy > oldcy)
                                   {
+                                    Board.this.posCheck.cx = oldcx;
+                                    Board.this.posCheck.cy = oldcy;
+                                  }
+                                  else if(((oldcx - Board.this.posCheck.cx) != (oldcy - Board.this.posCheck.cy)) && (oldcx - Board.this.posCheck.cx > 0) )
+                                  {
+                                    //System.out.println((oldcx - Board.this.posCheck.cx) + " " + (oldcy - Board.this.posCheck.cy));
+                                    Board.this.posCheck.cx = oldcx;
+                                    Board.this.posCheck.cy = oldcy;
+                                  }
+                                  else if(((Board.this.posCheck.cx - oldcx) != (oldcy - Board.this.posCheck.cy)) && (Board.this.posCheck.cx - oldcx > 0) )
+                                  {
+                                    //System.out.println((oldcx - Board.this.posCheck.cx) + " " + (oldcy - Board.this.posCheck.cy));
                                     Board.this.posCheck.cx = oldcx;
                                     Board.this.posCheck.cy = oldcy;
                                   }
@@ -547,7 +1027,7 @@ public class Board extends JComponent
                                   }
                                   else if((oldcx + 124 == Board.this.posCheck.cx) && ( oldcy - 124 == Board.this.posCheck.cy) && containThis(posChecks, Board.this.posCheck.cx - 62, Board.this.posCheck.cy + 62,CheckerType.RED_REGULAR))
                                   { 
-                                      //System.out.println("HELLO");
+                                      //System.out.println("HELLO2");
                                       for (PosCheck posCheck: posChecks)
                                         {
                                           if (posCheck.cx == Board.this.posCheck.cx - 62 &&
@@ -572,34 +1052,67 @@ public class Board extends JComponent
                                         }
                                         still_eating = false;  
                                   }
-                                  else if((oldcx - Board.this.posCheck.cx != 62 && oldcy - Board.this.posCheck.cy  != 62) ||  (Board.this.posCheck.cx - oldcx != 62 && oldcy - Board.this.posCheck.cy != 62 ))
-                                  {
-                                    //System.out.println("HOLA");
-                                    Board.this.posCheck.cx = oldcx;
-                                    Board.this.posCheck.cy = oldcy;
-                                  }
-                                  else if(!pick || Board.this.posCheck.cx == oldcx && Board.this.posCheck.cy == oldcy)
+                  
+                                  else if(Board.this.posCheck.cx == oldcx && Board.this.posCheck.cy == oldcy)
                                   {
                                       Board.this.posCheck.cx = oldcx;
                                       Board.this.posCheck.cy = oldcy;
                                   }
                                   else if(Board.this.posCheck.cx != oldcx && Board.this.posCheck.cy != oldcy)
                                   {
-                                    change(Board.this.posCheck.cx,Board.this.posCheck.cy,find(oldcx,oldcy));
-                                    still_eating = false;
+                                    System.out.println(Board.this.posCheck.cy + " " + oldcy);
+                                    if(Board.this.posCheck.cy + 62 == oldcy)
+                                    {
+                                      change(Board.this.posCheck.cx,Board.this.posCheck.cy,find(oldcx,oldcy));
+                                      still_eating = false;
+                                    }
+                                    else
+                                    {
+                                        Board.this.posCheck.cx = oldcx;
+                                        Board.this.posCheck.cy = oldcy;
+                                    }
     
                                     //print_matrix();
                                 
                                   }
-                                  if(Board.this.posCheck.cy == 31)
+                                  if(Board.this.posCheck.cy == 31 && Board.this.posCheck.checker.checkerType != CheckerType.BLACK_KING)
                                   {
                                     Board.this.posCheck.checker.checkerType = CheckerType.BLACK_KING;
+                                    //print_matrix();
+                                          for(int t = 0; t < 8; t++)
+                                          {
+                                            for(int u = 0; u < 8; u++)
+                                            {
+                                                if( (Board.this.posCheck.cy == x_matrix[u][0]) && (Board.this.posCheck.cx == y_matrix[0][t]) )
+                                                {
+                                                    String hold = matrix[u][t];
+                                                    matrix[u][t] = hold + "K";
+                                                }
+                                            }
+                                          }
+                                    //print_matrix();
+
                                   }
                                             //print_matrix();
                                 }
                               else if(Board.this.posCheck.checker.checkerType == CheckerType.BLACK_KING)
                               {
-                                if(!check_king(posChecks,Board.this.posCheck.cx,Board.this.posCheck.cy,oldcx,oldcy))
+                                if(!check_kingLL(posChecks,Board.this.posCheck.cx,Board.this.posCheck.cy,oldcx,oldcy) && (oldcx > Board.this.posCheck.cx) && (oldcy < Board.this.posCheck.cy))
+                                {
+                                      Board.this.posCheck.cx = oldcx;
+                                      Board.this.posCheck.cy = oldcy;
+                                }
+                                else if(!check_kingLR(posChecks,Board.this.posCheck.cx,Board.this.posCheck.cy,oldcx,oldcy) && (oldcx < Board.this.posCheck.cx) && (oldcy < Board.this.posCheck.cy))
+                                {
+                                      Board.this.posCheck.cx = oldcx;
+                                      Board.this.posCheck.cy = oldcy;
+                                }
+                                else if(!check_kingUL(posChecks,Board.this.posCheck.cx,Board.this.posCheck.cy,oldcx,oldcy) && (oldcx > Board.this.posCheck.cx) && (oldcy > Board.this.posCheck.cy))
+                                {
+                                      Board.this.posCheck.cx = oldcx;
+                                      Board.this.posCheck.cy = oldcy;
+                                }
+                               else if(!check_kingUR(posChecks,Board.this.posCheck.cx,Board.this.posCheck.cy,oldcx,oldcy) && (oldcx < Board.this.posCheck.cx) && (oldcy > Board.this.posCheck.cy))
                                 {
                                       Board.this.posCheck.cx = oldcx;
                                       Board.this.posCheck.cy = oldcy;
@@ -616,7 +1129,7 @@ public class Board extends JComponent
                               AI_activate(posChecks);
                               still_eating = true;
                             }
-                            print_matrix();
+                            //print_matrix();
                              posCheck = null;
                              repaint();
                           
