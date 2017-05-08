@@ -16,7 +16,7 @@ public class TicTacToe extends JFrame{
 		setSize(400,400);
 		setResizable(false);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
-		p.setLayout(new GridLayout(3,4));
+		p.setLayout(new GridLayout(3,3));
 		for(int i=0;i<9;i++){
 			lib.buttons[i]=new XOButton(i);
 			p.add(lib.buttons[i]);
@@ -24,4 +24,5 @@ public class TicTacToe extends JFrame{
 		add(p);
 		setVisible(true);
 	}
+	
 }
