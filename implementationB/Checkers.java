@@ -71,7 +71,7 @@ public class Checkers extends JFrame
       pack();
       setVisible(true);
    }
-      public static void main(String[] args)
+      public static void main(String[] args) 
    {
       Runnable r = new Runnable()
                    {

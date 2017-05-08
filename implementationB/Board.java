@@ -13,6 +13,8 @@ import java.util.*;
 import java.security.SecureRandom;
 import javax.swing.JComponent;
 
+import java.io.*;
+
 public class Board extends JComponent
 {
    // dimension of checkerboard square (25% bigger than checker)
@@ -51,6 +53,7 @@ public class Board extends JComponent
    private ArrayList<String> list_BLACK = new ArrayList<String>();
    private ArrayList<Integer> poss_moveX = new ArrayList<Integer>();
    private ArrayList<Integer> poss_moveY = new ArrayList<Integer>();
+   private Manager manager = new Manager();
 
 
    // list of Checker objects and their initial positions
@@ -488,12 +491,39 @@ public class Board extends JComponent
       all_move(name);
       if(poss_moveX.size() != 0 && poss_moveY.size() != 0)
       {
-        int move = gen_move(poss_moveX.size());
-        change(x_matrix[poss_moveX.get(move)][0],y_matrix[0][poss_moveY.get(move)],name);
-        int hold_X = x_matrix[poss_moveX.get(move)][0];
-        int hold_Y = y_matrix[0][poss_moveY.get(move)];
+        int newX, newY, move, hold_X = 0, hold_Y = 0;
+        try {
+          double[][] returnedScore = manager.stateDoesExist(matrix);
+          if (returnedScore != null && manager.getHighScore(returnedScore) != null){
+            newX = manager.getHighScore(returnedScore).get(0);
+            newY = manager.getHighScore(returnedScore).get(1);
+            change(x_matrix[newX][0],y_matrix[0][newY],name);
+            hold_X = x_matrix[newX][0];
+            hold_Y = y_matrix[0][newY];
+          } else {
+            move = gen_move(poss_moveX.size());
+            change(x_matrix[poss_moveX.get(move)][0],y_matrix[0][poss_moveY.get(move)],name);
+            hold_X = x_matrix[poss_moveX.get(move)][0];
+            hold_Y = y_matrix[0][poss_moveY.get(move)];
+          }
+
+        } catch (IOException e) {
+            System.err.println("Caught IOException: " + e.getMessage());
+        }
+
         //System.out.println(poss_moveX);
         //System.out.println(poss_moveY);
+
+        try {
+          if (manager.stateDoesExist(matrix) == null){
+            manager.setMatrix(matrix);
+            manager.setScoreOnPossibleMoves(poss_moveY, poss_moveX);
+            manager.printToFile();
+          }
+
+        } catch (IOException e) {
+            System.err.println("Caught IOException: " + e.getMessage());
+        }
 
         poss_moveX = new ArrayList<Integer>();
         poss_moveY = new ArrayList<Integer>();
