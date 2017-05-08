@@ -884,7 +884,7 @@ private void containUL(int x, int y)
    }
    private boolean go_back(int x, int y, int oldx, int oldy, int x_in, int y_in)
    {
-      while((x < 530 && x >= 31) && (y < 530 && y >= 31))
+      while((x < 466 && x >= 31) && (y < 466 && y >= 31))
       {
         //System.out.println(x + " " + y + " = " + oldx + " " + oldy);
          if(x == oldx && y == oldy)
@@ -1201,7 +1201,7 @@ private void containUL(int x, int y)
    }
    private boolean containThis(List<PosCheck> posChecks2, int x, int y, CheckerType color)
    {
-      if(x > 530 || x < 31 || y > 530 || y < 31)
+      if(x > 466 || x < 31 || y > 466 || y < 31)
         return false;
       for (PosCheck posCheck: posChecks2)
       {
@@ -1217,7 +1217,7 @@ private void containUL(int x, int y)
    }
     private boolean containempt(List<PosCheck> posChecks2, int x, int y)
    {
-     if(x > 530 || x < 31 || y > 530 || y < 31)
+     if(x > 466 || x < 31 || y > 466 || y < 31)
         return true;
       for (PosCheck posCheck: posChecks2)
       {
@@ -1233,15 +1233,15 @@ private void containUL(int x, int y)
    }
    private boolean containUR(List<PosCheck> posChecks2, int x, int y)
    {
-     while(x < 530 && y >= 31)
+     while(x < 466 && y >= 31)
      {
        x += 62;
        y -= 62;
-       if(x > 530 && y < 31)
+       if(x > 466 && y < 31)
           break;
-       if(containThis(posChecks2,x,y,CheckerType.RED_REGULAR) || containThis(posChecks2,x,y,CheckerType.RED_KING))
+       if((x - 62 >= 31 && y + 62 < 466) && (containThis(posChecks2,x,y,CheckerType.RED_REGULAR) || containThis(posChecks2,x,y,CheckerType.RED_KING)))
        {
-          if(!containempt(posChecks2,x + 62,y - 62) && (x + 62 < 530 && y - 62 >= 31))
+          if(!containempt(posChecks2,x + 62,y - 62))
           {
             return true;
           }
@@ -1257,9 +1257,9 @@ private void containUL(int x, int y)
        y -= 62;
       if(x < 31 && y < 31)
           break;
-       if(containThis(posChecks2,x,y,CheckerType.RED_REGULAR) || containThis(posChecks2,x,y,CheckerType.RED_KING))
+       if((x - 62 >= 31 && y + 62 < 466) && (containThis(posChecks2,x,y,CheckerType.RED_REGULAR) || containThis(posChecks2,x,y,CheckerType.RED_KING)))
        {
-          if(!containempt(posChecks2,x - 62,y - 62) && (x - 62 >= 31 && y - 62 >= 31))
+          if(!containempt(posChecks2,x - 62,y - 62))
           {
             return true;
           }
@@ -1269,15 +1269,15 @@ private void containUL(int x, int y)
    }
   private boolean containLR(List<PosCheck> posChecks2, int x, int y)
    {
-     while(x < 530 && y < 530)
+     while(x < 466 && y < 466)
      {
        x += 62;
        y += 62;
-       if(x > 530 && y > 530)
+       if(x > 466 && y > 466)
           break;
-       if(containThis(posChecks2,x,y,CheckerType.RED_REGULAR) || containThis(posChecks2,x,y,CheckerType.RED_KING))
+       if((x + 62 < 466 && y + 62 < 466) && (containThis(posChecks2,x,y,CheckerType.RED_REGULAR) || containThis(posChecks2,x,y,CheckerType.RED_KING)))
        {
-          if(!containempt(posChecks2,x + 62,y + 62) && (x + 62 < 530 && y + 62 < 530))
+          if(!containempt(posChecks2,x + 62,y + 62))
           {
             return true;
           }
@@ -1287,15 +1287,15 @@ private void containUL(int x, int y)
    }
   private boolean containLL(List<PosCheck> posChecks2, int x, int y)
    {
-     while(x >= 31 && y < 530)
+     while(x >= 31 && y < 466)
      {
        x -= 62;
        y += 62;
-       if(x < 31 && y > 530)
+       if(x < 31 && y > 466)
           break;
-       if(containThis(posChecks2,x,y,CheckerType.RED_REGULAR) || containThis(posChecks2,x,y,CheckerType.RED_KING))
+       if((x - 62 >= 31 && y + 62 < 466) && (containThis(posChecks2,x,y,CheckerType.RED_REGULAR) || containThis(posChecks2,x,y,CheckerType.RED_KING)))
        {
-          if(!containempt(posChecks2,x - 62,y + 62) && (x - 62 >= 31 && y + 62 < 530))
+          if(!containempt(posChecks2,x - 62,y + 62))
           {
             return true;
           }
@@ -1307,22 +1307,22 @@ private void containUL(int x, int y)
    {
      if(containUR(posChecks2,x,y))
      {
-      //System.out.println("OUT1");
+      System.out.println("OUT1");
        return true;   
      }
      else if(containUL(posChecks2,x,y))
      {
-        //System.out.println("OUT2");
+        System.out.println("OUT2");
        return true;
      }
      else if(containLR(posChecks2,x,y))
      {
-           // System.out.println("OUT3");
+        System.out.println("OUT3");
        return true;
      }
      else if(containLL(posChecks2,x,y))
      {
-            //System.out.println("OUT4");
+        System.out.println("OUT4");
        return true;
      }
      return false;
@@ -1389,7 +1389,7 @@ private void containUL(int x, int y)
                                            SQUAREDIM / 2;
                              posCheck.cy = (y - deltay) / SQUAREDIM * SQUAREDIM + 
                                            SQUAREDIM / 2;
-                             //System.out.println(posCheck.cx+" "+posCheck.cy);
+                             System.out.println(posCheck.cx+" "+posCheck.cy);
                              //System.out.println(find(oldcx,oldcy));
                             // System.out.println(must_eat);
                              // Do not move checker onto an occupied square.
@@ -1471,7 +1471,7 @@ private void containUL(int x, int y)
                                            }
                                            //System.out.println(x + " = " + posCheck.cx + " , " + y  + " = " + posCheck.cy);
                                         }
-                                        if((Board.this.posCheck.cx + 124 < 530 && Board.this.posCheck.cy - 124 >= 31) && (containThis(posChecks,Board.this.posCheck.cx + 62,Board.this.posCheck.cy - 62,CheckerType.RED_REGULAR) || containThis(posChecks,Board.this.posCheck.cx + 62,Board.this.posCheck.cy - 62,CheckerType.RED_KING)) )
+                                        if((Board.this.posCheck.cx + 124 < 466 && Board.this.posCheck.cy - 124 >= 31) && (containThis(posChecks,Board.this.posCheck.cx + 62,Board.this.posCheck.cy - 62,CheckerType.RED_REGULAR) || containThis(posChecks,Board.this.posCheck.cx + 62,Board.this.posCheck.cy - 62,CheckerType.RED_KING)) )
                                         {
                                           if(containThis(posChecks,Board.this.posCheck.cx + 62,Board.this.posCheck.cy - 62,CheckerType.RED_REGULAR) || containThis(posChecks,Board.this.posCheck.cx + 62,Board.this.posCheck.cy - 62,CheckerType.RED_KING))
                                           {
@@ -1547,7 +1547,7 @@ private void containUL(int x, int y)
                                            }
                                            //System.out.println(x + " = " + posCheck.cx + " , " + y  + " = " + posCheck.cy);
                                         }
-                                        if((Board.this.posCheck.cx + 124 < 530 && Board.this.posCheck.cy - 124 >= 31) && (containThis(posChecks,Board.this.posCheck.cx + 62,Board.this.posCheck.cy - 62,CheckerType.RED_REGULAR) || containThis(posChecks,Board.this.posCheck.cx + 62,Board.this.posCheck.cy - 62,CheckerType.RED_KING)))
+                                        if((Board.this.posCheck.cx + 124 < 466 && Board.this.posCheck.cy - 124 >= 31) && (containThis(posChecks,Board.this.posCheck.cx + 62,Board.this.posCheck.cy - 62,CheckerType.RED_REGULAR) || containThis(posChecks,Board.this.posCheck.cx + 62,Board.this.posCheck.cy - 62,CheckerType.RED_KING)))
                                         {
                                           if(containThis(posChecks,Board.this.posCheck.cx + 62,Board.this.posCheck.cy - 62,CheckerType.RED_REGULAR) || containThis(posChecks,Board.this.posCheck.cx + 62,Board.this.posCheck.cy - 62,CheckerType.RED_KING))
                                           {
@@ -1750,7 +1750,7 @@ private void containUL(int x, int y)
                                            }
                                            //System.out.println(x + " = " + posCheck.cx + " , " + y  + " = " + posCheck.cy);
                                         }
-                                        if((Board.this.posCheck.cx + 124 < 530 && Board.this.posCheck.cy - 124 >= 31) && (containThis(posChecks,Board.this.posCheck.cx + 62,Board.this.posCheck.cy - 62,CheckerType.RED_REGULAR) || containThis(posChecks,Board.this.posCheck.cx + 62,Board.this.posCheck.cy - 62,CheckerType.RED_KING)) )
+                                        if((Board.this.posCheck.cx + 124 < 466 && Board.this.posCheck.cy - 124 >= 31) && (containThis(posChecks,Board.this.posCheck.cx + 62,Board.this.posCheck.cy - 62,CheckerType.RED_REGULAR) || containThis(posChecks,Board.this.posCheck.cx + 62,Board.this.posCheck.cy - 62,CheckerType.RED_KING)) )
                                         {
        
                                           if(containThis(posChecks,Board.this.posCheck.cx + 62,Board.this.posCheck.cy - 62,CheckerType.RED_REGULAR) || containThis(posChecks,Board.this.posCheck.cx + 62,Board.this.posCheck.cy - 62,CheckerType.RED_KING))
@@ -1830,7 +1830,7 @@ private void containUL(int x, int y)
                                            }
                                            //System.out.println(x + " = " + posCheck.cx + " , " + y  + " = " + posCheck.cy);
                                         }
-                                        if((Board.this.posCheck.cx + 124 < 530 && Board.this.posCheck.cy - 124 >= 31) &&
+                                        if((Board.this.posCheck.cx + 124 < 466 && Board.this.posCheck.cy - 124 >= 31) &&
                                           (containThis(posChecks,Board.this.posCheck.cx + 62,Board.this.posCheck.cy - 62,CheckerType.RED_REGULAR) || containThis(posChecks,Board.this.posCheck.cx + 62,Board.this.posCheck.cy - 62,CheckerType.RED_KING)))
                                         {
                                           //System.out.println("OUTPUT20");
@@ -1972,6 +1972,7 @@ private void containUL(int x, int y)
                                   {
                                     king_jump = false;
                                     still_eating = true;
+                                    System.out.println("PROBLEM");
                                      must_eat = find(Board.this.posCheck.cx,Board.this.posCheck.cy);
                                   }
                                   else
