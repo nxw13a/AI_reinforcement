@@ -4,15 +4,25 @@ import java.util.*;
 import java.io.*;
 import java.util.regex.Pattern;
 import java.util.regex.Matcher;
+import java.nio.file.*;
+import java.nio.charset.*;
 
 public class Manager {
+
+    ////////////////////////////////////////////////////////////
+    //                    Object variables                    //
+    ////////////////////////////////////////////////////////////
 
     private double[][] score;
     private String[][] matrix;
     public static BufferedWriter writer = null;
     public static FileWriter fw = null;
+    private Queue<String> currThreeStates = new LinkedList<String>();
 
-    // Constructor
+    ////////////////////////////////////////////////////////////
+    //                    Object constructor                  //
+    ////////////////////////////////////////////////////////////
+    
     public Manager() {
         this.score = new double[8][8];
         this.matrix = new String[8][8];
@@ -43,6 +53,11 @@ public class Manager {
         }
     }
 
+    ////////////////////////////////////////////////////////////
+    //                        Setters                         //
+    ////////////////////////////////////////////////////////////
+
+    // Save the score of the current state
     protected void setScoreOnPossibleMoves(ArrayList<Integer> posY, ArrayList<Integer> posX) {
         int counter = 0;    
         while ((counter < posX.size()) && (counter < posY.size())) {
@@ -51,45 +66,16 @@ public class Manager {
         }
     }
 
+    // Save the current state of the board
     protected void setMatrix(String[][] matrix) {
         this.matrix = matrix;
     }
 
-    protected double[][] stateDoesExist(String[][] mat) throws IOException{
-        // @TODO - OPEN AND PARSE DATA FILE
-        String temp = "";
-        double[][] hc = null;
-        for (int i = 0; i < 8; i++) {
-            for (int j = 0; j < 8; j++) {
-                temp += "\"";
-                temp += mat[i][j];
-                temp += "\" ";
-            }
-        }
+    ////////////////////////////////////////////////////////////
+    //                        Getters                         //
+    ////////////////////////////////////////////////////////////
 
-        try {
-
-            File f = new File("implementationB/data.txt");
-
-            BufferedReader b = new BufferedReader(new FileReader(f));
-
-            String readLine = "";
-
-            while ((readLine = b.readLine()) != null) {
-                if (temp.equals(readLine)) {
-                    // Get score and return score matrix
-                    System.out.println("Found .... .. . .. . . . \n\n");
-                    hc = getScore(b.readLine());
-                    return hc;
-                }
-            }
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return hc;
-    }
-
+    // Find the highest score 
     protected ArrayList<Integer> getHighScore(double[][] score) {
         ArrayList<Integer> hcIndex = null;
         double temp = score[0][0];
@@ -113,9 +99,9 @@ public class Manager {
         return hcIndex;
     }
 
+    // Converts the raw string of the score to an array of doubles 
     private double[][] getScore(String rawScore) {
         Matcher m = Pattern.compile("([^\"]\\S*|\".+?\")\\s*").matcher(rawScore);
-        
         
         int row = 0, column = 0;
         double[][] tempHolder = new double[8][8];
@@ -140,6 +126,74 @@ public class Manager {
         // }
     }
 
+    ////////////////////////////////////////////////////////////
+    //                     Main Functions                     //
+    ////////////////////////////////////////////////////////////
+
+    // learn func: the index of the score being updated for an existing matrix/mat
+    // learnState: pos or neg; points increases and decreases accordingly
+    protected void learn(int[] index, String[][] mat, String learnState){
+        try {
+            double[][] temp = stateDoesExist(mat);
+            String oldScore = transformSc(temp);
+
+            if (temp != null && learnState.equals("pos")) {
+                temp[index[0]][index[1]] += 0.01;
+            } else if (temp != null && learnState.equals("neg")) {
+                if ((temp[index[0]][index[1]] - 0.1) > 0) 
+                    temp[index[0]][index[1]] -= 0.1;
+            }
+
+            Path path = Paths.get("implementationB/data.txt");
+            Charset charset = StandardCharsets.UTF_8;
+  
+            String newScore = transformSc(temp);
+            String content = new String(Files.readAllBytes(path), charset);
+
+            content = content.replaceAll(oldScore, newScore);
+            Files.write(path, content.getBytes(charset));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    // Check if the state exist in the file
+    protected double[][] stateDoesExist(String[][] mat) throws IOException{
+        // @TODO - OPEN AND PARSE DATA FILE
+        String temp = "";
+        double[][] hc = null;
+        for (int i = 0; i < 8; i++) {
+            for (int j = 0; j < 8; j++) {
+                temp += "\"";
+                temp += mat[i][j];
+                temp += "\" ";
+            }
+        }
+
+        try {
+
+            File f = new File("implementationB/data.txt");
+
+            BufferedReader b = new BufferedReader(new FileReader(f));
+
+            String readLine = "";
+
+            while ((readLine = b.readLine()) != null) {
+                if (temp.equals(readLine)) {
+                    // Get score and return score matrix
+                    System.out.println("Found .... .. . .. . . . \n");
+                    hc = getScore(b.readLine());
+                    return hc;
+                }
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return hc;
+    }
+
+    // Print state, score, and order to file
     protected void printToFile(){ 
 
         File varTmpDir = new File("implementationB/data.txt");
@@ -154,10 +208,11 @@ public class Manager {
             fw = new FileWriter(varTmpDir.getAbsoluteFile(), true);
             writer = new BufferedWriter(fw);
 
-            String[] dataToPrint = transformData();
+            writer.write(transformData("mat")+"\n");
+            writer.write(transformData("sc")+"\n");
 
-            for (int i = 0; i < 2; i++) {
-                writer.write(dataToPrint[i]+"\n");
+            if (currThreeStates.size() < 3){
+                currThreeStates.add(transformData("mat"));
             }
 
         } catch (IOException e) {
@@ -178,25 +233,46 @@ public class Manager {
         }
     }
 
-    private String[] transformData() {
-        String temp[] = new String[2];
-        Arrays.fill(temp, "");
+    ////////////////////////////////////////////////////////////
+    //    Transformation function: turns data into String     //
+    ////////////////////////////////////////////////////////////
+
+    private String transformData(String option) {
+        String temp = "";
+
+        if (option.equals("mat")) {
+            temp = transformMat(this.matrix);  
+        } else if (option.equals("sc")) {
+            temp = transformSc(this.score);          
+        }
+
+        return temp;
+    }
+
+    private String transformSc(double[][] sc) {
+        String temp = "";
 
         for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 8; j++) {
-                temp[0] += "\"";
-                temp[0] += this.matrix[i][j];
-                temp[0] += "\" "; 
+                temp += "\"";
+                temp += sc[i][j];
+                temp += "\" "; 
             }
-        }
+        }            
+
+        return temp;
+    }
+
+    private String transformMat(String[][] mat) {
+        String temp = "";
 
         for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 8; j++) {
-                temp[1] += "\"";
-                temp[1] += this.score[i][j];
-                temp[1] += "\" "; 
+                temp += "\"";
+                temp += mat[i][j];
+                temp += "\" "; 
             }
-        }
+        }            
 
         return temp;
     }
