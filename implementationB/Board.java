@@ -5,6 +5,8 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 
+
+
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseMotionAdapter;
@@ -38,7 +40,10 @@ public class Board extends JComponent
    private boolean gameover = false;
    private String must_eat = "";
    private boolean king_jump = false;
-  private boolean red_jump = false;
+   private boolean red_jump = false;
+
+   private Queue<String> queue = new LinkedList<String>();
+
 
    // displacement between drag start coordinates and checker center coordinates
 
@@ -67,6 +72,17 @@ public class Board extends JComponent
    public int[][] y_matrix = new int[8][8];
 
    public String[][] matrix = new String[8][8];
+
+   public void printout_queue()
+   {
+      Iterator iterator = queue.iterator();
+      while(iterator.hasNext()){
+        String element = (String) iterator.next();
+        System.out.print(element + " ");
+      }
+      System.out.println();
+   }
+
    private String turn_king(String a)
    {
       if(a == "R1")
@@ -627,11 +643,13 @@ private void containUL(int x, int y)
           if (returnedScore != null && manager.getHighScore(returnedScore) != null){
             newX = manager.getHighScore(returnedScore).get(0);
             newY = manager.getHighScore(returnedScore).get(1);
+            queue.add(name);
             change(x_matrix[newX][0],y_matrix[0][newY],name);
             hold_X = x_matrix[newX][0];
             hold_Y = y_matrix[0][newY];
           } else {
             move = gen_move(poss_moveX.size());
+            queue.add(name);
             change(x_matrix[poss_moveX.get(move)][0],y_matrix[0][poss_moveY.get(move)],name);
             hold_X = x_matrix[poss_moveX.get(move)][0];
             hold_Y = y_matrix[0][poss_moveY.get(move)];
@@ -714,6 +732,7 @@ private void containUL(int x, int y)
             //System.out.println(poss_moveX);
             //System.out.println(poss_moveY + "\n");
             move = gen_move(poss_moveX.size());
+            queue.add(name);
             change(x_matrix[poss_moveX.get(move)][0],y_matrix[0][poss_moveY.get(move)],name);
             hold_X = x_matrix[poss_moveX.get(move)][0];
             hold_Y = y_matrix[0][poss_moveY.get(move)];
@@ -1434,6 +1453,7 @@ private void containUL(int x, int y)
                                               posCheck.cy ==  Board.this.posCheck.cy + 62 && (posCheck.checker.checkerType == CheckerType.RED_REGULAR || posCheck.checker.checkerType == CheckerType.RED_KING))
                                            {
                                               //print_matrix();
+                                              queue.add(find(oldcx,oldcy));
                                              change(Board.this.posCheck.cx,Board.this.posCheck.cy,find(oldcx,oldcy));
                                              list_RED.add(find(Board.this.posCheck.cx + 62,Board.this.posCheck.cy + 62));
                                                for(int p = 0; p < list.size(); p++)
@@ -1509,6 +1529,7 @@ private void containUL(int x, int y)
                                           if (posCheck.cx == Board.this.posCheck.cx - 62 &&
                                               posCheck.cy ==  Board.this.posCheck.cy + 62 && (posCheck.checker.checkerType == CheckerType.RED_REGULAR || posCheck.checker.checkerType == CheckerType.RED_KING))
                                            {
+                                              queue.add(find(oldcx,oldcy));
                                               change(Board.this.posCheck.cx,Board.this.posCheck.cy,find(oldcx,oldcy));
                                               list_RED.add(find(Board.this.posCheck.cx - 62,Board.this.posCheck.cy + 62));
                                                 for(int p = 0; p < list.size(); p++)
@@ -1586,6 +1607,7 @@ private void containUL(int x, int y)
                                     //System.out.println(Board.this.posCheck.cy + " " + oldcy);
                                     if(Board.this.posCheck.cy + 62 == oldcy)
                                     {
+                                      queue.add(find(oldcx,oldcy));
                                       change(Board.this.posCheck.cx,Board.this.posCheck.cy,find(oldcx,oldcy));
                                       still_eating = false;
                                        must_eat = "";
@@ -1655,6 +1677,7 @@ private void containUL(int x, int y)
                                 }
                                 else
                                 {
+                                  queue.add(find(oldcx,oldcy));
                                   change(Board.this.posCheck.cx,Board.this.posCheck.cy,find(oldcx,oldcy));
                                   if(containking(posChecks,Board.this.posCheck.cx,Board.this.posCheck.cy) && king_jump)
                                   {
@@ -1709,6 +1732,7 @@ private void containUL(int x, int y)
                                               posCheck.cy ==  Board.this.posCheck.cy + 62 && (posCheck.checker.checkerType == CheckerType.RED_REGULAR || posCheck.checker.checkerType == CheckerType.RED_KING))
                                            {
                                               //print_matrix();
+                                            queue.add(find(oldcx,oldcy));
                                              change(Board.this.posCheck.cx,Board.this.posCheck.cy,find(oldcx,oldcy));
                                              list_RED.add(find(Board.this.posCheck.cx + 62,Board.this.posCheck.cy + 62));
                                                for(int p = 0; p < list.size(); p++)
@@ -1788,6 +1812,7 @@ private void containUL(int x, int y)
                                           if (posCheck.cx == Board.this.posCheck.cx - 62 &&
                                               posCheck.cy ==  Board.this.posCheck.cy + 62 && (posCheck.checker.checkerType == CheckerType.RED_REGULAR || posCheck.checker.checkerType == CheckerType.RED_KING))
                                            {
+                                              queue.add(find(oldcx,oldcy));
                                               change(Board.this.posCheck.cx,Board.this.posCheck.cy,find(oldcx,oldcy));
                                               list_RED.add(find(Board.this.posCheck.cx - 62,Board.this.posCheck.cy + 62));
                                                 for(int p = 0; p < list.size(); p++)
@@ -1870,6 +1895,7 @@ private void containUL(int x, int y)
                                     //System.out.println(Board.this.posCheck.cy + " " + oldcy);
                                     if(Board.this.posCheck.cy + 62 == oldcy)
                                     {
+                                      queue.add(find(oldcx,oldcy));
                                       change(Board.this.posCheck.cx,Board.this.posCheck.cy,find(oldcx,oldcy));
                                       still_eating = false;
                                        must_eat = "";
@@ -1940,6 +1966,7 @@ private void containUL(int x, int y)
                                 }
                                 else
                                 {
+                                  queue.add(find(oldcx,oldcy));
                                   change(Board.this.posCheck.cx,Board.this.posCheck.cy,find(oldcx,oldcy));
                                   if(containking(posChecks,Board.this.posCheck.cx,Board.this.posCheck.cy) && king_jump)
                                   {
@@ -1961,7 +1988,9 @@ private void containUL(int x, int y)
                               AI_activate(posChecks);
                               still_eating = true;
                             }
+                            //printout_queue(); 
                             //print_matrix();
+                            //System.out.println(queue.element());
                              //print_matrix();
                              posCheck = null;
                              repaint();

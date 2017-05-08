@@ -1,6 +1,5 @@
 package implementationB;
 import java.awt.EventQueue;
-
 import javax.swing.JFrame;
 
 public class Checkers extends JFrame
@@ -9,6 +8,7 @@ public class Checkers extends JFrame
    {
       super(title);
       setDefaultCloseOperation(EXIT_ON_CLOSE);
+
 
       Board board = new Board();
       board.add(new Checker(CheckerType.RED_REGULAR), 1, 2);
