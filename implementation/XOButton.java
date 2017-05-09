@@ -52,21 +52,40 @@ public class XOButton extends JButton implements ActionListener{
 	}
 
 	private void resetWin(){
-		System.out.println("YOU WIN");
 		// If the state does not exist
 		int index = managerList.doesExist(lib.position, lib.order, lib.count);
+		System.out.println("YOU WIN " + managerList.getSize());
+		
 		if (index == -1) {
-			Manager newManager = new Manager();
-			// Add position to list
-			newManager.setPosition(lib.position);
-			newManager.setScore(lib.score);
-			newManager.setOrderWith(lib.order);
-			// Push to ManagerList
-			managerList.addState(newManager);
+			if(managerList.repeat(lib.order,lib.position))
+			{
+				Manager newManager = new Manager();
+				// Add position to list
+				newManager.setPosition(lib.position);
+				newManager.setScore(lib.score);
+				newManager.setOrderWith(lib.order);
+				// Push to ManagerList
+				managerList.addState(newManager);
+			for(int x = 0; x < 9; x++)
+				System.out.print(lib.position[x] + " ");
+			System.out.println();
+			for(int x = 0; x < 9; x++)
+				System.out.print(lib.order[x] + " ");
+			System.out.println();
+			}
 		} else {
+			
 			// System.out.println("lib.count: " + lib.count);
 			managerList.getItemAtIndex(index).updateScore(location_button, true);
 			managerList.getItemAtIndex(index).updateScore(select, false);
+			/*
+			for(int x = 0; x < 9; x++)
+				System.out.print(managerList.getItemAtIndex(index).score[x] + " ");
+			System.out.println();
+			for(int x = 0; x < 9; x++)
+				System.out.print(managerList.getItemAtIndex(index).position[x] + " ");
+			System.out.println();
+			*/
 		}
 
 		resetBoard();
@@ -77,20 +96,32 @@ public class XOButton extends JButton implements ActionListener{
 	}
 
 	private void resetLost(){
-		System.out.println("YOU LOST");
 		// If the state does not exist
+
 		int index = managerList.doesExist(lib.position, lib.order, lib.count);
+		System.out.println("YOU LOST" + managerList.getSize());
 		if (index == -1) {
-			Manager newManager = new Manager();
-			// Add position to list
-			newManager.setPosition(lib.position);
-			newManager.setScore(lib.score);
-			newManager.setOrderWith(lib.order);
-			// Push to ManagerList
-			managerList.addState(newManager);
+			if(managerList.repeat(lib.order,lib.position))
+			{
+				Manager newManager = new Manager();
+				// Add position to list
+				newManager.setPosition(lib.position);
+				newManager.setScore(lib.score);
+				newManager.setOrderWith(lib.order);
+				// Push to ManagerList
+				managerList.addState(newManager);
+			}
 		} else {
 			// System.out.println("lib.count: " + lib.count);
 			managerList.getItemAtIndex(index).updateScore(select, true);
+			/*
+			for(int x = 0; x < 9; x++)
+				System.out.print(managerList.getItemAtIndex(index).score[x] + " ");
+			System.out.println();
+			for(int x = 0; x < 9; x++)
+				System.out.print(managerList.getItemAtIndex(index).position[x] + " ");
+			System.out.println();
+			*/
 		}
 
 		resetBoard();

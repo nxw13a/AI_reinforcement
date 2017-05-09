@@ -8,9 +8,11 @@ public class ManagerList {
     // Object Attributes
     public static ArrayList<Manager> managerList = new ArrayList<Manager>();
     private static ArrayList<Integer> possibleStates = new ArrayList<Integer>();
+        public static BufferedWriter writer = null;
+    public static FileWriter fw = null;
 
-
-    public ManagerList(){
+    public void load(){
+        
         String path = "data.txt";
         File varTmpDir = new File(path);
         boolean exists = varTmpDir.exists();
@@ -24,6 +26,41 @@ public class ManagerList {
                 System.out.println(e.getMessage());
             }
         }
+        
+    }
+    private boolean sameOrder(int[] orderN, int[] orderO)
+    {
+        for(int x = 0; x < 9; x++)
+        {
+            if(orderN[x] != orderO[x])
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+        private boolean samePos(String[] orderN, String[] orderO)
+    {
+        for(int x = 0; x < 9; x++)
+        {
+            if(orderN[x] != orderO[x])
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public boolean repeat(int[] orderN, String[] posN)
+    {
+        for(int x = 0; x < managerList.size(); x++)
+        {
+            if(sameOrder(orderN,managerList.get(x).order) && samePos(posN,managerList.get(x).position))
+            {
+                return false;
+            }
+        }
+        return true;
     }
     private void read_in(String[] line, int size)
     {
@@ -183,11 +220,72 @@ public class ManagerList {
         System.out.println(" ");
     }
 
-    public static void printToFile(){ 
+         public void printToFile(){ 
 
-        for (int i = 0; i < getSize(); i++) {
-                getItemAtIndex(i).printToFile();
-        }
+        File varTmpDir = new File("data.txt");
+        boolean exists = varTmpDir.exists();
+
+  
+
+        try {
+
+            if (!exists) {
+                varTmpDir.createNewFile();
+            }
+
+            fw = new FileWriter(varTmpDir.getAbsoluteFile(), false);
+            writer = new BufferedWriter(fw);
+
+            File f = new File("data.txt");
+
+            BufferedReader b = new BufferedReader(new FileReader(f));
+
+            String readLine = "";
+            String first="";
+            String second="";
+            String third="";
+            boolean d=true;
+
+            if(d)
+            {
+                for(int x = 0; x < managerList.size(); x++)
+                {
+                    for (int i = 0; i < 9; i++) {
+                        writer.write(managerList.get(x).order[i] + " ");
+                    }
+                    writer.write("\n");
+                    for (int i = 0; i < 9; i++) {
+                        writer.write(managerList.get(x).position[i] + " ");
+                    } 
+                    writer.write("\n");
+                    for (int i = 0; i < 9; i++) {
+                        writer.write(managerList.get(x).score[i] + " ");
+
+                    }
+                    writer.write("\n\n");
+                  }
+            }
+
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+
+            try {
+
+                if (writer != null)
+                    writer.close();
+
+                if (fw != null)
+                    fw.close();
+
+            } catch (IOException ex) {
+
+                ex.printStackTrace();
+
+            }
+        }   
     }
 
     

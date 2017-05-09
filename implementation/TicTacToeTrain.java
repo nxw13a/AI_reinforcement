@@ -26,6 +26,7 @@ public class TicTacToeTrain extends JFrame{
 		setResizable(false);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		p.setLayout(new GridLayout(3,3));
+		managerList.load();
 		for(int i=0;i<9;i++){
 			lib.buttons[i]=new XOButton(i, managerList);
 			p.add(lib.buttons[i]);
@@ -35,36 +36,9 @@ public class TicTacToeTrain extends JFrame{
 	}
 	public void touchs()
 	{
-		int x;
-		if (managerList.isEmpty()) {
-			generateRandomMove();
-			lib.buttons[select].doClick();
-		} else {
-			 x = managerList.doesExist(lib.position, lib.order, lib.count);
-			// @ TODO - IF STATES DON'T EXIST
-			if (x == -1) {
-				generateRandomMove();
-				lib.buttons[select].doClick();
-			} else { // @ TODO - IF STATE EXISTS
-				if (managerList.getItemAtIndex(x).isEqualScore()) {
-					generateRandomMove();
-					lib.buttons[select].doClick();
-				} else {
-					x = managerList.getHighestScore(lib.position, lib.order, lib.count);
-					if (x == -1) {
-						generateRandomMove();
-						lib.buttons[select].doClick();
-					} else {
-						x = managerList.getItemAtIndex(x).getHighestScore();
-						if (lib.position[x] != null){
-							generateRandomMove();
-							lib.buttons[select].doClick();
-						}
-						lib.buttons[x].doClick();
-					}
-				}
-			}
-		}
+		//int x;
+	  	generateRandomMove();
+		lib.buttons[select].doClick();
 	}
 	public void startTrain()
 	{

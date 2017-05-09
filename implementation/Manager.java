@@ -9,8 +9,7 @@ public class Manager {
     public int[] order;
     public double[] score;
     public String[] position;
-    public static BufferedWriter writer = null;
-    public static FileWriter fw = null;
+
 
     // Constructor
     public Manager(){
@@ -147,86 +146,5 @@ public class Manager {
         System.out.println("\n");
     }
 
-    public void printToFile(){ 
 
-        File varTmpDir = new File("data.txt");
-        boolean exists = varTmpDir.exists();
-
-        String tmp1="";
-        for (int x=0;x<9;x++) 
-        {
-            
-            tmp1+=order[x]+ " ";
-        }
-        String tmp2="";
-        for (int x=0;x<9;x++) 
-        {
-            
-            tmp2+=position[x]+ " ";
-        }
-
-        try {
-
-            if (!exists) {
-                varTmpDir.createNewFile();
-            }
-
-            fw = new FileWriter(varTmpDir.getAbsoluteFile(), true);
-            writer = new BufferedWriter(fw);
-
-            File f = new File("data.txt");
-
-            BufferedReader b = new BufferedReader(new FileReader(f));
-
-            String readLine = "";
-            String first="";
-            String second="";
-            String third="";
-            boolean d=true;
-            while ((first = b.readLine()) != null) {
-                second=b.readLine();
-                third=b.readLine();
-                if(tmp1.equals(first) && tmp2.equals(second))
-                {
-                    d=false;
-                    break;
-                }
-            }
-            if(d)
-            {
-                for (int i = 0; i < 9; i++) {
-                    writer.write(order[i] + " ");
-                }
-                writer.write("\n");
-                for (int i = 0; i < 9; i++) {
-                    writer.write(position[i] + " ");
-                } 
-                writer.write("\n");
-                for (int i = 0; i < 9; i++) {
-                    writer.write(score[i] + " ");
-                }
-                writer.write("\n\n");
-            }
-
-
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-
-            try {
-
-                if (writer != null)
-                    writer.close();
-
-                if (fw != null)
-                    fw.close();
-
-            } catch (IOException ex) {
-
-                ex.printStackTrace();
-
-            }
-        }   
-    }
 }
