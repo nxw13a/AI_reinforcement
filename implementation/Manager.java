@@ -33,9 +33,9 @@ public class Manager {
     public void updateScore(int index, boolean increase) {
         if (this.score[index] != 0) {
             if (increase)
-                this.score[index] += 0.05;
+                this.score[index] += 0.01;
             else
-                this.score[index] -= 0.05;
+                this.score[index] -= 0.01;
         }
     }
 
@@ -152,6 +152,18 @@ public class Manager {
         File varTmpDir = new File("data.txt");
         boolean exists = varTmpDir.exists();
 
+        String tmp1="";
+        for (int x=0;x<9;x++) 
+        {
+            
+            tmp1+=order[x]+ " ";
+        }
+        String tmp2="";
+        for (int x=0;x<9;x++) 
+        {
+            
+            tmp2+=position[x]+ " ";
+        }
 
         try {
 
@@ -161,19 +173,42 @@ public class Manager {
 
             fw = new FileWriter(varTmpDir.getAbsoluteFile(), true);
             writer = new BufferedWriter(fw);
-            writer.write("Order of moves: ");
-            for (int i = 0; i < 9; i++) {
-                writer.write(order[i] + " ");
+
+            File f = new File("data.txt");
+
+            BufferedReader b = new BufferedReader(new FileReader(f));
+
+            String readLine = "";
+            String first="";
+            String second="";
+            String third="";
+            boolean d=true;
+            while ((first = b.readLine()) != null) {
+                second=b.readLine();
+                third=b.readLine();
+                if(tmp1.equals(first) && tmp2.equals(second))
+                {
+                    d=false;
+                    break;
+                }
             }
-            writer.write("\nFinal State:");
-            for (int i = 0; i < 9; i++) {
-                writer.write(position[i] + " ");
-            } 
-            writer.write("\nReinforcement points: ");
-            for (int i = 0; i < 9; i++) {
-                writer.write(score[i] + " ");
+            if(d)
+            {
+                for (int i = 0; i < 9; i++) {
+                    writer.write(order[i] + " ");
+                }
+                writer.write("\n");
+                for (int i = 0; i < 9; i++) {
+                    writer.write(position[i] + " ");
+                } 
+                writer.write("\n");
+                for (int i = 0; i < 9; i++) {
+                    writer.write(score[i] + " ");
+                }
+                writer.write("\n\n");
             }
-            writer.write("\n\n");
+
+
 
         } catch (IOException e) {
             e.printStackTrace();

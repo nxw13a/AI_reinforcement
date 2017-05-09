@@ -17,12 +17,12 @@ class Main{
 		else if(i == 0)
 		{
 			TicTacToeTrain tr = new TicTacToeTrain();
+			//tr.loadData();
 			long t= System.currentTimeMillis();
-			long end = t+300000;
+			long end = t+600000;
 			while(System.currentTimeMillis() < end) {
 			  	tr.startTrain();
 			}
-			
 		}
 		else
 		{

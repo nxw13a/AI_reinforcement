@@ -10,7 +10,7 @@ import java.util.*;
 public class TicTacToe extends JFrame{
 	JPanel p=new JPanel();
 	Reinforcement lib = new Reinforcement();
-
+	ManagerList managerList = new ManagerList();
 	public TicTacToe(){
 		super("TicTacToe");
 		setSize(400,400);
@@ -18,7 +18,7 @@ public class TicTacToe extends JFrame{
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		p.setLayout(new GridLayout(3,3));
 		for(int i=0;i<9;i++){
-			lib.buttons[i]=new XOButton(i);
+			lib.buttons[i]=new XOButton(i, managerList);
 			p.add(lib.buttons[i]);
 		}
 		add(p);

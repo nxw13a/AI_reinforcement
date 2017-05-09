@@ -2,12 +2,10 @@ package implementation;
 
 import javax.swing.JButton;
 import javax.swing.ImageIcon;
-import javax.swing.*;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.util.*;
 import java.security.SecureRandom;
-import java.io.*;
 
 public class XOButton extends JButton implements ActionListener{
 	ImageIcon X,O;
@@ -23,62 +21,13 @@ public class XOButton extends JButton implements ActionListener{
 	1:X
 	2:O
 	*/
-	public void loadData()
-	{
-		File varTmpDir = new File("data.txt");
-        boolean exists = varTmpDir.exists();
-        File filed = varTmpDir.getAbsoluteFile();
-        try {
-        	if (!exists) {
-        	        varTmpDir.createNewFile();
-        	 }
-
-            fr = new FileReader(filed);
-            br = new BufferedReader(fr);
-            String position;
-            String tmp;
-            String order;
-            String score;
-            br = new BufferedReader(new FileReader(filed));
-            position = br.readLine();
-          	position = position.substring(16,34);
-          	for
-          	System.out.println(position);
-            /*sCur = br.readLine();
-            sCur = br.readLine();
-
-
-			while ((sCur = br.readLine()) != null) {
-			}*/
-
-			} catch (IOException e) {
-
-			e.printStackTrace();
-
-		} finally {
-
-			try {
-
-				if (br != null)
-					br.close();
-
-				if (fr != null)
-					fr.close();
-
-			} catch (IOException ex) {
-
-				ex.printStackTrace();
-
-			}
-
-		}
-	}
-	public XOButton(int location){
+	
+	public XOButton(int location, ManagerList x){
 		X=new ImageIcon(this.getClass().getResource("X.png"));
 		O=new ImageIcon(this.getClass().getResource("O.png"));
 		location_button = location;
 		lib = new Reinforcement();
-		managerList = new ManagerList();
+		managerList = x;
 		this.addActionListener(this);
 	}
 	
@@ -162,6 +111,7 @@ public class XOButton extends JButton implements ActionListener{
 
 	public void actionPerformed(ActionEvent e){
 
+		//System.out.println(lib.print());
 
 		if(lib.position[location_button] == null && lib.check_forX() == false && lib.check_forO() == false)
 		{

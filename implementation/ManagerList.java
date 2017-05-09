@@ -9,6 +9,7 @@ public class ManagerList {
     public static ArrayList<Manager> managerList = new ArrayList<Manager>();
     private static ArrayList<Integer> possibleStates = new ArrayList<Integer>();
 
+
     public static int getSize() {
         return managerList.size();
     }
@@ -93,8 +94,9 @@ public class ManagerList {
     }
 
     public static void printToFile(){ 
+
         for (int i = 0; i < getSize(); i++) {
-            getItemAtIndex(i).printToFile();
+                getItemAtIndex(i).printToFile();
         }
     }
 
