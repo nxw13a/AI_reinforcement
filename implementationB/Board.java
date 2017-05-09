@@ -2093,7 +2093,6 @@ private void containUL(int x, int y)
                              });
 
    }
-}
 
    public void add(Checker checker, int row, int col)
    {
