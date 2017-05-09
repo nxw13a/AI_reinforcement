@@ -296,6 +296,8 @@ public class Board extends JComponent
                        list.remove(p);
                     }
                   }
+                  System.out.println(find(Board.this.posCheck.cx + 62,Board.this.posCheck.cy - 62) + " " + Board.this.posCheck.cx);
+                  
                   remove(find(Board.this.posCheck.cx + 62,Board.this.posCheck.cy - 62));                                    
               }
              //still_eating = false;
@@ -352,7 +354,12 @@ public class Board extends JComponent
                        list.remove(p);
                     }
                   }
-                  remove(find(Board.this.posCheck.cx - 62,Board.this.posCheck.cy - 62));        
+                  System.out.println(find(Board.this.posCheck.cx - 62,Board.this.posCheck.cy - 62) + " " + Board.this.posCheck.cx);
+                  
+                  
+                  
+                  remove(find(Board.this.posCheck.cx - 62,Board.this.posCheck.cy - 62));   
+                     
               }
              //still_eating = false;
              return true;
@@ -408,7 +415,12 @@ public class Board extends JComponent
                        list.remove(p);
                     }
                   }
-                 remove(find(Board.this.posCheck.cx + 62,Board.this.posCheck.cy + 62));        
+                  System.out.println(find(Board.this.posCheck.cx + 62,Board.this.posCheck.cy + 62) + " " + Board.this.posCheck.cx);
+                  
+                  
+                  
+                 remove(find(Board.this.posCheck.cx + 62,Board.this.posCheck.cy + 62)); 
+                     
               }
              //still_eating = false;
              return true;
@@ -463,7 +475,12 @@ public class Board extends JComponent
                        list.remove(p);
                     }
                   }
-                  remove(find(Board.this.posCheck.cx - 62,Board.this.posCheck.cy + 62));       
+                  System.out.println(find(Board.this.posCheck.cx - 62,Board.this.posCheck.cy + 62) + " " + Board.this.posCheck.cx);
+                  
+                  
+                  
+                  remove(find(Board.this.posCheck.cx - 62,Board.this.posCheck.cy + 62));  
+                     
               }
              //still_eating = false;
              return true;
@@ -706,10 +723,17 @@ private void containUL(int x, int y)
         queue.add(name);
 
         try {
+          if (manager.stateDoesExist(matrix) != null) {
+            System.err.println("Matrix Only ");
+          }
+
+          if (manager.stateDoesExist(matrix, queue) != null) {
+            System.err.println("Matrix and Q ");
+          }
           saveThings();
-        } catch (IOException e) {
-            System.err.println("Caught IOException: " + e.getMessage());
-        }
+          } catch (IOException e) {
+              System.err.println("Caught IOException: " + e.getMessage());
+          }
 
         poss_moveX = new ArrayList<Integer>();
         poss_moveY = new ArrayList<Integer>();
@@ -723,7 +747,7 @@ private void containUL(int x, int y)
               posCheck.cx = hold_X;
               posCheck.cy = hold_Y;
 
-              manager.learn(findIndexOfEatenPieces(hold_X,hold_Y), matrix, queue, "pos");
+              
               clear_p(posChecks2, hold_X, hold_Y, pos_X, pos_Y,name.length());
 
               if(hold_Y == 465 && posCheck.checker.checkerType != CheckerType.RED_KING)
@@ -774,18 +798,18 @@ private void containUL(int x, int y)
             move = gen_move(poss_moveX.size());
             queue.add(name);
 
-            try {
-              saveThings();
-            } catch (IOException e) {
-                System.err.println("Caught IOException: " + e.getMessage());
-            }
-
             change(x_matrix[poss_moveX.get(move)][0],y_matrix[0][poss_moveY.get(move)],name);
             hold_X = x_matrix[poss_moveX.get(move)][0];
             hold_Y = y_matrix[0][poss_moveY.get(move)];
             //print_matrix();
             //System.out.println(poss_moveX);
             //System.out.println(poss_moveY + "\n");
+
+            try {
+              saveThings();
+            } catch (IOException e) {
+                System.err.println("Caught IOException: " + e.getMessage());
+            }
 
             poss_moveX = new ArrayList<Integer>();
             poss_moveY = new ArrayList<Integer>();
@@ -861,72 +885,82 @@ private void containUL(int x, int y)
    {
     if(length < 3)
     {
-      for (PosCheck posCheck: posChecks2)
-                  {
-                    if (posCheck.cx == hold_X - 62 && pos_X == hold_X - 124 &&
-                        posCheck.cy == hold_Y - 62 && (posCheck.checker.checkerType == CheckerType.BLACK_REGULAR || posCheck.checker.checkerType == CheckerType.BLACK_KING))
-                     {
-                        remove(find(posCheck.cx,posCheck.cy));
-                        //System.out.println(find(posCheck.cx,posCheck.cy));
-                        red_jump = true;
-                        posCheck.cx = 527;
-                        posCheck.cy = 403;
-                     }
-                     else if(posCheck.cx == hold_X + 62 && pos_X == hold_X + 124 &&
-                        posCheck.cy == hold_Y - 62 && (posCheck.checker.checkerType == CheckerType.BLACK_REGULAR || posCheck.checker.checkerType == CheckerType.BLACK_KING))
-                     {
-                        remove(find(posCheck.cx,posCheck.cy));
-                        //System.out.println(find(posCheck.cx,posCheck.cy));
-                        red_jump = true;
-                        posCheck.cx = 527;
-                        posCheck.cy = 403;
-                     }
-                     //System.out.println(x + " = " + posCheck.cx + " , " + y  + " = " + posCheck.cy);
-                  }
+      for (PosCheck posCheck: posChecks2) {
+          if (posCheck.cx == hold_X - 62 && pos_X == hold_X - 124 &&
+              posCheck.cy == hold_Y - 62 && (posCheck.checker.checkerType == CheckerType.BLACK_REGULAR || posCheck.checker.checkerType == CheckerType.BLACK_KING))
+           {
+              
+              remove(find(posCheck.cx,posCheck.cy));
+              //System.out.println(find(posCheck.cx,posCheck.cy));
+
+              red_jump = true;
+              posCheck.cx = 527;
+              posCheck.cy = 403;
+           }
+           else if(posCheck.cx == hold_X + 62 && pos_X == hold_X + 124 &&
+              posCheck.cy == hold_Y - 62 && (posCheck.checker.checkerType == CheckerType.BLACK_REGULAR || posCheck.checker.checkerType == CheckerType.BLACK_KING))
+           {  
+              
+              remove(find(posCheck.cx,posCheck.cy));
+              //System.out.println(find(posCheck.cx,posCheck.cy));
+              
+              red_jump = true;
+              posCheck.cx = 527;
+              posCheck.cy = 403;
+           }
+               //System.out.println(x + " = " + posCheck.cx + " , " + y  + " = " + posCheck.cy);
+      }
     }
     else
     {
-      for (PosCheck posCheck: posChecks2)
-                  {
-                    if (posCheck.cx == hold_X - 62  && go_back(hold_X, hold_Y, pos_X, pos_Y,-62,-62) &&
-                        posCheck.cy == hold_Y - 62 && (posCheck.checker.checkerType == CheckerType.BLACK_REGULAR || posCheck.checker.checkerType == CheckerType.BLACK_KING))
-                     {
-                        remove(find(posCheck.cx,posCheck.cy));
-                        //System.out.println(find(posCheck.cx,posCheck.cy));
-                        red_jump = true;
-                        posCheck.cx = 527;
-                        posCheck.cy = 403;
-                     }
-                     else if(posCheck.cx == hold_X + 62  && go_back(hold_X, hold_Y, pos_X, pos_Y,62,-62) &&
-                        posCheck.cy == hold_Y - 62 && (posCheck.checker.checkerType == CheckerType.BLACK_REGULAR || posCheck.checker.checkerType == CheckerType.BLACK_KING))
-                     {
-                        remove(find(posCheck.cx,posCheck.cy));
-                        //System.out.println(find(posCheck.cx,posCheck.cy));
-                        red_jump = true;
-                        posCheck.cx = 527;
-                        posCheck.cy = 403;
-                     }
-                     else if(posCheck.cx == hold_X + 62  && go_back(hold_X, hold_Y, pos_X, pos_Y,62,62) &&
-                        posCheck.cy == hold_Y + 62 && (posCheck.checker.checkerType == CheckerType.BLACK_REGULAR || posCheck.checker.checkerType == CheckerType.BLACK_KING))
-                     {
-                        remove(find(posCheck.cx,posCheck.cy));
-                        //System.out.println(find(posCheck.cx,posCheck.cy));
-                        red_jump = true;
-                        posCheck.cx = 527;
-                        posCheck.cy = 403;
-                     }
-                     else if(posCheck.cx == hold_X - 62  && go_back(hold_X, hold_Y, pos_X, pos_Y,-62,62) &&
-                        posCheck.cy == hold_Y + 62 && (posCheck.checker.checkerType == CheckerType.BLACK_REGULAR || posCheck.checker.checkerType == CheckerType.BLACK_KING))
-                     {
-                        remove(find(posCheck.cx,posCheck.cy));
-                        red_jump = true;
-                        //System.out.println(find(posCheck.cx,posCheck.cy));
-                        posCheck.cx = 527;
-                        posCheck.cy = 403;
-                     }
-                     //System.out.println(x + " = " + posCheck.cx + " , " + y  + " = " + posCheck.cy);
-                  }
-    }      
+      for (PosCheck posCheck: posChecks2) {
+          if (posCheck.cx == hold_X - 62  && go_back(hold_X, hold_Y, pos_X, pos_Y,-62,-62) &&
+              posCheck.cy == hold_Y - 62 && (posCheck.checker.checkerType == CheckerType.BLACK_REGULAR || posCheck.checker.checkerType == CheckerType.BLACK_KING))
+           {
+              
+              remove(find(posCheck.cx,posCheck.cy));
+              //System.out.println(find(posCheck.cx,posCheck.cy));
+              
+              red_jump = true;
+              posCheck.cx = 527;
+              posCheck.cy = 403;
+           }
+           else if(posCheck.cx == hold_X + 62  && go_back(hold_X, hold_Y, pos_X, pos_Y,62,-62) &&
+              posCheck.cy == hold_Y - 62 && (posCheck.checker.checkerType == CheckerType.BLACK_REGULAR || posCheck.checker.checkerType == CheckerType.BLACK_KING))
+           {
+              
+              remove(find(posCheck.cx,posCheck.cy));
+              //System.out.println(find(posCheck.cx,posCheck.cy));
+              
+              red_jump = true;
+              posCheck.cx = 527;
+              posCheck.cy = 403;
+           }
+           else if(posCheck.cx == hold_X + 62  && go_back(hold_X, hold_Y, pos_X, pos_Y,62,62) &&
+              posCheck.cy == hold_Y + 62 && (posCheck.checker.checkerType == CheckerType.BLACK_REGULAR || posCheck.checker.checkerType == CheckerType.BLACK_KING))
+           {
+              
+              remove(find(posCheck.cx,posCheck.cy));
+              //System.out.println(find(posCheck.cx,posCheck.cy));
+              
+              red_jump = true;
+              posCheck.cx = 527;
+              posCheck.cy = 403;
+           }
+           else if(posCheck.cx == hold_X - 62  && go_back(hold_X, hold_Y, pos_X, pos_Y,-62,62) &&
+              posCheck.cy == hold_Y + 62 && (posCheck.checker.checkerType == CheckerType.BLACK_REGULAR || posCheck.checker.checkerType == CheckerType.BLACK_KING))
+           {
+              
+              remove(find(posCheck.cx,posCheck.cy));
+              
+              red_jump = true;
+              //System.out.println(find(posCheck.cx,posCheck.cy));
+              posCheck.cx = 527;
+              posCheck.cy = 403;
+           }
+           //System.out.println(x + " = " + posCheck.cx + " , " + y  + " = " + posCheck.cy);
+        }
+    } 
    }
    private boolean go_back(int x, int y, int oldx, int oldy, int x_in, int y_in)
    {
@@ -1193,7 +1227,30 @@ private void containUL(int x, int y)
    }
    private void remove(String name)
    {
-    System.out.println("function: remove called.");
+    // System.out.println("function: removed " + name);
+
+    int[] indices = findIndexOfEatenName(name);
+    String printName = matrix[indices[0]][indices[1]];
+    boolean flagger = legalCheckFunction(printName);
+    // System.out.println("\nflagger: " + flagger);
+    
+    if (flagger) {
+      System.out.println("negative");
+      try {
+        if (manager.stateDoesExist(matrix, queue) == null) {
+          saveThings();
+          manager.learn(indices, matrix, queue, "neg");
+        }
+      } catch (IOException e) { }
+      
+
+      
+    }
+    else {
+      System.out.println("positive");
+      manager.learn(indices, matrix, queue, "pos");
+    }
+
       for(int t = 0; t < 8; t++)
       {
         for(int u = 0; u < 8; u++)
@@ -1205,6 +1262,8 @@ private void containUL(int x, int y)
    }
    private void change(int dom, int ran, String name)
    {
+
+      manager.cacheCurrentState(matrix);
       int pos_X = 0;
       int pos_Y = 0;
       for(int x = 0; x < 8; x++)
@@ -1272,6 +1331,25 @@ private void containUL(int x, int y)
       // System.out.println("\n"+ pos_X + " " + pos_Y);
       return pos;
    }
+
+   private int[] findIndexOfEatenName(String getName)
+   {
+      int[] pos = new int[2];
+      
+      for(int t = 0; t < 8; t++)
+      {
+        for(int u = 0; u < 8; u++)
+        {
+          if(matrix[t][u] == getName){
+            pos[0] = t;
+            pos[1] = u;
+          }
+        }
+      }
+
+      return pos;
+   }
+
    private boolean containThis(List<PosCheck> posChecks2, int x, int y, CheckerType color)
    {
       if(x > 466 || x < 31 || y > 466 || y < 31)
@@ -1528,6 +1606,7 @@ private void containUL(int x, int y)
                                               //print_matrix();
                                               queue.add(find(oldcx,oldcy));
                                              change(Board.this.posCheck.cx,Board.this.posCheck.cy,find(oldcx,oldcy));
+                                             
                                              list_RED.add(find(Board.this.posCheck.cx + 62,Board.this.posCheck.cy + 62));
                                                for(int p = 0; p < list.size(); p++)
                                              {
@@ -1536,6 +1615,9 @@ private void containUL(int x, int y)
                                                     list.remove(p);
                                                  }
                                              }
+                                             System.out.println(find(Board.this.posCheck.cx + 62,Board.this.posCheck.cy + 62) + " " + Board.this.posCheck.cx);
+                                             
+                                             
                                               //System.out.println(find(Board.this.posCheck.cx - 62,Board.this.posCheck.cy + 62) + " " + Board.this.posCheck.cx);
                                              remove(find(Board.this.posCheck.cx + 62,Board.this.posCheck.cy + 62));
                                              //print_matrix();
@@ -1604,6 +1686,7 @@ private void containUL(int x, int y)
                                            {
                                               queue.add(find(oldcx,oldcy));
                                               change(Board.this.posCheck.cx,Board.this.posCheck.cy,find(oldcx,oldcy));
+                                              
                                               list_RED.add(find(Board.this.posCheck.cx - 62,Board.this.posCheck.cy + 62));
                                                 for(int p = 0; p < list.size(); p++)
                                                {
@@ -1612,9 +1695,12 @@ private void containUL(int x, int y)
                                                       list.remove(p);
                                                    }
                                                }
+                                               System.out.println(find(Board.this.posCheck.cx + 62,Board.this.posCheck.cy + 62) + " " + Board.this.posCheck.cx);
+                                               
+                                               
                                               //System.out.println(find(Board.this.posCheck.cx - 62,Board.this.posCheck.cy + 62));
                                               remove(find(Board.this.posCheck.cx - 62,Board.this.posCheck.cy + 62));
-
+                                              
                                               posCheck.cx = 527;
                                               posCheck.cy = 403;
                                            }
@@ -1682,6 +1768,7 @@ private void containUL(int x, int y)
                                     {
                                       queue.add(find(oldcx,oldcy));
                                       change(Board.this.posCheck.cx,Board.this.posCheck.cy,find(oldcx,oldcy));
+                                      
                                       still_eating = false;
                                        must_eat = "";
                                     }
@@ -1752,6 +1839,7 @@ private void containUL(int x, int y)
                                 {
                                   queue.add(find(oldcx,oldcy));
                                   change(Board.this.posCheck.cx,Board.this.posCheck.cy,find(oldcx,oldcy));
+                                  
                                   if(containking(posChecks,Board.this.posCheck.cx,Board.this.posCheck.cy) && king_jump)
                                   {
                                     king_jump = false;
@@ -1795,6 +1883,8 @@ private void containUL(int x, int y)
                                     Board.this.posCheck.cx = oldcx;
                                     Board.this.posCheck.cy = oldcy;
                                   }
+                                  /*eating from the left */
+
                                   else if((oldcx - 124 == Board.this.posCheck.cx) && ( oldcy - 124 == Board.this.posCheck.cy) && (containThis(posChecks, Board.this.posCheck.cx + 62, Board.this.posCheck.cy + 62,CheckerType.RED_REGULAR) || 
                                     containThis(posChecks, Board.this.posCheck.cx + 62, Board.this.posCheck.cy + 62,CheckerType.RED_KING)))
                                   { 
@@ -1807,6 +1897,9 @@ private void containUL(int x, int y)
                                               //print_matrix();
                                             queue.add(find(oldcx,oldcy));
                                              change(Board.this.posCheck.cx,Board.this.posCheck.cy,find(oldcx,oldcy));
+
+                                             
+                                             
                                              list_RED.add(find(Board.this.posCheck.cx + 62,Board.this.posCheck.cy + 62));
                                                for(int p = 0; p < list.size(); p++)
                                              {
@@ -1815,8 +1908,11 @@ private void containUL(int x, int y)
                                                     list.remove(p);
                                                  }
                                              }
-                                              //System.out.println(find(Board.this.posCheck.cx - 62,Board.this.posCheck.cy + 62) + " " + Board.this.posCheck.cx);
+                                             System.out.println(find(Board.this.posCheck.cx + 62,Board.this.posCheck.cy + 62) + " " + Board.this.posCheck.cx);
+                                             
+                                             
                                              remove(find(Board.this.posCheck.cx + 62,Board.this.posCheck.cy + 62));
+
                                              //print_matrix();
                                               posCheck.cx = 527;
                                               posCheck.cy = 403;
@@ -1876,6 +1972,8 @@ private void containUL(int x, int y)
                                           must_eat = "";
                                         }
                                   }
+
+                                  /*eating from the right  */
                                   else if((oldcx + 124 == Board.this.posCheck.cx) && ( oldcy - 124 == Board.this.posCheck.cy) && (containThis(posChecks, Board.this.posCheck.cx - 62, Board.this.posCheck.cy + 62,CheckerType.RED_REGULAR) 
                                     || containThis(posChecks, Board.this.posCheck.cx - 62, Board.this.posCheck.cy + 62,CheckerType.RED_KING)))
                                   { 
@@ -1887,6 +1985,7 @@ private void containUL(int x, int y)
                                            {
                                               queue.add(find(oldcx,oldcy));
                                               change(Board.this.posCheck.cx,Board.this.posCheck.cy,find(oldcx,oldcy));
+                                              
                                               list_RED.add(find(Board.this.posCheck.cx - 62,Board.this.posCheck.cy + 62));
                                                 for(int p = 0; p < list.size(); p++)
                                                {
@@ -1895,6 +1994,9 @@ private void containUL(int x, int y)
                                                       list.remove(p);
                                                    }
                                                }
+                                               System.out.println(find(Board.this.posCheck.cx - 62,Board.this.posCheck.cy + 62) + " " + Board.this.posCheck.cx);
+                                               
+                                               
                                               //System.out.println(find(Board.this.posCheck.cx - 62,Board.this.posCheck.cy + 62));
                                               remove(find(Board.this.posCheck.cx - 62,Board.this.posCheck.cy + 62));
 
@@ -1970,6 +2072,7 @@ private void containUL(int x, int y)
                                     {
                                       queue.add(find(oldcx,oldcy));
                                       change(Board.this.posCheck.cx,Board.this.posCheck.cy,find(oldcx,oldcy));
+
                                       still_eating = false;
                                        must_eat = "";
                                     }
@@ -2071,6 +2174,7 @@ private void containUL(int x, int y)
                           
                         }
 
+
                        });
 
       // Attach a mouse motion listener to the applet. That listener listens
@@ -2091,6 +2195,12 @@ private void containUL(int x, int y)
                                    }
                                 }
                              });
+
+      try {
+        saveThings();
+      } catch (IOException e) {
+          System.err.println("Caught IOException: " + e.getMessage());
+      }
 
    }
 
@@ -2179,13 +2289,15 @@ private void containUL(int x, int y)
               }
 
               manager.setScoreOnPossibleMoves(poss_moveY, poss_moveX);
-
-              System.out.println(queue);
               manager.setQueueOrder(queue);
-              manager.cacheCurrentState(matrix);
+              System.out.println(queue);
 
               manager.printToFile();
+            } else {
+                System.out.println(queue);
+                System.err.println("State Exists..");    
             }
+
       } catch (IOException e) {
           System.err.println("Caught IOException: " + e.getMessage());
       }

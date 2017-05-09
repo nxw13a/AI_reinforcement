@@ -85,10 +85,11 @@ public class Manager {
             this.currThreeStates.remove(0);
             this.currThreeStates.trimToSize();
             this.currThreeStates.add(tempCopy);
-
         } else {
             this.currThreeStates.add(tempCopy);
         }
+
+        
     }
 
     ////////////////////////////////////////////////////////////
@@ -153,38 +154,52 @@ public class Manager {
 
     // learn func: the index of the score being updated for an existing matrix/mat
     // learnState: pos or neg; points increases and decreases accordingly
-    protected void learn(int[] index, String[][] mat, Queue<String> q, String learnState){
+    protected void learn(int[] index, String[][] mat, Queue<String> que, String learnState){
         try {
-            double[][] temp = stateDoesExist(mat, q);
-            String oldScore;
+            // for(Object item : que){
+            //     System.out.println("item.toString(): " + item.toString());
+            // }
+
+            double[][] temp = stateDoesExist(mat, que);
+            
+
+            String oldScore, newScore;
             if (temp != null){
+                System.out.println("Found something..");
                 oldScore = transformSc(temp);
 
-                if (temp != null && learnState.equals("pos")) {
-                    System.out.println("Learning something positive..");
-                    temp[index[0]][index[1]] += 0.01;
+                if (learnState.equals("pos")) {
+                    System.out.println("Learnt something positive..");
+                    System.out.println("Before " + temp[index[0]][index[1]]);
+                    if (temp[index[0]][index[1]] != 0.0)
+                        temp[index[0]][index[1]] += 0.01;
+                    else
+                        temp[index[0]][index[1]] += 0.51;
+                    System.out.println("After " + temp[index[0]][index[1]]);
+                    newScore = transformSc(temp);
+                    setVariable(getLineNumber(mat, que), newScore);
                 } 
 
-                if (learnState.equals("neg")) {
-                    System.out.println("Learning something negative..");
+                else if (learnState.equals("neg")) {
+                    System.out.println("Learnt something negative..");
                     // Gets the second element of the arraylist
-                    String[][] tempMat = this.currThreeStates.get(1);
-                    temp = stateDoesExist(tempMat);
-                    if (temp != null && (temp[index[0]][index[1]] - 0.01) > 0){
-                        temp[index[0]][index[1]] -= 0.01;
-                    }
+                    System.out.println("Before " + temp[index[0]][index[1]]);
+                    temp[index[0]][index[1]] -= 0.01;
+                    System.out.println("After " + temp[index[0]][index[1]]);
+                    newScore = transformSc(temp);
+                    setVariable(getLineNumber(mat, que), newScore);
                 }
-
-                Path path = Paths.get("implementationB/data.txt");
-                Charset charset = StandardCharsets.UTF_8;
-      
-                String newScore = transformSc(temp);
-
-                String content = new String(Files.readAllBytes(path), charset);
-
-                content = content.replaceAll(oldScore, newScore);
-                Files.write(path, content.getBytes(charset));
+                
+            } else {
+                temp = stateDoesExist(mat);
+                if (temp == null) {
+                    System.out.println("Found nothing..");
+                } else {
+                    System.out.println("Found something in temp..");
+                }
+                
             }
+
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -193,12 +208,13 @@ public class Manager {
     // Check if the state exist in the file
     protected double[][] stateDoesExist(String[][] mat, Queue<String> queue) throws IOException{
         // @TODO - OPEN AND PARSE DATA FILE
-        String tempSc = "", tempOrder = "";
+        String tempMat = "", tempOrder = "";
 
         double[][] hc = null;
 
-        tempSc = transformMat(mat);
+        tempMat = transformMat(mat);
         tempOrder = transformQ(queue);
+        // System.out.println("\n" + tempOrder);
 
         try {
 
@@ -213,10 +229,9 @@ public class Manager {
                 String currSpace = b.readLine();
                 String currScore = b.readLine();
 
-                if (tempSc.equals(currScore) && tempOrder.equals(currOrder)) {
+                if (tempMat.equals(currSpace) && tempOrder.equals(currOrder)) {
                     // Get score and return score matrix
-                    System.out.println("Found .... .. . .. . . . \n");
-                    hc = getScore(b.readLine());
+                    hc = getScore(currScore);
                     return hc;
                 }
             }
@@ -250,7 +265,6 @@ public class Manager {
 
                 if (temp.equals(currSpace)) {
                     // Get score and return score matrix
-                    System.out.println("Found .... .. . .. . . . \n");
                     hc = getScore(currScore);
                     return hc;
                 }
@@ -370,5 +384,47 @@ public class Manager {
             System.arraycopy(src[i], 0, target[i], 0, src[i].length);
         }
         return target;
+    }
+
+    public static void setVariable(int lineNumber, String data) throws IOException {
+        Path path = Paths.get("implementationB/data.txt");
+        List<String> lines = Files.readAllLines(path, StandardCharsets.UTF_8);
+        lines.set(lineNumber-1, data);
+        Files.write(path, lines, StandardCharsets.UTF_8);
+    }
+
+    protected int getLineNumber(String[][] mat, Queue<String> queue) throws IOException{
+        // @TODO - OPEN AND PARSE DATA FILE
+        String tempMat = "", tempOrder = "";
+        int currLine = 0;
+
+        double[][] hc = null;
+
+        tempMat = transformMat(mat);
+        tempOrder = transformQ(queue);
+
+        try {
+
+            File f = new File("implementationB/data.txt");
+
+            BufferedReader b = new BufferedReader(new FileReader(f));
+
+            String readLine = "";
+
+            while ((readLine = b.readLine()) != null) {
+                String currOrder = readLine;
+                String currSpace = b.readLine();
+                String currScore = b.readLine();
+
+                currLine += 3;
+                if (tempMat.equals(currSpace) && tempOrder.equals(currOrder)) {
+                    return currLine;
+                }
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return currLine;
     }
 }
