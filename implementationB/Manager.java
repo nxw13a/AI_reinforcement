@@ -17,7 +17,8 @@ public class Manager {
     private String[][] matrix;
     public static BufferedWriter writer = null;
     public static FileWriter fw = null;
-    private Queue<String> currThreeStates = new LinkedList<String>();
+    private ArrayList<String[][]> currThreeStates = new ArrayList<String[][]>();
+    private Queue<String> q = new LinkedList<String>();
 
     ////////////////////////////////////////////////////////////
     //                    Object constructor                  //
@@ -71,6 +72,25 @@ public class Manager {
         this.matrix = matrix;
     }
 
+    protected void setQueueOrder(Queue<String> queue) {
+        this.q = queue;
+    }
+
+    protected void cacheCurrentState(String[][] mat) {
+
+        String[][] tempCopy = cloneArray(mat);
+
+        if (this.currThreeStates.size() == 3){ 
+            
+            this.currThreeStates.remove(0);
+            this.currThreeStates.trimToSize();
+            this.currThreeStates.add(tempCopy);
+
+        } else {
+            this.currThreeStates.add(tempCopy);
+        }
+    }
+
     ////////////////////////////////////////////////////////////
     //                        Getters                         //
     ////////////////////////////////////////////////////////////
@@ -88,15 +108,14 @@ public class Manager {
                         hcIndex.add(i);
                         hcIndex.add(j);
                     } else {
-                        hcIndex.add(0, i);
-                        hcIndex.add(1, j);
+                        hcIndex.set(0, i);
+                        hcIndex.set(1, j);
                     }
-                    return hcIndex;
                 }
             }
         }
-
         return hcIndex;
+        
     }
 
     // Converts the raw string of the score to an array of doubles 
@@ -124,6 +143,8 @@ public class Manager {
         //         System.out.print(tempHolder[i][j]);
         //     }
         // }
+
+
     }
 
     ////////////////////////////////////////////////////////////
@@ -132,43 +153,52 @@ public class Manager {
 
     // learn func: the index of the score being updated for an existing matrix/mat
     // learnState: pos or neg; points increases and decreases accordingly
-    protected void learn(int[] index, String[][] mat, String learnState){
+    protected void learn(int[] index, String[][] mat, Queue<String> q, String learnState){
         try {
-            double[][] temp = stateDoesExist(mat);
-            String oldScore = transformSc(temp);
+            double[][] temp = stateDoesExist(mat, q);
+            String oldScore;
+            if (temp != null){
+                oldScore = transformSc(temp);
 
-            if (temp != null && learnState.equals("pos")) {
-                temp[index[0]][index[1]] += 0.01;
-            } else if (temp != null && learnState.equals("neg")) {
-                if ((temp[index[0]][index[1]] - 0.1) > 0) 
-                    temp[index[0]][index[1]] -= 0.1;
+                if (temp != null && learnState.equals("pos")) {
+                    System.out.println("Learning something positive..");
+                    temp[index[0]][index[1]] += 0.01;
+                } 
+
+                if (learnState.equals("neg")) {
+                    System.out.println("Learning something negative..");
+                    // Gets the second element of the arraylist
+                    String[][] tempMat = this.currThreeStates.get(1);
+                    temp = stateDoesExist(tempMat);
+                    if (temp != null && (temp[index[0]][index[1]] - 0.01) > 0){
+                        temp[index[0]][index[1]] -= 0.01;
+                    }
+                }
+
+                Path path = Paths.get("implementationB/data.txt");
+                Charset charset = StandardCharsets.UTF_8;
+      
+                String newScore = transformSc(temp);
+
+                String content = new String(Files.readAllBytes(path), charset);
+
+                content = content.replaceAll(oldScore, newScore);
+                Files.write(path, content.getBytes(charset));
             }
-
-            Path path = Paths.get("implementationB/data.txt");
-            Charset charset = StandardCharsets.UTF_8;
-  
-            String newScore = transformSc(temp);
-            String content = new String(Files.readAllBytes(path), charset);
-
-            content = content.replaceAll(oldScore, newScore);
-            Files.write(path, content.getBytes(charset));
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
     // Check if the state exist in the file
-    protected double[][] stateDoesExist(String[][] mat) throws IOException{
+    protected double[][] stateDoesExist(String[][] mat, Queue<String> queue) throws IOException{
         // @TODO - OPEN AND PARSE DATA FILE
-        String temp = "";
+        String tempSc = "", tempOrder = "";
+
         double[][] hc = null;
-        for (int i = 0; i < 8; i++) {
-            for (int j = 0; j < 8; j++) {
-                temp += "\"";
-                temp += mat[i][j];
-                temp += "\" ";
-            }
-        }
+
+        tempSc = transformMat(mat);
+        tempOrder = transformQ(queue);
 
         try {
 
@@ -179,10 +209,49 @@ public class Manager {
             String readLine = "";
 
             while ((readLine = b.readLine()) != null) {
-                if (temp.equals(readLine)) {
+                String currOrder = readLine;
+                String currSpace = b.readLine();
+                String currScore = b.readLine();
+
+                if (tempSc.equals(currScore) && tempOrder.equals(currOrder)) {
                     // Get score and return score matrix
                     System.out.println("Found .... .. . .. . . . \n");
                     hc = getScore(b.readLine());
+                    return hc;
+                }
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return hc;
+    }
+
+    protected double[][] stateDoesExist(String[][] mat) throws IOException{
+        // @TODO - OPEN AND PARSE DATA FILE
+        String temp = "";
+
+        double[][] hc = null;
+
+        temp = transformMat(mat);
+
+        try {
+
+            File f = new File("implementationB/data.txt");
+
+            BufferedReader b = new BufferedReader(new FileReader(f));
+
+            String readLine = "";
+
+            while ((readLine = b.readLine()) != null) {
+                String currOrder = readLine;
+                String currSpace = b.readLine();
+                String currScore = b.readLine();
+
+                if (temp.equals(currSpace)) {
+                    // Get score and return score matrix
+                    System.out.println("Found .... .. . .. . . . \n");
+                    hc = getScore(currScore);
                     return hc;
                 }
             }
@@ -208,12 +277,9 @@ public class Manager {
             fw = new FileWriter(varTmpDir.getAbsoluteFile(), true);
             writer = new BufferedWriter(fw);
 
+            writer.write(transformData("Q")+"\n");
             writer.write(transformData("mat")+"\n");
             writer.write(transformData("sc")+"\n");
-
-            if (currThreeStates.size() < 3){
-                currThreeStates.add(transformData("mat"));
-            }
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -244,6 +310,8 @@ public class Manager {
             temp = transformMat(this.matrix);  
         } else if (option.equals("sc")) {
             temp = transformSc(this.score);          
+        } else {
+            temp = transformQ(this.q);
         }
 
         return temp;
@@ -275,5 +343,32 @@ public class Manager {
         }            
 
         return temp;
+    }
+
+    private String transformQ(Queue q) {
+        String temp = "";
+
+        for(Object item : q){
+            temp += "\"";
+            temp += item.toString();    
+            temp += "\" "; 
+        }
+
+        return temp;
+    }
+
+    /**
+     * Clones the provided array
+     * 
+     * @param src
+     * @return a new clone of the provided array
+     */
+    public static String[][] cloneArray(String[][] src) {
+        int length = src.length;
+        String[][] target = new String[length][src[0].length];
+        for (int i = 0; i < length; i++) {
+            System.arraycopy(src[i], 0, target[i], 0, src[i].length);
+        }
+        return target;
     }
 }

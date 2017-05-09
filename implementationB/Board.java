@@ -44,7 +44,6 @@ public class Board extends JComponent
 
    private Queue<String> queue = new LinkedList<String>();
 
-
    // displacement between drag start coordinates and checker center coordinates
 
    private int deltax, deltay;
@@ -56,11 +55,13 @@ public class Board extends JComponent
    // center location of checker at start of drag
 
    private int oldcx, oldcy;
+   private int[] pos_index_holder = new int[2];
    public ArrayList<String> list = new ArrayList<String>();
    private ArrayList<String> list_RED = new ArrayList<String>();
    private ArrayList<String> list_BLACK = new ArrayList<String>();
    private ArrayList<Integer> poss_moveX = new ArrayList<Integer>();
    private ArrayList<Integer> poss_moveY = new ArrayList<Integer>();
+   ArrayList<Integer> newPosition = new ArrayList<Integer>();
    private Manager manager = new Manager();
 
 
@@ -637,38 +638,75 @@ private void containUL(int x, int y)
       all_move(name);
       if(poss_moveX.size() != 0 && poss_moveY.size() != 0)
       {
-        int newX, newY, move, hold_X = 0, hold_Y = 0;
+        int newX, newY, move, hold_X, hold_Y;
+
+        // try {
+          
+        //   double[][] returnedScore = manager.stateDoesExist(matrix);
+
+        //   // returnedScore != null: current state exists 
+        //   // manager.getHighScore(returnedScore) != null: The score of the current state is not equal
+        //   if (returnedScore != null && manager.getHighScore(returnedScore) != null){
+        //       System.out.println("ENTERED INTO THE DUNGEON...");
+        //       // Determine the indices with the highest score: newX and newY
+        //       // With the Queue find the piece that has the possible move newX and newY
+        //       // Move that piece and update variables
+        //       newPosition.clear();
+        //       newPosition = manager.getHighScore(returnedScore);
+
+        //       boolean flag = false;
+        //       int counter = 0;
+        //       // if (!queue.isEmpty()) {
+        //       //   for(Object item : queue){
+        //       //     if (legalCheckFunction(item.toString())) {
+        //       //       poss_moveY.clear();
+        //       //       poss_moveX.clear();
+
+        //       //       all_move(item.toString());
+        //       //       counter = 0;
+        //       //       while (counter < poss_moveX.size() || counter < poss_moveY.size()){
+
+
+        //       //           if (poss_moveX.get(counter) == newPosition.get(1) && poss_moveY.get(counter) == newPosition.get(0)){
+        //       //               System.out.println(item.toString());
+        //       //               System.out.println(poss_moveX.get(counter) + " : " + newPosition.get(1));
+        //       //               System.out.println(poss_moveY.get(counter) + " : " + newPosition.get(0));
+        //       // //             name = item.toString();
+        //       // //             flag = true;
+        //       //             break;
+        //       //           }else {
+        //       //             counter++;
+        //       //           }
+        //       //       }
+        //       //     }
+        //       //   }
+        //       // }                
+              
+        //       // change(x_matrix[newX][0],y_matrix[0][newY],name);
+        //       // hold_X = x_matrix[newX][0];
+        //       // hold_Y = y_matrix[0][newY];
+        //   } else {
+
+        //       // Choose a random piece, move and update variable if the current state does not exist
+        //       // move = gen_move(poss_moveX.size());
+        //       // change(x_matrix[poss_moveX.get(move)][0],y_matrix[0][poss_moveY.get(move)],name);
+        //       // hold_X = x_matrix[poss_moveX.get(move)][0];
+        //       // hold_Y = y_matrix[0][poss_moveY.get(move)];
+        //   } 
+
+        // } catch (IOException e) {
+        //     System.err.println("Caught IOException: " + e.getMessage());
+        // }
+
+        move = gen_move(poss_moveX.size());
+        change(x_matrix[poss_moveX.get(move)][0],y_matrix[0][poss_moveY.get(move)],name);
+        hold_X = x_matrix[poss_moveX.get(move)][0];
+        hold_Y = y_matrix[0][poss_moveY.get(move)];
+
+        queue.add(name);
+
         try {
-          double[][] returnedScore = manager.stateDoesExist(matrix);
-          if (returnedScore != null && manager.getHighScore(returnedScore) != null){
-            newX = manager.getHighScore(returnedScore).get(0);
-            newY = manager.getHighScore(returnedScore).get(1);
-            queue.add(name);
-            change(x_matrix[newX][0],y_matrix[0][newY],name);
-            hold_X = x_matrix[newX][0];
-            hold_Y = y_matrix[0][newY];
-          } else {
-            move = gen_move(poss_moveX.size());
-            queue.add(name);
-            change(x_matrix[poss_moveX.get(move)][0],y_matrix[0][poss_moveY.get(move)],name);
-            hold_X = x_matrix[poss_moveX.get(move)][0];
-            hold_Y = y_matrix[0][poss_moveY.get(move)];
-          }
-
-        } catch (IOException e) {
-            System.err.println("Caught IOException: " + e.getMessage());
-        }
-
-        //System.out.println(poss_moveX);
-        //System.out.println(poss_moveY + "\n");
-
-        try {
-          if (manager.stateDoesExist(matrix) == null){
-            manager.setMatrix(matrix);
-            manager.setScoreOnPossibleMoves(poss_moveY, poss_moveX);
-            manager.printToFile();
-          }
-
+          saveThings();
         } catch (IOException e) {
             System.err.println("Caught IOException: " + e.getMessage());
         }
@@ -684,6 +722,8 @@ private void containUL(int x, int y)
            {
               posCheck.cx = hold_X;
               posCheck.cy = hold_Y;
+
+              manager.learn(findIndexOfEatenPieces(hold_X,hold_Y), matrix, queue, "pos");
               clear_p(posChecks2, hold_X, hold_Y, pos_X, pos_Y,name.length());
 
               if(hold_Y == 465 && posCheck.checker.checkerType != CheckerType.RED_KING)
@@ -733,6 +773,13 @@ private void containUL(int x, int y)
             //System.out.println(poss_moveY + "\n");
             move = gen_move(poss_moveX.size());
             queue.add(name);
+
+            try {
+              saveThings();
+            } catch (IOException e) {
+                System.err.println("Caught IOException: " + e.getMessage());
+            }
+
             change(x_matrix[poss_moveX.get(move)][0],y_matrix[0][poss_moveY.get(move)],name);
             hold_X = x_matrix[poss_moveX.get(move)][0];
             hold_Y = y_matrix[0][poss_moveY.get(move)];
@@ -809,7 +856,6 @@ private void containUL(int x, int y)
       System.out.println(poss_moveY);
       */
    }
-
 
    private void clear_p(List<PosCheck> posChecks2, int hold_X, int hold_Y, int pos_X, int pos_Y,int length)
    {
@@ -1102,6 +1148,7 @@ private void containUL(int x, int y)
    }
    private boolean eating(int y, int x, String type)
    {
+    System.out.println("function: eating called.");
       if(y - 2 >= 0 && x + 2 < 8)
       {
         if(matrix[y - 1][x + 1] != null)
@@ -1126,6 +1173,7 @@ private void containUL(int x, int y)
    }
    private boolean find_eating(String type, String name)
    {
+      System.out.println("function: find_eating called.");
       for(int t = 0; t < 8; t++)
       {
         for(int u = 0; u < 8; u++)
@@ -1145,6 +1193,7 @@ private void containUL(int x, int y)
    }
    private void remove(String name)
    {
+    System.out.println("function: remove called.");
       for(int t = 0; t < 8; t++)
       {
         for(int u = 0; u < 8; u++)
@@ -1196,8 +1245,32 @@ private void containUL(int x, int y)
             pos_Y = y;
           //System.out.print(y_matrix[0][y]+ " ");
       }
-      //System.out.println("\n"+ pos_X + " " + pos_Y);
+      // System.out.println("\n"+ pos_X + " " + pos_Y);
+
+      // System.out.println("\n"+ matrix[pos_Y][pos_X]);
+
       return matrix[pos_Y][pos_X];
+   }
+
+   private int[] findIndexOfEatenPieces(int dom, int ran)
+   {
+      int[] pos = new int[2];
+      
+      for(int x = 0; x < 8; x++)
+      {
+         if(dom == x_matrix[x][0])
+            pos[0] = x;
+          //System.out.print(x_matrix[x][0]+ " ");
+      }
+     // System.out.println();
+      for(int y = 0; y < 8; y++)
+      {
+         if(ran == y_matrix[0][y])
+            pos[1] = y;
+          //System.out.print(y_matrix[0][y]+ " ");
+      }
+      // System.out.println("\n"+ pos_X + " " + pos_Y);
+      return pos;
    }
    private boolean containThis(List<PosCheck> posChecks2, int x, int y, CheckerType color)
    {
@@ -2020,6 +2093,7 @@ private void containUL(int x, int y)
                              });
 
    }
+}
 
    public void add(Checker checker, int row, int col)
    {
@@ -2085,4 +2159,58 @@ private void containUL(int x, int y)
       public int cx;
       public int cy;
    }
+
+   private void saveThings() throws IOException{
+   try {
+        if (manager.stateDoesExist(matrix, queue) == null){
+              manager.setMatrix(matrix);
+
+              poss_moveX.clear();
+              poss_moveY.clear();
+
+              for(int t = 0; t < 8; t++)
+              {
+                for(int u = 0; u < 8; u++)
+                {
+                    // System.out.println(copy.get(j));
+                    if(legalCheckFunction(matrix[t][u])) {
+                      all_move(matrix[t][u]);
+                    }
+                }
+              }
+
+              manager.setScoreOnPossibleMoves(poss_moveY, poss_moveX);
+
+              System.out.println(queue);
+              manager.setQueueOrder(queue);
+              manager.cacheCurrentState(matrix);
+
+              manager.printToFile();
+            }
+      } catch (IOException e) {
+          System.err.println("Caught IOException: " + e.getMessage());
+      }
+  }
+
+  private boolean legalCheckFunction(String name) {
+      if(name == "R1")
+        return true;
+      if(name == "R2")
+        return true;
+      if(name == "R3")
+        return true;
+      if(name == "R4")
+        return true;
+      if(name == "R5")
+        return true;
+      if(name == "R6")
+        return true;
+      if(name == "R7")
+        return true;
+      if(name == "R8")
+        return true;
+
+      return false;
+  }
+      
 }
