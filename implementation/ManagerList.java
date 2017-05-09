@@ -10,6 +10,96 @@ public class ManagerList {
     private static ArrayList<Integer> possibleStates = new ArrayList<Integer>();
 
 
+    public ManagerList(){
+        String path = "data.txt";
+        File varTmpDir = new File(path);
+        boolean exists = varTmpDir.exists();
+        if(exists)
+        {
+            try {
+                OpenFile(path);
+                varTmpDir.delete();
+            }
+            catch (IOException e) {
+                System.out.println(e.getMessage());
+            }
+        }
+    }
+    private void read_in(String[] line, int size)
+    {
+        for(int t = 0; t < size; t+=4)
+        {
+            ArrayList<Integer> list_order = new ArrayList<Integer>();
+            ArrayList<String> list_position = new ArrayList<String>();
+            ArrayList<Double> list_score = new ArrayList<Double>();
+            int[] order = new int[9];
+            double[] score = new double[9];
+            String[] position = new String[9];
+            for(int x = 0; x < line[t].length();x++)
+            {
+                if(line[0].charAt(x) != ' ')
+                {
+                    list_order.add(Integer.parseInt(line[t].charAt(x) + ""));
+                }
+            }
+            String[] splited = line[t+1].split(" ");
+            for(int x = 0; x < list_order.size();x++)
+            {
+                if(splited[x] == "null")
+                    list_position.add(null);
+                else
+                    list_position.add(splited[x]);
+            }
+            String[] splited2 = line[t+2].split(" ");
+            for(int x = 0; x < list_order.size();x++)
+            {
+                list_score.add(Double.parseDouble(splited2[x]));
+            }
+            for(int x = 0; x < list_order.size();x++)
+            {
+                order[x] = list_order.get(x);
+                position[x] = list_position.get(x);
+                score[x] = list_score.get(x);
+            }
+            Manager newManager = new Manager();
+            newManager.setPosition(position);
+            newManager.setScore(score);
+            newManager.setOrderWith(order);
+            addState(newManager);
+        }
+
+        //System.out.println(list_order);
+        //System.out.println(list_position);
+        //System.out.println(list_score);
+    }
+    private int readLines(String path) throws IOException {
+        FileReader file_to_read = new FileReader(path);
+        BufferedReader bf = new BufferedReader(file_to_read);
+
+        String aline;
+        int numberOfLines = 0;
+        while ( ( aline = bf.readLine()) != null) {
+            numberOfLines++;
+        }
+        bf.close();
+
+        return numberOfLines;
+    }
+    private void OpenFile(String path) throws IOException
+    {
+        FileReader fr = new FileReader(path);
+        BufferedReader textReader = new BufferedReader(fr);
+
+        int numberOfLines = readLines(path);
+        String[] textData = new String[numberOfLines];
+
+        int i;
+        for(i = 0; i < numberOfLines; i++) {
+             textData[i] = textReader.readLine();
+        }
+        read_in(textData,numberOfLines);
+        textReader.close();
+    }
     public static int getSize() {
         return managerList.size();
     }

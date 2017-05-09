@@ -1,0 +1,220 @@
+0 5 4 0 2 3 6 0 1 
+null X O null O X O null X 
+0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+7 4 2 6 5 3 0 0 1 
+X O O O X X null null X 
+0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+7 4 2 6 5 3 0 0 1 
+X O O O X X null null X 
+0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+5 0 2 0 3 0 4 0 1 
+X null O null X null O null X 
+0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+7 4 2 6 5 3 0 0 1 
+X O O O X X null null X 
+0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+5 2 4 0 3 0 0 0 1 
+X O O null X null null null X 
+0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+7 4 2 6 5 3 0 0 1 
+X O O O X X null null X 
+0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+5 2 4 0 3 0 0 0 1 
+X O O null X null null null X 
+0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+5 0 0 0 3 2 0 4 1 
+X null null null X O null O X 
+0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+5 2 4 0 3 0 0 0 1 
+X O O null X null null null X 
+0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+5 0 0 0 3 2 0 4 1 
+X null null null X O null O X 
+0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+2 5 7 8 3 0 6 4 1 
+O X X O X null O O X 
+0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+5 0 0 0 3 2 0 4 1 
+X null null null X O null O X 
+0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+2 5 7 8 3 0 6 4 1 
+O X X O X null O O X 
+0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+2 5 7 8 3 0 6 4 1 
+O X X O X null O O X 
+0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+4 7 5 8 3 6 2 0 1 
+O X X O X O O null X 
+0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+2 5 7 8 3 0 6 4 1 
+O X X O X null O O X 
+0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+5 0 0 0 3 0 4 2 1 
+X null null null X null O O X 
+0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+2 5 7 8 3 0 6 4 1 
+O X X O X null O O X 
+0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+5 0 0 0 3 0 4 2 1 
+X null null null X null O O X 
+0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+5 4 0 0 3 0 0 2 1 
+X O null null X null null O X 
+0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+5 0 0 0 3 0 4 2 1 
+X null null null X null O O X 
+0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+5 4 0 0 3 0 0 2 1 
+X O null null X null null O X 
+0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+5 0 4 0 3 0 0 2 1 
+X null O null X null null O X 
+0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+5 4 0 0 3 0 0 2 1 
+X O null null X null null O X 
+0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+5 0 4 0 3 0 0 2 1 
+X null O null X null null O X 
+0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+5 0 0 2 3 4 0 0 1 
+X null null O X O null null X 
+0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+5 0 4 0 3 0 0 2 1 
+X null O null X null null O X 
+0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+5 0 0 2 3 4 0 0 1 
+X null null O X O null null X 
+0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+0 4 5 0 2 3 0 0 1 
+null O X null O X null null X 
+0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+5 0 0 2 3 4 0 0 1 
+X null null O X O null null X 
+0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+0 4 5 0 2 3 0 0 1 
+null O X null O X null null X 
+0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+0 4 5 0 2 3 0 0 1 
+null O X null O X null null X 
+0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+5 0 4 2 3 0 0 0 1 
+X null O O X null null null X 
+0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+0 4 5 0 2 3 0 0 1 
+null O X null O X null null X 
+0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+5 0 0 4 3 0 0 2 1 
+X null null O X null null O X 
+0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+0 4 5 0 2 3 0 0 1 
+null O X null O X null null X 
+0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+5 0 0 4 3 0 0 2 1 
+X null null O X null null O X 
+0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+5 4 0 0 3 0 2 0 1 
+X O null null X null O null X 
+0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+5 0 0 4 3 0 0 2 1 
+X null null O X null null O X 
+0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+5 4 0 0 3 0 2 0 1 
+X O null null X null O null X 
+0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+5 4 0 0 3 0 2 0 1 
+X O null null X null O null X 
+0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+0 0 5 4 2 3 0 0 1 
+null null X O O X null null X 
+0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+5 4 0 0 3 0 2 0 1 
+X O null null X null O null X 
+0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+5 2 0 0 3 4 0 0 1 
+X O null null X O null null X 
+0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+5 4 0 0 3 0 2 0 1 
+X O null null X null O null X 
+0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+5 2 0 0 3 4 0 0 1 
+X O null null X O null null X 
+0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+4 5 2 9 3 7 8 6 1 
+O X O X X X O O X 
+0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+5 2 0 0 3 4 0 0 1 
+X O null null X O null null X 
+0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+4 5 2 9 3 7 8 6 1 
+O X O X X X O O X 
+0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+4 5 2 9 3 7 8 6 1 
+O X O X X X O O X 
+0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+4 5 2 9 3 7 8 6 1 
+O X O X X X O O X 
+0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+5 4 0 2 3 0 0 0 1 
+X O null O X null null null X 
+0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+5 4 0 2 3 0 0 0 1 
+X O null O X null null null X 
+0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
+5 4 0 2 3 0 0 0 1 
+X O null O X null null null X 
+0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+
