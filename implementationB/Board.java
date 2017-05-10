@@ -651,7 +651,7 @@ private void containUL(int x, int y)
         }
       }
       //System.out.println(pos_X + " " + pos_Y);
-     //System.out.println(name);
+     System.out.println(name);
       all_move(name);
       if(poss_moveX.size() != 0 && poss_moveY.size() != 0)
       {
@@ -719,6 +719,9 @@ private void containUL(int x, int y)
         change(x_matrix[poss_moveX.get(move)][0],y_matrix[0][poss_moveY.get(move)],name);
         hold_X = x_matrix[poss_moveX.get(move)][0];
         hold_Y = y_matrix[0][poss_moveY.get(move)];
+        System.out.println(name);
+        System.out.println(poss_moveX);
+        System.out.println(poss_moveY + "\n");
 
         queue.add(name);
 
@@ -738,7 +741,7 @@ private void containUL(int x, int y)
         poss_moveX = new ArrayList<Integer>();
         poss_moveY = new ArrayList<Integer>();
 
-        //print_matrix();
+        print_matrix();
         for (PosCheck posCheck: posChecks2)
         {
           if (posCheck.cx == pos_X &&
@@ -1095,6 +1098,8 @@ private void containUL(int x, int y)
 
    private void all_move(String name)
    {
+        poss_moveX = new ArrayList<Integer>();
+        poss_moveY = new ArrayList<Integer>();
       int pos_Y = 0;
       int pos_X = 0;
       for(int t = 0; t < 8; t++)
