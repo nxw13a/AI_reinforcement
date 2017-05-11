@@ -1,3 +1,12 @@
+    ////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////
+    //                    Created By Shawn                    //
+    //                      Manager.java                      //
+    //            This file handles the logic of RL           //
+    ////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////
+
+
 package implementationB;
 
 import java.util.*;
@@ -61,8 +70,12 @@ public class Manager {
     // Save the score of the current state
     protected void setScoreOnPossibleMoves(ArrayList<Integer> posY, ArrayList<Integer> posX) {
         int counter = 0;    
+
+        System.out.println(posX.size());
         while ((counter < posX.size()) && (counter < posY.size())) {
-            this.score[posY.get(counter)][posX.get(counter)] = 0.5;
+            if ((posY.get(counter) < 8 && posY.get(counter) >= 0) && (posX.get(counter) < 8 && posX.get(counter) >= 0))
+                this.score[posY.get(counter)][posX.get(counter)] = 0.5;
+
             counter++;
         }
     }
@@ -108,9 +121,11 @@ public class Manager {
                         hcIndex = new ArrayList<Integer>();
                         hcIndex.add(i);
                         hcIndex.add(j);
+                        temp = score[i][j];
                     } else {
                         hcIndex.set(0, i);
                         hcIndex.set(1, j);
+                        temp = score[i][j];
                     }
                 }
             }

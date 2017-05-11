@@ -5,8 +5,6 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 
-
-
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseMotionAdapter;
@@ -61,6 +59,10 @@ public class Board extends JComponent
    private ArrayList<String> list_BLACK = new ArrayList<String>();
    private ArrayList<Integer> poss_moveX = new ArrayList<Integer>();
    private ArrayList<Integer> poss_moveY = new ArrayList<Integer>();
+
+   private ArrayList<Integer> shawn_poss_X = new ArrayList<Integer>();
+   private ArrayList<Integer> shawn_poss_Y = new ArrayList<Integer>();
+
    ArrayList<Integer> newPosition = new ArrayList<Integer>();
    private Manager manager = new Manager();
 
@@ -233,9 +235,33 @@ public class Board extends JComponent
             t--;
          }
       }
-    //System.out.println(copy);
-    //System.out.println(list +"\n");
+      
     int select = a.nextInt(copy.size());
+      try {
+        double[][] returnedScore = manager.stateDoesExist(matrix, queue);
+        if (returnedScore != null){
+
+          ArrayList<Integer> hcIndex = new ArrayList<Integer>();
+          ArrayList<String> possiblePieces = new ArrayList<String>();
+          hcIndex = manager.getHighScore(returnedScore);
+
+          for (int i = 0; i < copy.size(); i++) {
+              all_move(copy.get(i));
+              for (int j = 0; j < poss_moveX.size(); j++) {
+                if ((hcIndex.get(0)== poss_moveY.get(j)) && (hcIndex.get(1) == poss_moveX.get(j))){
+                  possiblePieces.add(copy.get(i));
+                }
+              }
+          }
+
+          select = a.nextInt(possiblePieces.size());
+          return possiblePieces.get(select);
+        }
+      } catch (IOException e) {
+            System.err.println("Caught IOException: " + e.getMessage());
+      }
+
+    
     return copy.get(select);
     
   }
@@ -657,64 +683,6 @@ private void containUL(int x, int y)
       {
         int newX, newY, move, hold_X, hold_Y;
 
-        // try {
-          
-        //   double[][] returnedScore = manager.stateDoesExist(matrix);
-
-        //   // returnedScore != null: current state exists 
-        //   // manager.getHighScore(returnedScore) != null: The score of the current state is not equal
-        //   if (returnedScore != null && manager.getHighScore(returnedScore) != null){
-        //       System.out.println("ENTERED INTO THE DUNGEON...");
-        //       // Determine the indices with the highest score: newX and newY
-        //       // With the Queue find the piece that has the possible move newX and newY
-        //       // Move that piece and update variables
-        //       newPosition.clear();
-        //       newPosition = manager.getHighScore(returnedScore);
-
-        //       boolean flag = false;
-        //       int counter = 0;
-        //       // if (!queue.isEmpty()) {
-        //       //   for(Object item : queue){
-        //       //     if (legalCheckFunction(item.toString())) {
-        //       //       poss_moveY.clear();
-        //       //       poss_moveX.clear();
-
-        //       //       all_move(item.toString());
-        //       //       counter = 0;
-        //       //       while (counter < poss_moveX.size() || counter < poss_moveY.size()){
-
-
-        //       //           if (poss_moveX.get(counter) == newPosition.get(1) && poss_moveY.get(counter) == newPosition.get(0)){
-        //       //               System.out.println(item.toString());
-        //       //               System.out.println(poss_moveX.get(counter) + " : " + newPosition.get(1));
-        //       //               System.out.println(poss_moveY.get(counter) + " : " + newPosition.get(0));
-        //       // //             name = item.toString();
-        //       // //             flag = true;
-        //       //             break;
-        //       //           }else {
-        //       //             counter++;
-        //       //           }
-        //       //       }
-        //       //     }
-        //       //   }
-        //       // }                
-              
-        //       // change(x_matrix[newX][0],y_matrix[0][newY],name);
-        //       // hold_X = x_matrix[newX][0];
-        //       // hold_Y = y_matrix[0][newY];
-        //   } else {
-
-        //       // Choose a random piece, move and update variable if the current state does not exist
-        //       // move = gen_move(poss_moveX.size());
-        //       // change(x_matrix[poss_moveX.get(move)][0],y_matrix[0][poss_moveY.get(move)],name);
-        //       // hold_X = x_matrix[poss_moveX.get(move)][0];
-        //       // hold_Y = y_matrix[0][poss_moveY.get(move)];
-        //   } 
-
-        // } catch (IOException e) {
-        //     System.err.println("Caught IOException: " + e.getMessage());
-        // }
-
         move = gen_move(poss_moveX.size());
         change(x_matrix[poss_moveX.get(move)][0],y_matrix[0][poss_moveY.get(move)],name);
         hold_X = x_matrix[poss_moveX.get(move)][0];
@@ -734,9 +702,6 @@ private void containUL(int x, int y)
           } catch (IOException e) {
               System.err.println("Caught IOException: " + e.getMessage());
           }
-
-        poss_moveX = new ArrayList<Integer>();
-        poss_moveY = new ArrayList<Integer>();
 
         //print_matrix();
         for (PosCheck posCheck: posChecks2)
@@ -786,8 +751,6 @@ private void containUL(int x, int y)
             if(poss_moveX.size() == 0 && poss_moveY.size() == 0)
             {
               //System.out.println("HI");
-              poss_moveX = new ArrayList<Integer>();
-              poss_moveY = new ArrayList<Integer>();
                break;
             }
             int org_Y = hold_Y;
@@ -796,7 +759,6 @@ private void containUL(int x, int y)
             //System.out.println(poss_moveX);
             //System.out.println(poss_moveY + "\n");
             move = gen_move(poss_moveX.size());
-            queue.add(name);
 
             change(x_matrix[poss_moveX.get(move)][0],y_matrix[0][poss_moveY.get(move)],name);
             hold_X = x_matrix[poss_moveX.get(move)][0];
@@ -811,8 +773,6 @@ private void containUL(int x, int y)
                 System.err.println("Caught IOException: " + e.getMessage());
             }
 
-            poss_moveX = new ArrayList<Integer>();
-            poss_moveY = new ArrayList<Integer>();
 
             //print_matrix();
             for (PosCheck posCheck: posChecks2)
@@ -857,6 +817,7 @@ private void containUL(int x, int y)
               }
             }
           red_jump = false;
+          queue.add(name);
         }
 
       }
@@ -988,6 +949,9 @@ private void containUL(int x, int y)
              {
                 poss_moveX.add(x);
                 poss_moveY.add(y);
+
+                shawn_poss_X.add(x);
+                shawn_poss_Y.add(y);
              }
             else 
             {  
@@ -997,6 +961,9 @@ private void containUL(int x, int y)
                 {
                   poss_moveX.add(x + 1);
                   poss_moveY.add(y + 1);
+
+                  shawn_poss_X.add(x + 1);
+                  shawn_poss_Y.add(y + 1);
                 }
               }
               break;
@@ -1017,6 +984,9 @@ private void containUL(int x, int y)
              {
                 poss_moveX.add(x);
                 poss_moveY.add(y);
+
+                shawn_poss_X.add(x);
+                shawn_poss_Y.add(y);
              }
             else 
             {  
@@ -1026,6 +996,9 @@ private void containUL(int x, int y)
                 {
                   poss_moveX.add(x - 1);
                   poss_moveY.add(y + 1);
+
+                  shawn_poss_X.add(x - 1);
+                  shawn_poss_Y.add(y + 1);
                 }
               }
               break;
@@ -1046,6 +1019,9 @@ private void containUL(int x, int y)
              {
                 poss_moveX.add(x);
                 poss_moveY.add(y);
+
+                shawn_poss_X.add(x);
+                shawn_poss_Y.add(y);
              }
             else 
             {  
@@ -1055,6 +1031,9 @@ private void containUL(int x, int y)
                 {
                   poss_moveX.add(x + 1);
                   poss_moveY.add(y - 1);
+
+                  shawn_poss_X.add(x + 1);
+                  shawn_poss_Y.add(y - 1);
                 }
                 
               }
@@ -1076,6 +1055,9 @@ private void containUL(int x, int y)
              {
                 poss_moveX.add(x);
                 poss_moveY.add(y);
+
+                shawn_poss_X.add(x);
+                shawn_poss_Y.add(y);
              }
             else 
             { 
@@ -1085,6 +1067,9 @@ private void containUL(int x, int y)
                 {
                   poss_moveX.add(x - 1);
                   poss_moveY.add(y - 1);
+
+                  shawn_poss_X.add(x - 1);
+                  shawn_poss_Y.add(y - 1);
                 }
               }
               break;
@@ -1095,6 +1080,10 @@ private void containUL(int x, int y)
 
    private void all_move(String name)
    {
+
+      poss_moveX.clear();
+      poss_moveY.clear();
+
       int pos_Y = 0;
       int pos_X = 0;
       for(int t = 0; t < 8; t++)
@@ -1117,6 +1106,10 @@ private void containUL(int x, int y)
            {
                poss_moveX.add(pos_X+1);
                poss_moveY.add(pos_Y+1);
+
+               shawn_poss_X.add(pos_X+1);
+               shawn_poss_Y.add(pos_X+1);
+
            }
         }
         
@@ -1126,6 +1119,9 @@ private void containUL(int x, int y)
            {
                poss_moveX.add(pos_X-1);
                poss_moveY.add(pos_Y+1); 
+
+               shawn_poss_X.add(pos_X-1);
+               shawn_poss_Y.add(pos_X+1);
           }
         }
         if(pos_X + 2 < 8 && pos_Y + 2 < 8)
@@ -1136,6 +1132,9 @@ private void containUL(int x, int y)
               {
                poss_moveX.add(pos_X+2);
                poss_moveY.add(pos_Y+2);
+
+               shawn_poss_X.add(pos_X+2);
+               shawn_poss_Y.add(pos_X+2);
              }
            }
         }
@@ -1147,6 +1146,9 @@ private void containUL(int x, int y)
               {
                poss_moveX.add(pos_X-2);
                poss_moveY.add(pos_Y+2);
+
+               shawn_poss_X.add(pos_X-2);
+               shawn_poss_Y.add(pos_X+2);
              }
            }
         }
@@ -2282,13 +2284,20 @@ private void containUL(int x, int y)
                 for(int u = 0; u < 8; u++)
                 {
                     // System.out.println(copy.get(j));
-                    if(legalCheckFunction(matrix[t][u])) {
+
+                    if((matrix[t][u] != null) && (matrix[t][u].charAt(0) == 'R')) {
                       all_move(matrix[t][u]);
                     }
+                    // if(legalCheckFunction(matrix[t][u])) {
+                    //   all_move(matrix[t][u]);
+                    // }
                 }
               }
 
-              manager.setScoreOnPossibleMoves(poss_moveY, poss_moveX);
+              manager.setScoreOnPossibleMoves(shawn_poss_Y, shawn_poss_X);
+              shawn_poss_Y.clear();
+              shawn_poss_X.clear();
+
               manager.setQueueOrder(queue);
               System.out.println(queue);
 
